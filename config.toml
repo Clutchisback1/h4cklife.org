@@ -1,8 +1,5 @@
-#baseURL = "http://example.org/"
-#languageCode = "en-us"
-#title = "My New Hugo Site"
-#theme = "hello-friend"
-
+baseURL = "http://example.org/"
+title = "My New Hugo Site"
 baseurl = "https://clutchisback1.github.io/H4cklife.github.io/"
 languageCode = "en-us"
 theme = "hello-friend"
