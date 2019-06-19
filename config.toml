@@ -3,7 +3,7 @@
 #title = "My New Hugo Site"
 #theme = "hello-friend"
 
-baseurl = "http://example.org/"
+baseurl = "/"
 languageCode = "en-us"
 theme = "hello-friend"
 paginate = 5
