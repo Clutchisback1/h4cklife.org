@@ -1,6 +1,9 @@
-baseURL = "http://example.org/"
-title = "My New Hugo Site"
-baseurl = "https://clutchisback1.github.io/H4cklife.github.io/"
+#baseURL = "http://example.org/"
+#languageCode = "en-us"
+#title = "My New Hugo Site"
+#theme = "hello-friend"
+
+baseurl = "/"
 languageCode = "en-us"
 theme = "hello-friend"
 paginate = 5
