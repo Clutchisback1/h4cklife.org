@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>Starting OSCP From Scratch :: Hello Friend — A simple theme for Hugo</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Read Time: 16 mins By: Clutchisback1
+I hate reading boring articles so I&amp;rsquo;m not going to waste any of your time by writing one. Besides, you&amp;rsquo;re probably an PWK student with lab time ticking away each second as you get closer to your exam date; The very exam date that will determine whether or not you&amp;rsquo;ve become a man/woman yet in the information security industry. Right now, you&amp;rsquo;re still a little boy/girl with absolutely nothing going for yourself."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/starting-oscp-from-scratch/" />
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Starting OSCP From Scratch"/>
+<meta name="twitter:description" content="Read Time: 16 mins By: Clutchisback1
+I hate reading boring articles so I&rsquo;m not going to waste any of your time by writing one. Besides, you&rsquo;re probably an PWK student with lab time ticking away each second as you get closer to your exam date; The very exam date that will determine whether or not you&rsquo;ve become a man/woman yet in the information security industry. Right now, you&rsquo;re still a little boy/girl with absolutely nothing going for yourself."/>
+
+
+
+<meta property="og:title" content="Starting OSCP From Scratch" />
+<meta property="og:description" content="Read Time: 16 mins By: Clutchisback1
+I hate reading boring articles so I&rsquo;m not going to waste any of your time by writing one. Besides, you&rsquo;re probably an PWK student with lab time ticking away each second as you get closer to your exam date; The very exam date that will determine whether or not you&rsquo;ve become a man/woman yet in the information security industry. Right now, you&rsquo;re still a little boy/girl with absolutely nothing going for yourself." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/starting-oscp-from-scratch/" /><meta property="article:published_time" content="2019-06-19T21:23:57-06:00"/>
+<meta property="article:modified_time" content="2019-06-19T21:23:57-06:00"/><meta property="og:site_name" content="Hello Friend" />
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">hello friend</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about">About</a></li>
+        
+      
+        
+          <li><a href="/showcase">Showcase</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about">About</a></li>
+      
+    
+      
+        <li><a href="/showcase">Showcase</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  <div class="post">
+    <h2 class="post-title"><a href="/posts/starting-oscp-from-scratch/">Starting OSCP From Scratch</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2019-06-19
+        </span>
+      
+      
+      
+    </div>
+
+    
+
+    
+
+    <div class="post-content">
+      
+
+<p>Read Time: 16 mins
+<strong>By:</strong> Clutchisback1</p>
+
+<p>I hate reading boring articles so I&rsquo;m not going to waste any of your time by writing one. Besides, you&rsquo;re probably an PWK student with lab time ticking away each second as you get closer to your exam date; The very exam date that will determine whether or not you&rsquo;ve become a man/woman yet in the information security industry. Right now, you&rsquo;re still a little boy/girl with absolutely nothing going for yourself. That&rsquo;s how I felt most of the time as I spent countless hours &ldquo;skateboarding&rdquo; through the internet trying to find some reverse PHP shell capable of running on windows host:</p>
+
+<p>It actually exists folks:
+(Windows PHP Reverse Shell)</p>
+
+<p>The feeling of insufficiency coupled with the euphoria that I felt after gaining root privileges, or learning a new technique motivated me. I was like <strong>Neo</strong> spending hours in simulation learning Jiu Jitsu (<em>which was really Karate but don&rsquo;t get me started on that!</em>).</p>
+
+<h2 id="tldr-ers-start-here">TLDR&rsquo;ers Start Here</h2>
+
+<p>But you already know all of that so let&rsquo;s get right into it:</p>
+
+<p>Do these:
+If you are just starting PWK, you&rsquo;ve probably already been told to go and do the OSCP like Vms:</p>
+
+<p>You&rsquo;ve probably even been told to go and watch some of Ippsec&rsquo;s videos.</p>
+
+<p>No one probably mentioned that you could find Pre Compiled Windows Exploits out there in the wild which will save you some headache during your time in the labs.</p>
+
+<p>Certainly do these:
+And if no one has told you about Nebula for learning Linux privilege escalation techniques they have done you a disservice!</p>
+
+<p>For note taking, I used a beautiful program called Atom. Learn MARKDOWN! Markdown is sort of like HTML and is super easy to use. After launching Atom and creating your folder for note taking make a &ldquo;.md&rdquo; file and start from there! It can recognize code and everything!</p>
+
+<p>If you want buffer overflow experience and you don&rsquo;t have lab access yet, I recommend doing Brainpan on Vulnhub.
+Spoiler: It has both a Windows and a Linux buffer overflow for you to pwn!</p>
+
+<p>Now that you have a good starting point, I want to cover some of the unwritten rules along with some additional tips that will help you during your time in the labs and in your pentesting career. Some of these tips will save you from a lot of embarrassment and frustration in your pursuit of the OSCP certification. I want to help you by shining light on how your thinking needs to and will change during your time in the labs.</p>
+
+<p>Tips &amp; Unwritten Rules</p>
+
+<ol>
+<li>Google, Google, Google &hellip;need I say more?</li>
+
+<li><p>Thaw shall not ask another pentester any questions prior to googling the subject for at least 5 minutes on the subject.</p></li>
+
+<li><p>Offsec admins are not as mean as you think they are.</p></li>
+
+<li><p>Before I used the Offsec Support Chat for the first time, I had already accepted that they were going tell me to try harder, but not once has any Offsec admin ever uttered those words to me. They are very understanding and super helpful.</p></li>
+
+<li><p>Read the write-ups.</p></li>
+
+<li><p>You should be watching yourself and making sure this doesn&rsquo;t become your &ldquo;go to&rdquo; on every single box you attempt to root, however, you are only hurting yourself when you abandon a machine without ever gaining the knowledge you are missing.</p></li>
+
+<li><p>You are not a failure if you get stuck and look at the write-up for a box.</p></li>
+
+<li><p>This is something I struggled with for a long time. I ALWAYS felt guilty resorting to someone&rsquo;s write-up after exhausting all of my knowledge on a target box but once you do read the write up you will likely remember that technique for the rest of your career!</p></li>
+
+<li><p>Pro tip: Peek: scroll down to where you are stuck and only view enough to get you moving again!</p></li>
+
+<li><p>DO NOT USE METASPLOIT:</p></li>
+
+<li><p>Using Metasploit will severely hinder your ability to pass the exam in my honest opinion. You can only use it on one machine during the exam and it is generally only worthwhile on windows machines. I mean, imagine getting to the exam and having zero manual windows privilege escalation skills because you&rsquo;ve been using Metasploit for every box in the lab. Yikes! Avoid it as much as possible.</p></li>
+
+<li><p>Make Friends</p></li>
+
+<li><p>Building relationships is one of the best things you can do while in the labs. The more connected you are within the community the better. Offsec also provides an IRC Channel where you can communicate with other students and admins. I strongly suggest jumping in here before your lab time and asking your questions here Keeping rule #1 in mind.</p></li>
+
+<li><p>Get a mentor</p></li>
+
+<li><p>Find someone who already passed OSCP or OSCE who can help do exactly what this article is doing in real time. Often times we read articles like this and forget that there is a real life person that wrote it and may be readily available in some Hackthebox forum somewhere. Find someone to &ldquo;show you de wey!&rdquo;</p></li>
+
+<li><p>Stay up Until 3AM</p></li>
+
+<li><p>My bedtime is 3am just about every night. It&rsquo;s gotten to the point where if I go to bed before then I will be laying there with my eyes open staring at the ceiling. Learn to optimize your available hours to pour into the labs and try not to get divorced because all you seem to care about is buffer overflows and rooting pain &amp; sufferance! Make sure you communicate your schedule with your family and don&rsquo;t slack off doing your responsibilities around the home!!!</p></li>
+</ol>
+
+<h2 id="closing-thoughts">Closing thoughts</h2>
+
+<p>Relax! You&rsquo;re going to do well! Check out some of my Github stars to find some really good enumeration scripts and other toys I&rsquo;ve picked up along my journey to OSCP. If you&rsquo;re not familiar with Github before starting in your labs you will become familiar with it soon enough!</p>
+
+<p>I leave you with this:</p>
+
+<p>Every machine you face in the labs and in life is a mirror reflecting your pentesting skill and competency.</p>
+
+<p>Every box you gain is a step upward in your ascension towards the glorious OSCP certification! Keep struggling! Keep learning! Keep hacking; and Stop sleeping!</p>
+
+    </div>
+    
+
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">hello friend</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span>
+        <span>Theme created by <a href="https://twitter.com/panr" target="_blank" rel="noopener">panr</a></span>
+      </div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+  </body>
+</html>
