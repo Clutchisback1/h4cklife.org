@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Hello Friend</title>
-    <link>/posts/</link>
+    <link>H4cklife.github.io/posts/</link>
     <description>Recent content in Posts on Hello Friend</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 19 Jun 2019 21:23:57 -0600</lastBuildDate>
     
-	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="H4cklife.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Starting OSCP From Scratch</title>
-      <link>/posts/starting-oscp-from-scratch/</link>
+      <link>H4cklife.github.io/posts/starting-oscp-from-scratch/</link>
       <pubDate>Wed, 19 Jun 2019 21:23:57 -0600</pubDate>
       
-      <guid>/posts/starting-oscp-from-scratch/</guid>
+      <guid>H4cklife.github.io/posts/starting-oscp-from-scratch/</guid>
       <description>Read Time: 16 mins By: Clutchisback1
 I hate reading boring articles so I&amp;rsquo;m not going to waste any of your time by writing one. Besides, you&amp;rsquo;re probably an PWK student with lab time ticking away each second as you get closer to your exam date; The very exam date that will determine whether or not you&amp;rsquo;ve become a man/woman yet in the information security industry. Right now, you&amp;rsquo;re still a little boy/girl with absolutely nothing going for yourself.</description>
     </item>
