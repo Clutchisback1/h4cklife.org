@@ -1,4 +1,4 @@
-baseurl = "H4cklife.github.io/"
+baseurl = "H4cklife.github.io"
 languageCode = "en-us"
 theme = "hello-friend"
 paginate = 5
