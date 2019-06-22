@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2019</copyright>
-    <lastBuildDate>Fri, 21 Jun 2019 22:41:15 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 21 Jun 2019 23:22:24 -0600</lastBuildDate>
     
 	<atom:link href="/H4cklife.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>OSCP   How to Know When You&#39;re Ready to Take the Exam</title>
+      <link>/H4cklife.github.io/posts/oscp-how-to-know-when-youre-ready-to-take-the-exam/</link>
+      <pubDate>Fri, 21 Jun 2019 23:22:24 -0600</pubDate>
+      
+      <guid>/H4cklife.github.io/posts/oscp-how-to-know-when-youre-ready-to-take-the-exam/</guid>
+      <description>Read Time: 15 minutes 🥚 
+If you&amp;rsquo;ve taken the red pill and decided to begin your journey towards the OSCP certification you will likely come to a point where you begin to wonder if you are ready to take/pass the exam. This article will serve as a guide in helping you determine just that. Let&amp;rsquo;s begin! TLDR&amp;rsquo;ers Start Here ⏩⏩   You&amp;rsquo;ve have most of the public network rooted:  If you have about 60% of the public network rooted I would say that is a good time to start thinking about taking the exam.</description>
+    </item>
     
     <item>
       <title>Starting OSCP From Scratch</title>

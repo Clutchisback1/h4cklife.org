@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/H4cklife.github.io/posts/oscp-how-to-know-when-youre-ready-to-take-the-exam/</loc>
+    <lastmod>2019-06-21T23:22:24-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/H4cklife.github.io/posts/starting-oscp-from-scratch/</loc>
     <lastmod>2019-06-21T22:41:15-06:00</lastmod>
   </url>
@@ -14,13 +19,13 @@
   
   <url>
     <loc>/H4cklife.github.io/</loc>
-    <lastmod>2019-06-21T22:41:15-06:00</lastmod>
+    <lastmod>2019-06-21T23:22:24-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/H4cklife.github.io/posts/</loc>
-    <lastmod>2019-06-21T22:41:15-06:00</lastmod>
+    <lastmod>2019-06-21T23:22:24-06:00</lastmod>
     <priority>0</priority>
   </url>
   
