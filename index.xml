@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>H4cklife!</title>
-    <link>/</link>
+    <link>/H4cklife.github.io/</link>
     <description>Recent content on H4cklife!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2019</copyright>
     <lastBuildDate>Fri, 21 Jun 2019 23:50:16 -0600</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/H4cklife.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>/about/</link>
+      <link>/H4cklife.github.io/about/</link>
       <pubDate>Fri, 21 Jun 2019 23:50:16 -0600</pubDate>
       
-      <guid>/about/</guid>
+      <guid>/H4cklife.github.io/about/</guid>
       <description>About Me!? I&amp;rsquo;m Clutchisback1 and I like to Beefhook!</description>
     </item>
     
     <item>
       <title>OSCP   How to Know When You&#39;re Ready to Take the Exam</title>
-      <link>/posts/oscp-how-to-know-when-youre-ready-to-take-the-exam/</link>
+      <link>/H4cklife.github.io/posts/oscp-how-to-know-when-youre-ready-to-take-the-exam/</link>
       <pubDate>Fri, 21 Jun 2019 23:22:24 -0600</pubDate>
       
-      <guid>/posts/oscp-how-to-know-when-youre-ready-to-take-the-exam/</guid>
+      <guid>/H4cklife.github.io/posts/oscp-how-to-know-when-youre-ready-to-take-the-exam/</guid>
       <description>Read Time: 15 minutes 🥚 
 If you&amp;rsquo;ve taken the red pill and decided to begin your journey towards the OSCP certification you will likely come to a point where you begin to wonder if you are ready to take/pass the exam. This article will serve as a guide in helping you determine just that. Let&amp;rsquo;s begin! TLDR&amp;rsquo;ers Start Here ⏩⏩   You&amp;rsquo;ve have most of the public network rooted:  If you have about 60% of the public network rooted I would say that is a good time to start thinking about taking the exam.</description>
     </item>
     
     <item>
       <title>Starting OSCP From Scratch</title>
-      <link>/posts/starting-oscp-from-scratch/</link>
+      <link>/H4cklife.github.io/posts/starting-oscp-from-scratch/</link>
       <pubDate>Fri, 21 Jun 2019 22:41:15 -0600</pubDate>
       
-      <guid>/posts/starting-oscp-from-scratch/</guid>
+      <guid>/H4cklife.github.io/posts/starting-oscp-from-scratch/</guid>
       <description>Read Time: 16 mins By: Clutchisback1
 I hate reading boring articles so I&amp;rsquo;m not going to waste any of your time by writing one. Besides, you&amp;rsquo;re probably an PWK student with lab time ticking away each second as you get closer to your exam date; The very exam date that will determine whether or not you&amp;rsquo;ve become a man/woman yet in the information security industry. Right now, you&amp;rsquo;re still a little boy/girl with absolutely nothing going for yourself.</description>
     </item>
