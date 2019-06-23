@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2019</copyright>
-    <lastBuildDate>Fri, 21 Jun 2019 23:22:24 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 21 Jun 2019 23:50:16 -0600</lastBuildDate>
     
 	<atom:link href="/H4cklife.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>/H4cklife.github.io/about/about/</link>
+      <pubDate>Fri, 21 Jun 2019 23:50:16 -0600</pubDate>
+      
+      <guid>/H4cklife.github.io/about/about/</guid>
+      <description>Self Dox: Hi, my name is Nate Curry and I began my OSCP journey several years ago. My first legitimate exposure to hacking 💻, outside of using Metasploit to send a MS08_netapi payload at a host running SMB on port 445, was through someone I met on reddit. I was soon shown the ropes and introduced to the &amp;ldquo;Mount Kilimanjaro&amp;rdquo;of hacking: The OSCP.
+Having started hacking with virtually no Linux exposure, caused me a lot of &amp;ldquo;pain&amp;rdquo; and &amp;ldquo;sufferance&amp;rdquo;and it took a long time for me to learn enough to defeat the OSCP exam!</description>
+    </item>
     
     <item>
       <title>OSCP   How to Know When You&#39;re Ready to Take the Exam</title>
