@@ -1,4 +1,242 @@
-<p><h2>Intro</h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>LazySysAdmin :: H4cklife!! — A simple theme for Hugo</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Intro I chose to do this write-up on LazySysAdmin because it is a good box for potential OSCP students to start out on and something that every OSCP pentester and every current OSCP (PWK) student that is ready to take the exam should be able to do without using a walk-through. This box should take 6 hours or less if you do not experience any hang ups or interruptions.
+Download LazySysAdmin Here!
+NMAP Enumeration My first initial NMAP scan I did a service scan on all 65535 ports. I usually port scan in two steps; First finding all ports that are open and then running a service scan against only the open ports in order to save time during the reconnaissance phase.
+[caption id=&amp;ldquo;attachment_124&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;449&amp;rdquo;]Nmap Service Scan against all ports[/caption]
+[caption id=&amp;ldquo;attachment_125&amp;rdquo; align=&amp;ldquo;alignnone&amp;rdquo; width=&amp;ldquo;953&amp;rdquo;]Nmap Scan Results[/caption] Web Enumeration To start my web enumeration I began with a basic Nikto scan of the target machine. In doing so reveals several notable webpages to investigate further.
+[caption id=&amp;ldquo;attachment_128&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;313&amp;rdquo;]Basic Nikto Web Scan[/caption]
+[caption id=&amp;ldquo;attachment_129&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;408&amp;rdquo;]Scan Detected 2 Notable Webpages[/caption] We will note these pages for further enumeration.
+WPSCAN Having discovered that a possible WordPress site was running on the target machine, wpscan was used immediately after the web-scan completed. The user Admin was discovered.
+[caption id=&amp;ldquo;attachment_133&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;717&amp;rdquo;]Command used to enumerate wordpress users[/caption]
+[caption id=&amp;ldquo;attachment_134&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;397&amp;rdquo;]User enumerated using the &amp;ldquo;&amp;ndash;enumerate u&amp;rdquo; flag[/caption] SMB Enumeration To begin SMB enumeration, enum4linux was used for the initial scan. The scan results revealed several shares that could be connected to using the smbclient. Using information that was gathered from the initial SMB enumeration via enum4linx along with the username discovered during the wpscan, allowed for a precise SMB connection using the smbclient, to be made.
+[caption id=&amp;ldquo;attachment_131&amp;rdquo; align=&amp;ldquo;aligncenter&amp;rdquo; width=&amp;ldquo;623&amp;rdquo;]Enum4linux Share Details[/caption]
+[caption id=&amp;ldquo;attachment_132&amp;rdquo; align=&amp;ldquo;alignnone&amp;rdquo; width=&amp;ldquo;820&amp;rdquo;]Connecting to the interactive share via the smbclient[/caption]
+Having connected to the SMB share named share$, allowed for the wp-config file and several other files containing passwords to be retrieved.
+The /wordpress/wp-config file revealed to following username and password combination: Admin  TogieMYSQL12345^^
+The deets.txt file revealed to following password: 12345
+"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/H4cklife.github.io/posts/lazysysadmin/" />
+
+
+<link rel="stylesheet" href="/H4cklife.github.io/assets/style.css">
+
+
+<link rel="stylesheet" href="/H4cklife.github.io/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/H4cklife.github.io/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/H4cklife.github.io/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="LazySysAdmin"/>
+<meta name="twitter:description" content="Intro
+I chose to do this write-up on LazySysAdmin because it is a good box for potential OSCP students to start out on and something that every OSCP pentester and every current OSCP (PWK) student that is ready to take the exam should be able to do without using a walk-through. This box should take 6 hours or less if you do not experience any hang ups or interruptions.
+Download LazySysAdmin Here!
+
+NMAP Enumeration
+My first initial NMAP scan I did a service scan on all 65535 ports. I usually port scan in two steps; First finding all ports that are open and then running a service scan against only the open ports in order to save time during the reconnaissance phase.
+
+[caption id=&ldquo;attachment_124&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;449&rdquo;] Nmap Service Scan against all ports[/caption]
+
+[caption id=&ldquo;attachment_125&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;953&rdquo;] Nmap Scan Results[/caption]
+Web Enumeration
+To start my web enumeration I began with a basic Nikto scan of the target machine. In doing so reveals several notable webpages to investigate further.
+
+[caption id=&ldquo;attachment_128&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;313&rdquo;] Basic Nikto Web Scan[/caption]
+
+[caption id=&ldquo;attachment_129&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;408&rdquo;] Scan Detected 2 Notable Webpages[/caption]
+We will note these pages for further enumeration.
+
+WPSCAN
+Having discovered that a possible WordPress site was running on the target machine, wpscan was used immediately after the web-scan completed. The user Admin was discovered.
+
+[caption id=&ldquo;attachment_133&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;717&rdquo;] Command used to enumerate wordpress users[/caption]
+
+[caption id=&ldquo;attachment_134&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;397&rdquo;] User enumerated using the &ldquo;&ndash;enumerate u&rdquo; flag[/caption]
+SMB Enumeration
+To begin SMB enumeration, enum4linux was used for the initial scan. The scan results revealed several shares that could be connected to using the smbclient. Using information that was gathered from the initial SMB enumeration via enum4linx along with the username discovered during the wpscan, allowed for a precise SMB connection using the smbclient, to be made.
+
+[caption id=&ldquo;attachment_131&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;623&rdquo;] Enum4linux Share Details[/caption]
+
+[caption id=&ldquo;attachment_132&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;820&rdquo;] Connecting to the interactive share via the smbclient[/caption]
+
+Having connected to the SMB share named share$, allowed for the wp-config file and several other files containing passwords to be retrieved.
+
+The /wordpress/wp-config file revealed to following username and password combination:
+Admin
+ TogieMYSQL12345^^
+The deets.txt file revealed to following password:
+12345"/>
+
+
+
+<meta property="og:title" content="LazySysAdmin" />
+<meta property="og:description" content="Intro
+I chose to do this write-up on LazySysAdmin because it is a good box for potential OSCP students to start out on and something that every OSCP pentester and every current OSCP (PWK) student that is ready to take the exam should be able to do without using a walk-through. This box should take 6 hours or less if you do not experience any hang ups or interruptions.
+Download LazySysAdmin Here!
+
+NMAP Enumeration
+My first initial NMAP scan I did a service scan on all 65535 ports. I usually port scan in two steps; First finding all ports that are open and then running a service scan against only the open ports in order to save time during the reconnaissance phase.
+
+[caption id=&ldquo;attachment_124&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;449&rdquo;] Nmap Service Scan against all ports[/caption]
+
+[caption id=&ldquo;attachment_125&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;953&rdquo;] Nmap Scan Results[/caption]
+Web Enumeration
+To start my web enumeration I began with a basic Nikto scan of the target machine. In doing so reveals several notable webpages to investigate further.
+
+[caption id=&ldquo;attachment_128&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;313&rdquo;] Basic Nikto Web Scan[/caption]
+
+[caption id=&ldquo;attachment_129&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;408&rdquo;] Scan Detected 2 Notable Webpages[/caption]
+We will note these pages for further enumeration.
+
+WPSCAN
+Having discovered that a possible WordPress site was running on the target machine, wpscan was used immediately after the web-scan completed. The user Admin was discovered.
+
+[caption id=&ldquo;attachment_133&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;717&rdquo;] Command used to enumerate wordpress users[/caption]
+
+[caption id=&ldquo;attachment_134&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;397&rdquo;] User enumerated using the &ldquo;&ndash;enumerate u&rdquo; flag[/caption]
+SMB Enumeration
+To begin SMB enumeration, enum4linux was used for the initial scan. The scan results revealed several shares that could be connected to using the smbclient. Using information that was gathered from the initial SMB enumeration via enum4linx along with the username discovered during the wpscan, allowed for a precise SMB connection using the smbclient, to be made.
+
+[caption id=&ldquo;attachment_131&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;623&rdquo;] Enum4linux Share Details[/caption]
+
+[caption id=&ldquo;attachment_132&rdquo; align=&ldquo;alignnone&rdquo; width=&ldquo;820&rdquo;] Connecting to the interactive share via the smbclient[/caption]
+
+Having connected to the SMB share named share$, allowed for the wp-config file and several other files containing passwords to be retrieved.
+
+The /wordpress/wp-config file revealed to following username and password combination:
+Admin
+ TogieMYSQL12345^^
+The deets.txt file revealed to following password:
+12345" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/H4cklife.github.io/posts/lazysysadmin/" /><meta property="article:published_time" content="2019-06-23T22:34:54-06:00"/>
+<meta property="article:modified_time" content="2019-06-23T22:34:54-06:00"/><meta property="og:site_name" content="H4cklife!!" />
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/H4cklife.github.io" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">H4cklife!!</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/H4cklife.github.io/about/about">About</a></li>
+        
+      
+        
+          <li><a href="/H4cklife.github.io/beefhook/beefhook">Beefhook</a></li>
+        
+      
+      
+        <ul class="menu__sub-inner">
+          <li class="menu__sub-inner-more-trigger">
+            Show more
+            <span class="menu__sub-inner-more-trigger-icon"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+          </li>
+
+          <ul class="menu__sub-inner-more hidden">
+            
+              
+                <li><a href="/H4cklife.github.io/showcase">Showcase</a></li>
+              
+            
+          </ul>
+        </ul>
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/H4cklife.github.io/about/about">About</a></li>
+      
+    
+      
+        <li><a href="/H4cklife.github.io/beefhook/beefhook">Beefhook</a></li>
+      
+    
+      
+        <li><a href="/H4cklife.github.io/showcase">Showcase</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  <div class="post">
+    <h2 class="post-title"><a href="/H4cklife.github.io/posts/lazysysadmin/">LazySysAdmin</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2019-06-23
+        </span>
+      
+      
+      
+    </div>
+
+    
+
+    
+
+    <div class="post-content">
+      <p><h2>Intro</h2>
 <p style="text-align:justify;">I chose to do this write-up on LazySysAdmin because it is <strong>a good box for potential OSCP students</strong> to start out on and something that every OSCP pentester and every current OSCP (PWK) student that is <strong><span style="text-decoration:underline;">ready to take the exam</span></strong> should be able to do without using a walk-through. This box should take 6 hours or less if you do not experience any hang ups or interruptions.</p>
 <p style="text-align:center;"><code><a href="https://www.vulnhub.com/entry/lazysysadmin-1,205/#" target="_blank" rel="noopener">Download LazySysAdmin Here!</a></code></p></p>
 
@@ -145,3 +383,49 @@ bhO!5Je65B6Z0bhZhQ3W64wL65wonnQ$@yw%Zhy0U19pu
 <h2>Additional learning for you</h2>
 <p style="text-align:justify;">Now that the box is rooted continue playing and familiarizing yourself with some of the services running on this machine. There is a phpmyadmin page along with a SQL database running locally on this machine that was not included in this write-up. If you have some time to learn and nothing on your agenda try to find out were the password files are for these services running on the target machine. Also, see if you can discover a new attack vector that hasn&rsquo;t been discovered yet then write your own write-up!</p>
 &nbsp;</p>
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+          
+            <span class="button next">
+              <a href="/H4cklife.github.io/posts/a-pre-exam-for-future-oscp-students/">
+                <span class="button__text">A PRE EXAM for FUTURE OSCP STUDENTS!</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">Copyright 2019</div>
+    
+  </div>
+</footer>
+
+<script src="/H4cklife.github.io/assets/main.js"></script>
+<script src="/H4cklife.github.io/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+  </body>
+</html>

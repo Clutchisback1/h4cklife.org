@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/H4cklife.github.io/posts/lazysysadmin/</loc>
+    <lastmod>2019-06-23T22:34:54-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/H4cklife.github.io/posts/a-pre-exam-for-future-oscp-students/</loc>
+    <lastmod>2019-06-23T22:34:38-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/H4cklife.github.io/about/about/</loc>
     <lastmod>2019-06-21T23:50:16-06:00</lastmod>
   </url>
@@ -19,14 +29,6 @@
   
   <url>
     <loc>/H4cklife.github.io/beefhook/beefhook/</loc>
-  </url>
-  
-  <url>
-    <loc>/H4cklife.github.io/posts/a-pre-exam-for-future-oscp-students/</loc>
-  </url>
-  
-  <url>
-    <loc>/H4cklife.github.io/posts/lazysysadmin/</loc>
   </url>
   
   <url>
@@ -47,13 +49,13 @@
   
   <url>
     <loc>/H4cklife.github.io/</loc>
-    <lastmod>2019-06-21T23:50:16-06:00</lastmod>
+    <lastmod>2019-06-23T22:34:54-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/H4cklife.github.io/posts/</loc>
-    <lastmod>2019-06-21T23:22:24-06:00</lastmod>
+    <lastmod>2019-06-23T22:34:54-06:00</lastmod>
     <priority>0</priority>
   </url>
   

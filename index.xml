@@ -7,63 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2019</copyright>
-    <lastBuildDate>Fri, 21 Jun 2019 23:50:16 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 23 Jun 2019 22:34:54 -0600</lastBuildDate>
     
 	<atom:link href="/H4cklife.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>About</title>
-      <link>/H4cklife.github.io/about/about/</link>
-      <pubDate>Fri, 21 Jun 2019 23:50:16 -0600</pubDate>
-      
-      <guid>/H4cklife.github.io/about/about/</guid>
-      <description>Self Dox: Hi, my name is Nate Curry and I began my OSCP journey several years ago. My first legitimate exposure to hacking 💻, outside of using Metasploit to send a MS08_netapi payload at a host running SMB on port 445, was through someone I met on reddit. I was soon shown the ropes and introduced to the &amp;ldquo;Mount Kilimanjaro&amp;rdquo; of hacking: The OSCP.
-Having started hacking with virtually no Linux exposure, caused me a lot of &amp;ldquo;pain&amp;rdquo; and &amp;ldquo;sufferance&amp;rdquo; and it took a long time for me to learn enough to defeat the OSCP exam!</description>
-    </item>
-    
-    <item>
-      <title>OSCP   How to Know When You&#39;re Ready to Take the Exam</title>
-      <link>/H4cklife.github.io/posts/oscp-how-to-know-when-youre-ready-to-take-the-exam/</link>
-      <pubDate>Fri, 21 Jun 2019 23:22:24 -0600</pubDate>
-      
-      <guid>/H4cklife.github.io/posts/oscp-how-to-know-when-youre-ready-to-take-the-exam/</guid>
-      <description>Read Time: 15 minutes 🥚 
-If you&amp;rsquo;ve taken the red pill and decided to begin your journey towards the OSCP certification you will likely come to a point where you begin to wonder if you are ready to take/pass the exam. This article will serve as a guide in helping you determine just that. Let&amp;rsquo;s begin! TLDR&amp;rsquo;ers Start Here ⏩⏩   You&amp;rsquo;ve have most of the public network rooted:  If you have about 60% of the public network rooted I would say that is a good time to start thinking about taking the exam.</description>
-    </item>
-    
-    <item>
-      <title>Starting OSCP From Scratch</title>
-      <link>/H4cklife.github.io/posts/starting-oscp-from-scratch/</link>
-      <pubDate>Fri, 21 Jun 2019 22:41:15 -0600</pubDate>
-      
-      <guid>/H4cklife.github.io/posts/starting-oscp-from-scratch/</guid>
-      <description>Read Time: 16 mins By: Clutchisback1
-I hate reading boring articles so I&amp;rsquo;m not going to waste any of your time by writing one. Besides, you&amp;rsquo;re probably an PWK student with lab time ticking away each second as you get closer to your exam date; The very exam date that will determine whether or not you&amp;rsquo;ve become a man/woman yet in the information security industry. Right now, you&amp;rsquo;re still a little boy/girl with absolutely nothing going for yourself.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/H4cklife.github.io/beefhook/beefhook/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/H4cklife.github.io/beefhook/beefhook/</guid>
-      <description> ______ __ ____ _____ | _ \ \ / / __ / ___| ____| | |_) \ \ /\ / / &#39;_ \| | _| _| | __/ \ V V /| | | | |_| | |___ |_| \_/\_/ |_| |_|\____|_____| _________ &amp;lt; L337Hax &amp;gt; --------- \ ____ \ / \ | ^__^ | | (oo) |______ | (__) | )\/\ \____/|----w | || ||  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/H4cklife.github.io/posts/a-pre-exam-for-future-oscp-students/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/H4cklife.github.io/posts/a-pre-exam-for-future-oscp-students/</guid>
-      <description>Overview Whether you are in preparation for your lab time to begin or you just want to get a feel for what exam day will be like, I&amp;rsquo;ve put together a few practice exams for future OSCP students to take. These boxes should be comprehensive enough to cover many of the basics that you will face in the labs. All of these boxes will have write-ups available for you to review AFTER your exam time has ended.</description>
-    </item>
-    
-    <item>
-      <title></title>
+      <title>LazySysAdmin</title>
       <link>/H4cklife.github.io/posts/lazysysadmin/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 23 Jun 2019 22:34:54 -0600</pubDate>
       
       <guid>/H4cklife.github.io/posts/lazysysadmin/</guid>
       <description>&lt;p&gt;&lt;h2&gt;Intro&lt;/h2&gt;
@@ -104,6 +56,54 @@ Having discovered that a possible WordPress site was running on the target machi
 &lt;strong&gt; TogieMYSQL12345^^&lt;/strong&gt;&lt;/p&gt;
 The d&lt;span style=&#34;text-decoration:underline;&#34;&gt;eets.txt&lt;/span&gt; file revealed to following password:
 &lt;p style=&#34;text-align:center;&#34;&gt;&lt;strong&gt;12345&lt;/strong&gt;&lt;/p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>A PRE EXAM for FUTURE OSCP STUDENTS!</title>
+      <link>/H4cklife.github.io/posts/a-pre-exam-for-future-oscp-students/</link>
+      <pubDate>Sun, 23 Jun 2019 22:34:38 -0600</pubDate>
+      
+      <guid>/H4cklife.github.io/posts/a-pre-exam-for-future-oscp-students/</guid>
+      <description>Overview Whether you are in preparation for your lab time to begin or you just want to get a feel for what exam day will be like, I&amp;rsquo;ve put together a few practice exams for future OSCP students to take. These boxes should be comprehensive enough to cover many of the basics that you will face in the labs. All of these boxes will have write-ups available for you to review AFTER your exam time has ended.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/H4cklife.github.io/about/about/</link>
+      <pubDate>Fri, 21 Jun 2019 23:50:16 -0600</pubDate>
+      
+      <guid>/H4cklife.github.io/about/about/</guid>
+      <description>Self Dox: Hi, my name is Nate Curry and I began my OSCP journey several years ago. My first legitimate exposure to hacking 💻, outside of using Metasploit to send a MS08_netapi payload at a host running SMB on port 445, was through someone I met on reddit. I was soon shown the ropes and introduced to the &amp;ldquo;Mount Kilimanjaro&amp;rdquo; of hacking: The OSCP.
+Having started hacking with virtually no Linux exposure, caused me a lot of &amp;ldquo;pain&amp;rdquo; and &amp;ldquo;sufferance&amp;rdquo; and it took a long time for me to learn enough to defeat the OSCP exam!</description>
+    </item>
+    
+    <item>
+      <title>OSCP   How to Know When You&#39;re Ready to Take the Exam</title>
+      <link>/H4cklife.github.io/posts/oscp-how-to-know-when-youre-ready-to-take-the-exam/</link>
+      <pubDate>Fri, 21 Jun 2019 23:22:24 -0600</pubDate>
+      
+      <guid>/H4cklife.github.io/posts/oscp-how-to-know-when-youre-ready-to-take-the-exam/</guid>
+      <description>Read Time: 15 minutes 🥚 
+If you&amp;rsquo;ve taken the red pill and decided to begin your journey towards the OSCP certification you will likely come to a point where you begin to wonder if you are ready to take/pass the exam. This article will serve as a guide in helping you determine just that. Let&amp;rsquo;s begin! TLDR&amp;rsquo;ers Start Here ⏩⏩   You&amp;rsquo;ve have most of the public network rooted:  If you have about 60% of the public network rooted I would say that is a good time to start thinking about taking the exam.</description>
+    </item>
+    
+    <item>
+      <title>Starting OSCP From Scratch</title>
+      <link>/H4cklife.github.io/posts/starting-oscp-from-scratch/</link>
+      <pubDate>Fri, 21 Jun 2019 22:41:15 -0600</pubDate>
+      
+      <guid>/H4cklife.github.io/posts/starting-oscp-from-scratch/</guid>
+      <description>Read Time: 16 mins By: Clutchisback1
+I hate reading boring articles so I&amp;rsquo;m not going to waste any of your time by writing one. Besides, you&amp;rsquo;re probably an PWK student with lab time ticking away each second as you get closer to your exam date; The very exam date that will determine whether or not you&amp;rsquo;ve become a man/woman yet in the information security industry. Right now, you&amp;rsquo;re still a little boy/girl with absolutely nothing going for yourself.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/H4cklife.github.io/beefhook/beefhook/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/H4cklife.github.io/beefhook/beefhook/</guid>
+      <description> ______ __ ____ _____ | _ \ \ / / __ / ___| ____| | |_) \ \ /\ / / &#39;_ \| | _| _| | __/ \ V V /| | | | |_| | |___ |_| \_/\_/ |_| |_|\____|_____| _________ &amp;lt; L337Hax &amp;gt; --------- \ ____ \ / \ | ^__^ | | (oo) |______ | (__) | )\/\ \____/|----w | || ||  </description>
     </item>
     
   </channel>
