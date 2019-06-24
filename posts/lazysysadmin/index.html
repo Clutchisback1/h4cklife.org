@@ -9,15 +9,15 @@
 <meta name="description" content="Intro I chose to do this write-up on LazySysAdmin because it is a good box for potential OSCP students to start out on and something that every OSCP pentester and every current OSCP (PWK) student that is ready to take the exam should be able to do without using a walk-through. This box should take 6 hours or less if you do not experience any hang ups or interruptions.
 Download LazySysAdmin Here!
 NMAP Enumeration My first initial NMAP scan I did a service scan on all 65535 ports. I usually port scan in two steps; First finding all ports that are open and then running a service scan against only the open ports in order to save time during the reconnaissance phase.
- Nmap Service Scan against all ports[/caption]
- Nmap Scan Results[/caption] Web Enumeration To start my web enumeration I began with a basic Nikto scan of the target machine. In doing so reveals several notable webpages to investigate further.
- Basic Nikto Web Scan[/caption]
- Scan Detected 2 Notable Webpages[/caption] We will note these pages for further enumeration.
+ Nmap Service Scan against all ports
+ Nmap Scan Results Web Enumeration To start my web enumeration I began with a basic Nikto scan of the target machine. In doing so reveals several notable webpages to investigate further.
+ Basic Nikto Web Scan
+ Scan Detected 2 Notable Webpages We will note these pages for further enumeration.
 WPSCAN Having discovered that a possible WordPress site was running on the target machine, wpscan was used immediately after the web-scan completed. The user Admin was discovered.
- Command used to enumerate wordpress users[/caption]
- User enumerated using the &amp;ldquo;&amp;ndash;enumerate u&amp;rdquo; flag[/caption] SMB Enumeration To begin SMB enumeration, enum4linux was used for the initial scan. The scan results revealed several shares that could be connected to using the smbclient. Using information that was gathered from the initial SMB enumeration via enum4linx along with the username discovered during the wpscan, allowed for a precise SMB connection using the smbclient, to be made.
- Enum4linux Share Details[/caption]
- Connecting to the interactive share via the smbclient[/caption]
+ Command used to enumerate wordpress users
+ User enumerated using the &amp;ldquo;&amp;ndash;enumerate u&amp;rdquo; flag SMB Enumeration To begin SMB enumeration, enum4linux was used for the initial scan. The scan results revealed several shares that could be connected to using the smbclient. Using information that was gathered from the initial SMB enumeration via enum4linx along with the username discovered during the wpscan, allowed for a precise SMB connection using the smbclient, to be made.
+ Enum4linux Share Details
+ Connecting to the interactive share via the smbclient
 Having connected to the SMB share named share$, allowed for the wp-config file and several other files containing passwords to be retrieved.
 The /wordpress/wp-config file revealed to following username and password combination: Admin  TogieMYSQL12345^^
 The deets.txt file revealed to following password: 12345
@@ -46,29 +46,29 @@ Download LazySysAdmin Here!
 NMAP Enumeration
 My first initial NMAP scan I did a service scan on all 65535 ports. I usually port scan in two steps; First finding all ports that are open and then running a service scan against only the open ports in order to save time during the reconnaissance phase.
 
- Nmap Service Scan against all ports[/caption]
+ Nmap Service Scan against all ports
 
- Nmap Scan Results[/caption]
+ Nmap Scan Results
 Web Enumeration
 To start my web enumeration I began with a basic Nikto scan of the target machine. In doing so reveals several notable webpages to investigate further.
 
- Basic Nikto Web Scan[/caption]
+ Basic Nikto Web Scan
 
- Scan Detected 2 Notable Webpages[/caption]
+ Scan Detected 2 Notable Webpages
 We will note these pages for further enumeration.
 
 WPSCAN
 Having discovered that a possible WordPress site was running on the target machine, wpscan was used immediately after the web-scan completed. The user Admin was discovered.
 
- Command used to enumerate wordpress users[/caption]
+ Command used to enumerate wordpress users
 
- User enumerated using the &ldquo;&ndash;enumerate u&rdquo; flag[/caption]
+ User enumerated using the &ldquo;&ndash;enumerate u&rdquo; flag
 SMB Enumeration
 To begin SMB enumeration, enum4linux was used for the initial scan. The scan results revealed several shares that could be connected to using the smbclient. Using information that was gathered from the initial SMB enumeration via enum4linx along with the username discovered during the wpscan, allowed for a precise SMB connection using the smbclient, to be made.
 
- Enum4linux Share Details[/caption]
+ Enum4linux Share Details
 
- Connecting to the interactive share via the smbclient[/caption]
+ Connecting to the interactive share via the smbclient
 
 Having connected to the SMB share named share$, allowed for the wp-config file and several other files containing passwords to be retrieved.
 
@@ -88,29 +88,29 @@ Download LazySysAdmin Here!
 NMAP Enumeration
 My first initial NMAP scan I did a service scan on all 65535 ports. I usually port scan in two steps; First finding all ports that are open and then running a service scan against only the open ports in order to save time during the reconnaissance phase.
 
- Nmap Service Scan against all ports[/caption]
+ Nmap Service Scan against all ports
 
- Nmap Scan Results[/caption]
+ Nmap Scan Results
 Web Enumeration
 To start my web enumeration I began with a basic Nikto scan of the target machine. In doing so reveals several notable webpages to investigate further.
 
- Basic Nikto Web Scan[/caption]
+ Basic Nikto Web Scan
 
- Scan Detected 2 Notable Webpages[/caption]
+ Scan Detected 2 Notable Webpages
 We will note these pages for further enumeration.
 
 WPSCAN
 Having discovered that a possible WordPress site was running on the target machine, wpscan was used immediately after the web-scan completed. The user Admin was discovered.
 
- Command used to enumerate wordpress users[/caption]
+ Command used to enumerate wordpress users
 
- User enumerated using the &ldquo;&ndash;enumerate u&rdquo; flag[/caption]
+ User enumerated using the &ldquo;&ndash;enumerate u&rdquo; flag
 SMB Enumeration
 To begin SMB enumeration, enum4linux was used for the initial scan. The scan results revealed several shares that could be connected to using the smbclient. Using information that was gathered from the initial SMB enumeration via enum4linx along with the username discovered during the wpscan, allowed for a precise SMB connection using the smbclient, to be made.
 
- Enum4linux Share Details[/caption]
+ Enum4linux Share Details
 
- Connecting to the interactive share via the smbclient[/caption]
+ Connecting to the interactive share via the smbclient
 
 Having connected to the SMB share named share$, allowed for the wp-config file and several other files containing passwords to be retrieved.
 
@@ -243,29 +243,29 @@ The deets.txt file revealed to following password:
 <p><h3>NMAP Enumeration</h3>
 My first initial NMAP scan I did a service scan on all 65535 ports. I usually port scan in two steps; First finding all ports that are open and then running a service scan against only the open ports in order to save time during the reconnaissance phase.</p>
 
-<p><center><img class="alignnone size-full wp-image-124" src="https://h4cklife.files.wordpress.com/2018/05/scan_command.jpg" alt="scan_command" width="449" height="25" /></center> <em>Nmap Service Scan against all ports</em>[/caption]</p>
+<p><center><img class="alignnone size-full wp-image-124" src="https://h4cklife.files.wordpress.com/2018/05/scan_command.jpg" alt="scan_command" width="449" height="25" /></center> <em>Nmap Service Scan against all ports</em></p>
 
-<p><center><img class=" size-full wp-image-125 alignnone" src="https://h4cklife.files.wordpress.com/2018/05/scan_results.jpg" alt="scan_results" width="953" height="211" /></center> <em>Nmap Scan Results</em>[/caption]
+<p><center><img class=" size-full wp-image-125 alignnone" src="https://h4cklife.files.wordpress.com/2018/05/scan_results.jpg" alt="scan_results" width="953" height="211" /></center> <em>Nmap Scan Results</em>
 <h3>Web Enumeration</h3>
 To start my web enumeration I began with a basic <strong>Nikto</strong> scan of the target machine. In doing so reveals several notable webpages to investigate further.</p>
 
-<p><center><img class="alignnone size-full wp-image-128" src="https://h4cklife.files.wordpress.com/2018/05/nikto_command.jpg" alt="nikto_command" width="313" height="21" /></center> Basic Nikto Web Scan[/caption]</p>
+<p><center><img class="alignnone size-full wp-image-128" src="https://h4cklife.files.wordpress.com/2018/05/nikto_command.jpg" alt="nikto_command" width="313" height="21" /></center> Basic Nikto Web Scan</p>
 
-<p><center><img class="alignnone size-full wp-image-129" src="https://h4cklife.files.wordpress.com/2018/05/nikto_results.jpg" alt="nikto_results" width="408" height="163" /></center> <em>Scan Detected 2 Notable Webpages</em>[/caption]
+<p><center><img class="alignnone size-full wp-image-129" src="https://h4cklife.files.wordpress.com/2018/05/nikto_results.jpg" alt="nikto_results" width="408" height="163" /></center> <em>Scan Detected 2 Notable Webpages</em>
 <p style="text-align:center;"><em>We will note these pages for further enumeration.</em></p></p>
 
 <p><h3>WPSCAN</h3>
 Having discovered that a possible WordPress site was running on the target machine, <strong>wpscan</strong> was used immediately after the web-scan completed. The user <strong><span style="text-decoration:underline;">Admin</span></strong> was discovered.</p>
 
-<p><center><img class=" size-full wp-image-133 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/wpscan_command.jpg" alt="wpscan_command" width="717" height="27" /></center> <em>Command used to enumerate wordpress users</em>[/caption]</p>
+<p><center><img class=" size-full wp-image-133 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/wpscan_command.jpg" alt="wpscan_command" width="717" height="27" /></center> <em>Command used to enumerate wordpress users</em></p>
 
-<p><center><img class=" size-full wp-image-134 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/wpscan_results.jpg" alt="wpscan_results" width="397" height="167" /></center> <em>User enumerated using the &ldquo;&ndash;enumerate u&rdquo; flag</em>[/caption]
+<p><center><img class=" size-full wp-image-134 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/wpscan_results.jpg" alt="wpscan_results" width="397" height="167" /></center> <em>User enumerated using the &ldquo;&ndash;enumerate u&rdquo; flag</em>
 <h3>SMB Enumeration</h3>
 <p style="text-align:justify;">To begin SMB enumeration, <strong>enum4linux </strong>was used for the initial scan. The scan results revealed several shares that could be connected to using the <strong>smbclient. </strong>Using information that was gathered from the initial SMB enumeration via enum4linx along with the username discovered during the wpscan, allowed for a precise SMB connection using the smbclient, to be made.</p></p>
 
-<p><center><img class=" size-full wp-image-131 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/enum4linux_scan.jpg" alt="enum4linux_scan" width="623" height="456" /></center> <em>Enum4linux Share Details</em>[/caption]</p>
+<p><center><img class=" size-full wp-image-131 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/enum4linux_scan.jpg" alt="enum4linux_scan" width="623" height="456" /></center> <em>Enum4linux Share Details</em></p>
 
-<p><center><img class=" size-full wp-image-132 alignnone" src="https://h4cklife.files.wordpress.com/2018/05/smbclient_command.jpg" alt="smbclient_command" width="820" height="471" /></center> <em>Connecting to the interactive share via the smbclient</em>[/caption]</p>
+<p><center><img class=" size-full wp-image-132 alignnone" src="https://h4cklife.files.wordpress.com/2018/05/smbclient_command.jpg" alt="smbclient_command" width="820" height="471" /></center> <em>Connecting to the interactive share via the smbclient</em></p>
 
 <p>Having connected to the SMB share named share$, allowed for the <strong>wp-config</strong> file and several other files containing passwords to be retrieved.</p>
 
@@ -281,7 +281,7 @@ Armed with the password taken directly from the wp-config file, a successful log
 <p><center><img class="alignnone size-full wp-image-137" src="https://h4cklife.files.wordpress.com/2018/05/wp-admin.jpg" alt="Wp-admin" width="1898" height="622" /></center>
 <p style="text-align:justify;">This new access allows for both malicious plugins to be uploaded as well as existing plugins to be modified. In this case I chose to modify an existing plugin due to the fact that WordPress requires headers on added plugins. Modifying an existing plugin would save the step of copying another plugin&rsquo;s header to my payload.</p></p>
 
-<p><center><img class="alignnone size-full wp-image-136" src="https://h4cklife.files.wordpress.com/2018/05/wp-admin_plugins.jpg" alt="wp-admin_plugins" width="1103" height="528" /></center> <em>wp-admin page is now accessible using stolen credentials</em>[/caption]
+<p><center><img class="alignnone size-full wp-image-136" src="https://h4cklife.files.wordpress.com/2018/05/wp-admin_plugins.jpg" alt="wp-admin_plugins" width="1103" height="528" /></center> <em>wp-admin page is now accessible using stolen credentials</em>
 <p style="text-align:justify;">Below is a snippet of the modified &ldquo;Akismet Anti-Spam&rdquo;plugin. All of the plugin contents have been removed except for the header comments and the PHP tags themselves. Towards the bottom of the snippet you will see the beginning my <a href="http://pentestmonkey.net/tools/web-shells/php-reverse-shell" target="_blank" rel="noopener">php-reverse-shell</a> code that replaced the original PHP plugin content:</p></p>
 
 <p><pre><code>/**
@@ -329,7 +329,7 @@ $debug = 0;
 </code></pre>
 Once the shell code was added the plugin was reactivated and a reverse shell connection was received.</p>
 
-<p><center><img class="alignnone size-full wp-image-138" src="https://h4cklife.files.wordpress.com/2018/05/reverse_shell_connect.jpg" alt="reverse_shell_connect" width="920" height="327" /></center> Reverse  PHP Shell connection and bash tty shell spawned[/caption]</p>
+<p><center><img class="alignnone size-full wp-image-138" src="https://h4cklife.files.wordpress.com/2018/05/reverse_shell_connect.jpg" alt="reverse_shell_connect" width="920" height="327" /></center> Reverse  PHP Shell connection and bash tty shell spawned</p>
 
 <p>Now that a local connection has been established, the /etc/passwd file was read in order to see the local users on the target machine for possible attack trajectories to root.</p>
 
@@ -341,10 +341,10 @@ Once the shell code was added the plugin was reactivated and a reverse shell con
 
 <p>Using the password enumerated from the deet.txt file during the SMB enumeration happened to be the login credentials for the user Togie!</p>
 
-<p><center><img class=" size-full wp-image-141 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/sudo_l.jpg" alt="sudo_l" width="828" height="235" /></center> sudo -l reveals user can run any command as root[/caption]
+<p><center><img class=" size-full wp-image-141 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/sudo_l.jpg" alt="sudo_l" width="828" height="235" /></center> sudo -l reveals user can run any command as root
 <p style="text-align:justify;">Immediately after logging in the sudo privileges for user Togie were checked revealing that this user has the ability to run <strong>ANY program</strong> on the machine as root! Upon seeing this we run &ldquo;sudo su,&rdquo; enter the password for Togie, and receive a command line now possessing root privileges!!</p></p>
 
-<p>[caption id=&ldquo;attachment_142&rdquo; align=&ldquo;aligncenter&rdquo; width=&ldquo;359&rdquo;]<center><img class="  wp-image-142 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/sudo_su.jpg" alt="sudo_su" width="359" height="82" /></center> user runs sudo su command and receives root privileges![/caption]</p>
+<p><center><img class="  wp-image-142 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/sudo_su.jpg" alt="sudo_su" width="359" height="82" /></center> user runs sudo su command and receives root privileges!</p>
 
 <p>Below, the <strong>proof.txt</strong> was read from the /root/ directory validating that this machine has been exploited successfully:
 <pre><span style="color:#ff0000;"><strong>root@LazySysAdmin</strong></span>:/# cd /root
