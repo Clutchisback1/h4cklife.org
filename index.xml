@@ -25,15 +25,15 @@
 &lt;p&gt;&lt;h3&gt;NMAP Enumeration&lt;/h3&gt;
 My first initial NMAP scan I did a service scan on all 65535 ports. I usually port scan in two steps; First finding all ports that are open and then running a service scan against only the open ports in order to save time during the reconnaissance phase.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img class=&#34;alignnone size-full wp-image-124&#34; src=&#34;https://h4cklife.files.wordpress.com/2018/05/scan_command.jpg&#34; alt=&#34;scan_command&#34; width=&#34;449&#34; height=&#34;25&#34; /&gt;&lt;/center&gt; &lt;em&gt;Nmap Service Scan against all ports&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img class=&#34;alignnone size-full wp-image-124&#34; src=&#34;https://h4cklife.files.wordpress.com/2018/05/scan_command.jpg&#34; alt=&#34;scan_command&#34; width=&#34;449&#34; height=&#34;25&#34; /&gt;&lt;/center&gt; &lt;center&gt;&lt;em&gt;Nmap Service Scan against all ports&lt;/em&gt;&lt;/center&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img class=&#34; size-full wp-image-125 alignnone&#34; src=&#34;https://h4cklife.files.wordpress.com/2018/05/scan_results.jpg&#34; alt=&#34;scan_results&#34; width=&#34;953&#34; height=&#34;211&#34; /&gt;&lt;/center&gt; &lt;em&gt;Nmap Scan Results&lt;/em&gt;
+&lt;p&gt;&lt;center&gt;&lt;img class=&#34; size-full wp-image-125 alignnone&#34; src=&#34;https://h4cklife.files.wordpress.com/2018/05/scan_results.jpg&#34; alt=&#34;scan_results&#34; width=&#34;953&#34; height=&#34;211&#34; /&gt;&lt;/center&gt; &lt;center&gt;&lt;em&gt;Nmap Scan Results&lt;/em&gt;&lt;/center&gt;
 &lt;h3&gt;Web Enumeration&lt;/h3&gt;
 To start my web enumeration I began with a basic &lt;strong&gt;Nikto&lt;/strong&gt; scan of the target machine. In doing so reveals several notable webpages to investigate further.&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img class=&#34;alignnone size-full wp-image-128&#34; src=&#34;https://h4cklife.files.wordpress.com/2018/05/nikto_command.jpg&#34; alt=&#34;nikto_command&#34; width=&#34;313&#34; height=&#34;21&#34; /&gt;&lt;/center&gt; Basic Nikto Web Scan&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;img class=&#34;alignnone size-full wp-image-128&#34; src=&#34;https://h4cklife.files.wordpress.com/2018/05/nikto_command.jpg&#34; alt=&#34;nikto_command&#34; width=&#34;313&#34; height=&#34;21&#34; /&gt;&lt;/center&gt; &lt;center&gt;&lt;em&gt;Basic Nikto Web Scan&lt;/em&gt;&lt;/center&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;center&gt;&lt;img class=&#34;alignnone size-full wp-image-129&#34; src=&#34;https://h4cklife.files.wordpress.com/2018/05/nikto_results.jpg&#34; alt=&#34;nikto_results&#34; width=&#34;408&#34; height=&#34;163&#34; /&gt;&lt;/center&gt; &lt;em&gt;Scan Detected 2 Notable Webpages&lt;/em&gt;
+&lt;p&gt;&lt;center&gt;&lt;img class=&#34;alignnone size-full wp-image-129&#34; src=&#34;https://h4cklife.files.wordpress.com/2018/05/nikto_results.jpg&#34; alt=&#34;nikto_results&#34; width=&#34;408&#34; height=&#34;163&#34; /&gt;&lt;/center&gt; &lt;center&gt;&lt;em&gt;Scan Detected 2 Notable Webpages&lt;/em&gt;&lt;/center&gt;
 &lt;p style=&#34;text-align:center;&#34;&gt;&lt;em&gt;We will note these pages for further enumeration.&lt;/em&gt;&lt;/p&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;h3&gt;WPSCAN&lt;/h3&gt;
