@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2019</copyright>
-    <lastBuildDate>Sun, 23 Jun 2019 22:34:54 -0600</lastBuildDate>
+    <lastBuildDate>Thu, 25 Jul 2019 10:15:07 -0600</lastBuildDate>
     
 	<atom:link href="/H4cklife.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Windows 7 Kiosk Escape</title>
+      <link>/H4cklife.github.io/posts/windows-7-kiosk-escape/</link>
+      <pubDate>Thu, 25 Jul 2019 10:15:07 -0600</pubDate>
+      
+      <guid>/H4cklife.github.io/posts/windows-7-kiosk-escape/</guid>
+      <description>Windows 7 Kiosk Escape Backstory One day I was on site with client and was tasked with assessing an application for them. This was troubling for two reasons: 1.) This was my first on site assessment and 2.) due to the nature of the content I was tasked to work with, my little visit there required full supervision, which meant that my primary point of contact (POC) watched over my shoulder as I worked on this application for about 4 or so hours.</description>
+    </item>
     
     <item>
       <title>LazySysAdmin</title>
