@@ -18,7 +18,7 @@
       <pubDate>Thu, 25 Jul 2019 10:15:07 -0600</pubDate>
       
       <guid>/H4cklife.github.io/posts/windows-7-kiosk-escape/</guid>
-      <description>Windows 7 Kiosk Escape Backstory One day I was on site with client and was tasked with assessing an application for them. This was troubling for two reasons: 1.) This was my first on site assessment and 2.) due to the nature of the content I was tasked to work with, my little visit there required full supervision, which meant that my primary point of contact (POC) watched over my shoulder as I worked on this application for about 4 or so hours.</description>
+      <description>Backstory One day I was on site with client and was tasked with assessing an application for them. This was troubling for two reasons: 1.) This was my first on site assessment and 2.) due to the nature of the content I was tasked to work with, my little visit there required full supervision, which meant that my primary point of contact (POC) watched over my shoulder as I worked on this application for about 4 or so hours.</description>
     </item>
     
     <item>
@@ -27,7 +27,7 @@
       <pubDate>Sun, 23 Jun 2019 22:34:54 -0600</pubDate>
       
       <guid>/H4cklife.github.io/posts/lazysysadmin/</guid>
-      <description>&lt;p&gt;&lt;h2&gt;Intro&lt;/h2&gt;
+      <description>&lt;p&gt;##Intro
 &lt;p style=&#34;text-align:justify;&#34;&gt;I chose to do this write-up on LazySysAdmin because it is &lt;strong&gt;a good box for potential OSCP students&lt;/strong&gt; to start out on and something that every OSCP pentester and every current OSCP (PWK) student that is &lt;strong&gt;&lt;span style=&#34;text-decoration:underline;&#34;&gt;ready to take the exam&lt;/span&gt;&lt;/strong&gt; should be able to do without using a walk-through. This box should take 6 hours or less if you do not experience any hang ups or interruptions.&lt;/p&gt;
 &lt;p style=&#34;text-align:center;&#34;&gt;&lt;code&gt;&lt;a href=&#34;https://www.vulnhub.com/entry/lazysysadmin-1,205/#&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Download LazySysAdmin Here!&lt;/a&gt;&lt;/code&gt;&lt;/p&gt;&lt;/p&gt;
 
