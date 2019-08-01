@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/H4cklife.github.io/posts/what-its-like-being-a-pentester-after-oscp/</loc>
+    <lastmod>2019-07-31T21:31:39-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/H4cklife.github.io/posts/windows-7-kiosk-escape/</loc>
     <lastmod>2019-07-25T10:15:07-06:00</lastmod>
   </url>
@@ -54,13 +59,13 @@
   
   <url>
     <loc>/H4cklife.github.io/</loc>
-    <lastmod>2019-07-25T10:15:07-06:00</lastmod>
+    <lastmod>2019-07-31T21:31:39-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/H4cklife.github.io/posts/</loc>
-    <lastmod>2019-07-25T10:15:07-06:00</lastmod>
+    <lastmod>2019-07-31T21:31:39-06:00</lastmod>
     <priority>0</priority>
   </url>
   
