@@ -163,47 +163,7 @@
       <div class="post-content">
         
           
-            <h2 id="intro">Intro</h2>
-
-<p style="text-align:justify;">I chose to do this write-up on LazySysAdmin because it is <strong>a good box for potential OSCP students</strong> to start out on and something that every OSCP pentester and every current OSCP (PWK) student that is <strong><span style="text-decoration:underline;">ready to take the exam</span></strong> should be able to do without using a walk-through. This box should take 6 hours or less if you do not experience any hang ups or interruptions.</p>
-<p style="text-align:center;"><code>
-<a href="https://www.vulnhub.com/entry/lazysysadmin-1,205/#" target="\_blank" rel="noopener">Download LazySysAdmin Here!</a></code></p>
-
-<p><h3>NMAP Enumeration</h3>
-My first initial NMAP scan I did a service scan on all 65535 ports. I usually port scan in two steps; First finding all ports that are open and then running a service scan against only the open ports in order to save time during the reconnaissance phase.</p>
-
-<p><center><img class="alignnone size-full wp-image-124" src="https://h4cklife.files.wordpress.com/2018/05/scan_command.jpg" alt="scan_command" width="449" height="25" /></center> <center><em>Nmap Service Scan against all ports</em></center></p>
-
-<p><center><img class=" size-full wp-image-125 alignnone" src="https://h4cklife.files.wordpress.com/2018/05/scan_results.jpg" alt="scan_results" width="953" height="211" /></center> <center><em>Nmap Scan Results</em></center>
-<h3>Web Enumeration</h3>
-To start my web enumeration I began with a basic <strong>Nikto</strong> scan of the target machine. In doing so reveals several notable webpages to investigate further.</p>
-
-<p><center><img class="alignnone size-full wp-image-128" src="https://h4cklife.files.wordpress.com/2018/05/nikto_command.jpg" alt="nikto_command" width="313" height="21" /></center> <center><em>Basic Nikto Web Scan</em></center></p>
-
-<p><center><img class="alignnone size-full wp-image-129" src="https://h4cklife.files.wordpress.com/2018/05/nikto_results.jpg" alt="nikto_results" width="408" height="163" /></center> <center><em>Scan Detected 2 Notable Webpages</em></center>
-<p style="text-align:center;"><em>We will note these pages for further enumeration.</em></p></p>
-
-<p><h3>WPSCAN</h3>
-Having discovered that a possible WordPress site was running on the target machine, <strong>wpscan</strong> was used immediately after the web-scan completed. The user <strong><span style="text-decoration:underline;">Admin</span></strong> was discovered.</p>
-
-<p><center><img class=" size-full wp-image-133 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/wpscan_command.jpg" alt="wpscan_command" width="717" height="27" /></center> <em>Command used to enumerate wordpress users</em></p>
-
-<p><center><img class=" size-full wp-image-134 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/wpscan_results.jpg" alt="wpscan_results" width="397" height="167" /></center> <em>User enumerated using the &ldquo;&ndash;enumerate u&rdquo; flag</em>
-<h3>SMB Enumeration</h3>
-<p style="text-align:justify;">To begin SMB enumeration, <strong>enum4linux </strong>was used for the initial scan. The scan results revealed several shares that could be connected to using the <strong>smbclient. </strong>Using information that was gathered from the initial SMB enumeration via enum4linx along with the username discovered during the wpscan, allowed for a precise SMB connection using the smbclient, to be made.</p></p>
-
-<p><center><img class=" size-full wp-image-131 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/enum4linux_scan.jpg" alt="enum4linux_scan" width="623" height="456" /></center> <em>Enum4linux Share Details</em></p>
-
-<p><center><img class=" size-full wp-image-132 alignnone" src="https://h4cklife.files.wordpress.com/2018/05/smbclient_command.jpg" alt="smbclient_command" width="820" height="471" /></center> <em>Connecting to the interactive share via the smbclient</em></p>
-
-<p>Having connected to the SMB share named share$, allowed for the <strong>wp-config</strong> file and several other files containing passwords to be retrieved.</p>
-
-<p>The /wordpress/w<span style="text-decoration:underline;">p-config</span> file revealed to following username and password combination:
-<p style="text-align:center;"><strong>Admin</strong>
-<strong> TogieMYSQL12345^^</strong></p>
-The d<span style="text-decoration:underline;">eets.txt</span> file revealed to following password:
-<p style="text-align:center;"><strong>12345</strong></p></p>
-
+            Intro I chose to do this write-up on LazySysAdmin because it is a good box for potential OSCP students to start out on and something that every OSCP pentester and every current OSCP (PWK) student that is ready to take the exam should be able to do without using a walk-through. This box should take 6 hours or less if you do not experience any hang ups or interruptions.
           
         
       </div>

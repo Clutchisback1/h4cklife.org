@@ -27,46 +27,7 @@
       <pubDate>Sun, 23 Jun 2019 22:34:54 -0600</pubDate>
       
       <guid>/H4cklife.github.io/posts/lazysysadmin-writeup/</guid>
-      <description>&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
-
-&lt;p style=&#34;text-align:justify;&#34;&gt;I chose to do this write-up on LazySysAdmin because it is &lt;strong&gt;a good box for potential OSCP students&lt;/strong&gt; to start out on and something that every OSCP pentester and every current OSCP (PWK) student that is &lt;strong&gt;&lt;span style=&#34;text-decoration:underline;&#34;&gt;ready to take the exam&lt;/span&gt;&lt;/strong&gt; should be able to do without using a walk-through. This box should take 6 hours or less if you do not experience any hang ups or interruptions.&lt;/p&gt;
-&lt;p style=&#34;text-align:center;&#34;&gt;&lt;code&gt;
-&lt;a href=&#34;https://www.vulnhub.com/entry/lazysysadmin-1,205/#&#34; target=&#34;\_blank&#34; rel=&#34;noopener&#34;&gt;Download LazySysAdmin Here!&lt;/a&gt;&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;h3&gt;NMAP Enumeration&lt;/h3&gt;
-My first initial NMAP scan I did a service scan on all 65535 ports. I usually port scan in two steps; First finding all ports that are open and then running a service scan against only the open ports in order to save time during the reconnaissance phase.&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;img class=&#34;alignnone size-full wp-image-124&#34; src=&#34;https://h4cklife.files.wordpress.com/2018/05/scan_command.jpg&#34; alt=&#34;scan_command&#34; width=&#34;449&#34; height=&#34;25&#34; /&gt;&lt;/center&gt; &lt;center&gt;&lt;em&gt;Nmap Service Scan against all ports&lt;/em&gt;&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;img class=&#34; size-full wp-image-125 alignnone&#34; src=&#34;https://h4cklife.files.wordpress.com/2018/05/scan_results.jpg&#34; alt=&#34;scan_results&#34; width=&#34;953&#34; height=&#34;211&#34; /&gt;&lt;/center&gt; &lt;center&gt;&lt;em&gt;Nmap Scan Results&lt;/em&gt;&lt;/center&gt;
-&lt;h3&gt;Web Enumeration&lt;/h3&gt;
-To start my web enumeration I began with a basic &lt;strong&gt;Nikto&lt;/strong&gt; scan of the target machine. In doing so reveals several notable webpages to investigate further.&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;img class=&#34;alignnone size-full wp-image-128&#34; src=&#34;https://h4cklife.files.wordpress.com/2018/05/nikto_command.jpg&#34; alt=&#34;nikto_command&#34; width=&#34;313&#34; height=&#34;21&#34; /&gt;&lt;/center&gt; &lt;center&gt;&lt;em&gt;Basic Nikto Web Scan&lt;/em&gt;&lt;/center&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;img class=&#34;alignnone size-full wp-image-129&#34; src=&#34;https://h4cklife.files.wordpress.com/2018/05/nikto_results.jpg&#34; alt=&#34;nikto_results&#34; width=&#34;408&#34; height=&#34;163&#34; /&gt;&lt;/center&gt; &lt;center&gt;&lt;em&gt;Scan Detected 2 Notable Webpages&lt;/em&gt;&lt;/center&gt;
-&lt;p style=&#34;text-align:center;&#34;&gt;&lt;em&gt;We will note these pages for further enumeration.&lt;/em&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;h3&gt;WPSCAN&lt;/h3&gt;
-Having discovered that a possible WordPress site was running on the target machine, &lt;strong&gt;wpscan&lt;/strong&gt; was used immediately after the web-scan completed. The user &lt;strong&gt;&lt;span style=&#34;text-decoration:underline;&#34;&gt;Admin&lt;/span&gt;&lt;/strong&gt; was discovered.&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;img class=&#34; size-full wp-image-133 aligncenter&#34; src=&#34;https://h4cklife.files.wordpress.com/2018/05/wpscan_command.jpg&#34; alt=&#34;wpscan_command&#34; width=&#34;717&#34; height=&#34;27&#34; /&gt;&lt;/center&gt; &lt;em&gt;Command used to enumerate wordpress users&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;img class=&#34; size-full wp-image-134 aligncenter&#34; src=&#34;https://h4cklife.files.wordpress.com/2018/05/wpscan_results.jpg&#34; alt=&#34;wpscan_results&#34; width=&#34;397&#34; height=&#34;167&#34; /&gt;&lt;/center&gt; &lt;em&gt;User enumerated using the &amp;ldquo;&amp;ndash;enumerate u&amp;rdquo; flag&lt;/em&gt;
-&lt;h3&gt;SMB Enumeration&lt;/h3&gt;
-&lt;p style=&#34;text-align:justify;&#34;&gt;To begin SMB enumeration, &lt;strong&gt;enum4linux &lt;/strong&gt;was used for the initial scan. The scan results revealed several shares that could be connected to using the &lt;strong&gt;smbclient. &lt;/strong&gt;Using information that was gathered from the initial SMB enumeration via enum4linx along with the username discovered during the wpscan, allowed for a precise SMB connection using the smbclient, to be made.&lt;/p&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;img class=&#34; size-full wp-image-131 aligncenter&#34; src=&#34;https://h4cklife.files.wordpress.com/2018/05/enum4linux_scan.jpg&#34; alt=&#34;enum4linux_scan&#34; width=&#34;623&#34; height=&#34;456&#34; /&gt;&lt;/center&gt; &lt;em&gt;Enum4linux Share Details&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;&lt;img class=&#34; size-full wp-image-132 alignnone&#34; src=&#34;https://h4cklife.files.wordpress.com/2018/05/smbclient_command.jpg&#34; alt=&#34;smbclient_command&#34; width=&#34;820&#34; height=&#34;471&#34; /&gt;&lt;/center&gt; &lt;em&gt;Connecting to the interactive share via the smbclient&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Having connected to the SMB share named share$, allowed for the &lt;strong&gt;wp-config&lt;/strong&gt; file and several other files containing passwords to be retrieved.&lt;/p&gt;
-
-&lt;p&gt;The /wordpress/w&lt;span style=&#34;text-decoration:underline;&#34;&gt;p-config&lt;/span&gt; file revealed to following username and password combination:
-&lt;p style=&#34;text-align:center;&#34;&gt;&lt;strong&gt;Admin&lt;/strong&gt;
-&lt;strong&gt; TogieMYSQL12345^^&lt;/strong&gt;&lt;/p&gt;
-The d&lt;span style=&#34;text-decoration:underline;&#34;&gt;eets.txt&lt;/span&gt; file revealed to following password:
-&lt;p style=&#34;text-align:center;&#34;&gt;&lt;strong&gt;12345&lt;/strong&gt;&lt;/p&gt;&lt;/p&gt;</description>
+      <description>Intro I chose to do this write-up on LazySysAdmin because it is a good box for potential OSCP students to start out on and something that every OSCP pentester and every current OSCP (PWK) student that is ready to take the exam should be able to do without using a walk-through. This box should take 6 hours or less if you do not experience any hang ups or interruptions.</description>
     </item>
     
     <item>
