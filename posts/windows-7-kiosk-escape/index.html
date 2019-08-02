@@ -135,7 +135,7 @@
 
 <p>On top of that I wasn&rsquo;t working from my work laptop which was full of hack tools and con-booting this machine wasn&rsquo;t necessarily in scope. Needless to say it was a tad bit nerve wrecking also considering the fact that this thing was LOCKED down in terms of being able to access any of the underlying Windows functionality; Or so I thought!</p>
 
-<h3 id="hacking-tldrers-start-here">Hacking  &ndash;TLDRers Start here &ndash;&gt;</h3>
+<h3 id="the-hacking-part-tldrers-start-here">The Hacking Part    &ndash;TLDRers Start here &ndash;&gt;</h3>
 
 <p>So after spending a bunch of time poking around on this thing I noticed that <code>ctrl+alt+delete</code> worked, which brought up the screen below:</p>
 
@@ -143,10 +143,10 @@
 <figure>
 <img src="../../images/Kiosk_Escape/1.png" alt="Image of Windows 7 lock options" />
 <figcaption>
-Image of Windows 7 lock options
+<center>Image of Windows 7 lock options</center>
 </figcaption>
 </figure>
-</center><br></p>
+</center></p>
 
 <p>From playing around in the past in the past and partially out of desperation I decided to open up the infamous <code>On Screen Keyboard</code> in hopes that this thing would give me additional Windows options:</p>
 
@@ -154,10 +154,10 @@ Image of Windows 7 lock options
 <figure>
 <img src="../../images/Kiosk_Escape/2.png" alt="Image of On-Screen Keyboard options" />
 <figcaption>
-Image of On-Screen Keyboard options
+<center>Image of On-Screen Keyboard options</center>
 </figcaption>
 </figure>
-</center><br></p>
+</center></p>
 
 <p>Once the on-screen keyboard options were available, I was able to select the <code>Control whether the On-Screen Keyboard starts...</code> option which brought up the following screenshot where I was then able to access the <code>Use Speech Recognition</code> option:</p>
 
@@ -165,10 +165,10 @@ Image of On-Screen Keyboard options
 <figure>
 <img src="../../images/Kiosk_Escape/3.png" alt="Selecting Speech Recognition" />
 <figcaption>
-Selecting Speech Recognition
+<center>Selecting Speech Recognition</center>
 </figcaption>
 </figure>
-</center><br></p>
+</center></p>
 
 <p><strong>If you can get to this point it&rsquo;s pretty much game over.</strong> Here I just selected the control panel option and could access a whole bunch of other things. I mean right clicking and opening a command prompt could have probably worked sooner but this is what I did at the time.</p>
 
@@ -176,10 +176,10 @@ Selecting Speech Recognition
 <figure>
 <img src="../../images/Kiosk_Escape/4.png" alt="Image of Control Panel option" />
 <figcaption>
-Accessible Control Panel option
+<center>Accessible Control Panel option</center>
 </figcaption>
 </figure>
-</center><br></p>
+</center></p>
 
 <p>Something to note about this vector is that it does require prior authentication and the PC needs to be unlocked when you hit <code>ctrl+alt+delete</code>. You cant simply walk up to a locked pc and access the accessibility options as the <code>Control whether the On-Screen Keyboard starts...</code> option will be missing if you do. Also, in this example the user that was authenticated at the time had local system administrative privileges so this instance was pretty bad but you may run in to other obstacles that makes this vector more or less viable for you to pull off. Just keep this in the back of your mind the next time you feel like checking out some of the complementary systems you have access to out there in the wild and remember: <strong>Do nothing without permission</strong>!</p>
 
