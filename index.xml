@@ -18,8 +18,7 @@
       <pubDate>Sat, 03 Aug 2019 13:40:35 -0600</pubDate>
       
       <guid>/H4cklife.github.io/posts/installing-covenantv3.0-on-ubuntu-19-2019/</guid>
-      <description>What I did&amp;hellip; To start off I cloned the repository recursively as instructed in the repo&amp;rsquo;s wiki:
-clutchisback1@Deadpool /e/github $ git clone --recurse-submodules https://github.com/cobbr/Covenant Cloning into &#39;Covenant&#39;... remote: Enumerating objects: 1133, done. remote: Counting objects: 100% (1133/1133), done. remote: Compressing objects: 100% (548/548), done. remote: Total 1545 (delta 639), reused 996 (delta 560), pack-reused 412 Receiving objects: 100% (1545/1545), 22.18 MiB | 3.35 MiB/s, done.Resolving deltas: 100% (820/820), done.  After cloning the repo you have to make sure you have the dotnet core pre-reqs before you can build the tool.</description>
+      <description>Intro There&amp;rsquo;s a lot of hype around the new version of Covenant 3.0 so I figured I&amp;rsquo;d share my installation experience with the world (I need content&amp;hellip;shhhhh&amp;hellip;lol). My boy Wraith said it was pretty legit so I had a quick look-see before hoping into bed. It def looks like a solid and modern framework that ups that ante for other C2 frameworks (you&amp;rsquo;ll never steal my heart from Koadic!❤).</description>
     </item>
     
     <item>

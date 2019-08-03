@@ -6,8 +6,7 @@
     
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="What I did&amp;hellip; To start off I cloned the repository recursively as instructed in the repo&amp;rsquo;s wiki:
-clutchisback1@Deadpool /e/github $ git clone --recurse-submodules https://github.com/cobbr/Covenant Cloning into &#39;Covenant&#39;... remote: Enumerating objects: 1133, done. remote: Counting objects: 100% (1133/1133), done. remote: Compressing objects: 100% (548/548), done. remote: Total 1545 (delta 639), reused 996 (delta 560), pack-reused 412 Receiving objects: 100% (1545/1545), 22.18 MiB | 3.35 MiB/s, done.Resolving deltas: 100% (820/820), done.  After cloning the repo you have to make sure you have the dotnet core pre-reqs before you can build the tool."/>
+<meta name="description" content="Intro There&amp;rsquo;s a lot of hype around the new version of Covenant 3.0 so I figured I&amp;rsquo;d share my installation experience with the world (I need content&amp;hellip;shhhhh&amp;hellip;lol). My boy Wraith said it was pretty legit so I had a quick look-see before hoping into bed. It def looks like a solid and modern framework that ups that ante for other C2 frameworks (you&amp;rsquo;ll never steal my heart from Koadic!❤)."/>
 <meta name="keywords" content="Hacking"/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="/H4cklife.github.io/posts/installing-covenantv3.0-on-ubuntu-19-2019/" />
@@ -25,14 +24,12 @@ clutchisback1@Deadpool /e/github $ git clone --recurse-submodules https://github
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Installing Covenant v3.0 on Ubuntu 19 - 2019"/>
-<meta name="twitter:description" content="What I did&hellip; To start off I cloned the repository recursively as instructed in the repo&rsquo;s wiki:
-clutchisback1@Deadpool /e/github $ git clone --recurse-submodules https://github.com/cobbr/Covenant Cloning into &#39;Covenant&#39;... remote: Enumerating objects: 1133, done. remote: Counting objects: 100% (1133/1133), done. remote: Compressing objects: 100% (548/548), done. remote: Total 1545 (delta 639), reused 996 (delta 560), pack-reused 412 Receiving objects: 100% (1545/1545), 22.18 MiB | 3.35 MiB/s, done.Resolving deltas: 100% (820/820), done.  After cloning the repo you have to make sure you have the dotnet core pre-reqs before you can build the tool."/>
+<meta name="twitter:description" content="Intro There&rsquo;s a lot of hype around the new version of Covenant 3.0 so I figured I&rsquo;d share my installation experience with the world (I need content&hellip;shhhhh&hellip;lol). My boy Wraith said it was pretty legit so I had a quick look-see before hoping into bed. It def looks like a solid and modern framework that ups that ante for other C2 frameworks (you&rsquo;ll never steal my heart from Koadic!❤)."/>
 
 
 
 <meta property="og:title" content="Installing Covenant v3.0 on Ubuntu 19 - 2019" />
-<meta property="og:description" content="What I did&hellip; To start off I cloned the repository recursively as instructed in the repo&rsquo;s wiki:
-clutchisback1@Deadpool /e/github $ git clone --recurse-submodules https://github.com/cobbr/Covenant Cloning into &#39;Covenant&#39;... remote: Enumerating objects: 1133, done. remote: Counting objects: 100% (1133/1133), done. remote: Compressing objects: 100% (548/548), done. remote: Total 1545 (delta 639), reused 996 (delta 560), pack-reused 412 Receiving objects: 100% (1545/1545), 22.18 MiB | 3.35 MiB/s, done.Resolving deltas: 100% (820/820), done.  After cloning the repo you have to make sure you have the dotnet core pre-reqs before you can build the tool." />
+<meta property="og:description" content="Intro There&rsquo;s a lot of hype around the new version of Covenant 3.0 so I figured I&rsquo;d share my installation experience with the world (I need content&hellip;shhhhh&hellip;lol). My boy Wraith said it was pretty legit so I had a quick look-see before hoping into bed. It def looks like a solid and modern framework that ups that ante for other C2 frameworks (you&rsquo;ll never steal my heart from Koadic!❤)." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/H4cklife.github.io/posts/installing-covenantv3.0-on-ubuntu-19-2019/" /><meta property="article:published_time" content="2019-08-03T13:40:35-06:00"/>
 <meta property="article:modified_time" content="2019-08-03T13:40:35-06:00"/><meta property="og:site_name" content="H4cklife!!" />
@@ -132,7 +129,11 @@ clutchisback1@Deadpool /e/github $ git clone --recurse-submodules https://github
     <div class="post-content">
       
 
-<h1 id="what-i-did">What I did&hellip;</h1>
+<h3 id="intro">Intro</h3>
+
+<p>There&rsquo;s a lot of hype around the new version of <a href="https://github.com/cobbr/Covenant">Covenant 3.0</a> so I figured I&rsquo;d share my installation experience with the world (I need content&hellip;shhhhh&hellip;lol). My boy <a href='https://twitter.com/Wraiith1'>Wraith</a> said it was pretty legit so I had a quick look-see before hoping into bed. It def looks like a solid and modern framework that ups that ante for other C2 frameworks (<i>you&rsquo;ll never steal my heart from Koadic!❤</i>).</p>
+
+<h3 id="installation-steps-i-took-tldrs-start-here">Installation Steps I took&hellip;  -TLDRs Start Here ⤵</h3>
 
 <p>To start off I cloned the repository recursively as instructed in the repo&rsquo;s <a href="https://github.com/cobbr/Covenant/wiki/Installation-And-Startup">wiki</a>:</p>
 
@@ -218,7 +219,7 @@ Build succeeded.
 Time Elapsed 00:02:00.61
 </code></pre>
 
-<h2 id="running-it">Running it</h2>
+<h3 id="running-it">Running it</h3>
 
 <p style="text-align:justify;">
 After that big glob of "gobbly guk" I was able to launch the application by running run. As you can see I used the apt command 'dotnet-sdk.dotnet' that I had installed earlier to launch the run command specifying the apps folder with the '--project' flag. Apparently my project ended up being in a folder called Covenant which was also inside another folder called Covenant. I feel like there's a Linux law against embedding folders with the same name somewhere but 'whatevs':</p>
