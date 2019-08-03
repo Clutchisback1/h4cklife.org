@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2019</copyright>
-    <lastBuildDate>Wed, 31 Jul 2019 21:31:39 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 02 Aug 2019 19:48:17 -0600</lastBuildDate>
     
 	<atom:link href="/H4cklife.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How I Use Koadic on Internals</title>
+      <link>/H4cklife.github.io/posts/how-i-use-koadic-on-internals/</link>
+      <pubDate>Fri, 02 Aug 2019 19:48:17 -0600</pubDate>
+      
+      <guid>/H4cklife.github.io/posts/how-i-use-koadic-on-internals/</guid>
+      <description>Overview I LOVE KOADIC!! Yes this doesn&#39;t work out of the box against Windows 10+ machines but if you find yourself on a network with older Windows 7 and Windows Server 2012 and below machines Koadic will gobble the network whole and very quickly. I guess I should note that much of what I love about it is it&#39;s organization and implementation of Mimikatz which is probably the real MVP of the tool.</description>
+    </item>
     
     <item>
       <title>What It&#39;s Like Being a Pentester After OSCP</title>
