@@ -94,8 +94,19 @@ I hate reading boring articles so I&amp;rsquo;m not going to waste any of your t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/H4cklife.github.io/beefhook/beefhook/</guid>
-      <description>______________ &amp;lt; E4t M0r B33F &amp;gt; -------------- \ . _ . \ |\_|/__/| / / \/ \ \ /__|O||O|__ \ |/_ \_/\_/ _\ | | | (____) | || \/\___/\__/ // (_/ || | || | ||\ \ //_/ \______// __ || __|| (____(____)  Good Beefhooks  https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html https://github.com/byt3bl33d3r/CrackMapExec/wiki/Using-Credentials https://github.com/byt3bl33d3r/CrackMapExec/wiki/SMB-Command-Reference http://techgenix.com/psexec-nasty-things-it-can-do/ http://www.defaultpassword.com/ https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20injection https://github.com/s0md3v/AwesomeXSS https://sushant747.gitbooks.io/total-oscp-guide/privilege_escalation_windows.html https://www.acunetix.com/blog/articles/web-shells-101-using-php-introduction-web-shells-part-2/ https://www.securusglobal.com/community/2013/12/20/dumping-windows-credentials/ https://www.onlinehashcrack.com/how-to-procdump-mimikatz-credentials.php https://pentestlab.blog/2018/07/04/dumping-domain-password-hashes/
- Github Beefhooks  git clone https://github.com/Clutchisback1/GIT_THEM #My Github download script that downloads all these git clone https://github.</description>
+      <description>______________ &amp;lt; E4t M0r B33F &amp;gt; -------------- \ . _ . \ |\_|/__/| / / \/ \ \ /__|O||O|__ \ |/_ \_/\_/ _\ | | | (____) | || \/\___/\__/ // (_/ || | || | ||\ \ //_/ \______// __ || __|| (____(____)  Good Beefhooks  https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html
+https://github.com/byt3bl33d3r/CrackMapExec/wiki/Using-Credentials
+https://github.com/byt3bl33d3r/CrackMapExec/wiki/SMB-Command-Reference
+http://techgenix.com/psexec-nasty-things-it-can-do/
+http://www.defaultpassword.com/
+https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20injection
+https://github.com/s0md3v/AwesomeXSS
+https://sushant747.gitbooks.io/total-oscp-guide/privilege_escalation_windows.html
+https://www.acunetix.com/blog/articles/web-shells-101-using-php-introduction-web-shells-part-2/
+https://www.securusglobal.com/community/2013/12/20/dumping-windows-credentials/
+https://www.onlinehashcrack.com/how-to-procdump-mimikatz-credentials.php
+https://pentestlab.blog/2018/07/04/dumping-domain-password-hashes/
+ Github Beefhooks  git clone https://github.com/Clutchisback1/GIT_THEM #My Github download script that downloads all these</description>
     </item>
     
   </channel>
