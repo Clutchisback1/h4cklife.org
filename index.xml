@@ -103,7 +103,7 @@ I hate reading boring articles so I&amp;rsquo;m not going to waste any of your t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/H4cklife.github.io/beefhook/beefhook/</guid>
-      <description>______________ &amp;lt; E4t M0r B33F &amp;gt; -------------- \ . _ . \ |\_|/__/| / / \/ \ \ /__|O||O|__ \ |/_ \_/\_/ _\ | | | (____) | || \/\___/\__/ // (_/ || | || | ||\ \ //_/ \______// __ || __|| (____(____)  Good Beefhooks  https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html
+      <description>Good Beefhooks  https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html
 https://github.com/byt3bl33d3r/CrackMapExec/wiki/Using-Credentials
 https://github.com/byt3bl33d3r/CrackMapExec/wiki/SMB-Command-Reference
 http://techgenix.com/psexec-nasty-things-it-can-do/
@@ -115,7 +115,20 @@ https://www.acunetix.com/blog/articles/web-shells-101-using-php-introduction-web
 https://www.securusglobal.com/community/2013/12/20/dumping-windows-credentials/
 https://www.onlinehashcrack.com/how-to-procdump-mimikatz-credentials.php
 https://pentestlab.blog/2018/07/04/dumping-domain-password-hashes/
- Github Beefhooks  git clone https://github.com/Clutchisback1/GIT_THEM #My Github download script that downloads all these</description>
+ Github Beefhooks  git clone https://github.com/Clutchisback1/GIT_THEM #My Github download script that downloads most of these
+git clone https://github.com/D35m0nd142/LFISuite.git
+git clone https://github.com/linted/linuxprivchecker.git
+git clone https://github.com/m4ll0k/WAScan.git
+git clone https://github.com/archerysec/archerysec.git
+git clone https://github.com/maurosoria/dirsearch.git
+git clone https://github.com/codingo/Reconnoitre.git
+git clone https://github.com/RenwaX23/XSS-Payloads.git
+git clone https://github.com/caffix/amass.git
+git clone https://github.com/cyberheartmi9/PayloadsAllTheThings.git
+git clone https://github.com/TheSecondSun/Bashark.git
+git clone https://github.com/s0md3v/AwesomeXSS.git
+git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme.git
+git clone https://github.</description>
     </item>
     
   </channel>
