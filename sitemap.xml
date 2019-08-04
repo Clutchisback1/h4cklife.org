@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>/H4cklife.github.io/about/about/</loc>
+    <lastmod>2019-06-21T23:50:16-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/H4cklife.github.io/posts/oscp-how-to-know-when-youre-ready-to-take-the-exam/</loc>
     <lastmod>2019-06-21T23:22:24-06:00</lastmod>
   </url>
@@ -44,6 +49,12 @@
   
   <url>
     <loc>/H4cklife.github.io/beefhook/beefhook/</loc>
+  </url>
+  
+  <url>
+    <loc>/H4cklife.github.io/about/</loc>
+    <lastmod>2019-06-21T23:50:16-06:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
