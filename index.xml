@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2019</copyright>
-    <lastBuildDate>Sat, 03 Aug 2019 13:40:35 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 04 Aug 2019 19:07:12 -0600</lastBuildDate>
     
 	<atom:link href="/H4cklife.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Wallpapers</title>
+      <link>/H4cklife.github.io/wallpapers/</link>
+      <pubDate>Sun, 04 Aug 2019 19:07:12 -0600</pubDate>
+      
+      <guid>/H4cklife.github.io/wallpapers/</guid>
+      <description>Dead-cool   
+   Space ship   
+   Saw this on MKHDs videos once   
+   Cool Everest Minimal   
+   Kali White</description>
+    </item>
     
     <item>
       <title>Installing Covenant v3.0 on Ubuntu 19 - 2019</title>
