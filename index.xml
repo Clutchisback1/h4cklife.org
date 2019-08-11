@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2019 😜</copyright>
-    <lastBuildDate>Sun, 04 Aug 2019 19:07:12 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 11 Aug 2019 15:33:51 -0600</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Kiosk Escapes Pt 2 - Ft. Microsoft Edge!!</title>
+      <link>/posts/kiosk-escapes-pt-2/</link>
+      <pubDate>Sun, 11 Aug 2019 15:33:51 -0600</pubDate>
+      
+      <guid>/posts/kiosk-escapes-pt-2/</guid>
+      <description>Backstory So...there was this one location in Vegas during Defcon 27 that had these pcs that could be used by the general public. Kiosks as some would say...Well I went over to them to see what all accessibility these kiosks had to offer out of general curiosity, you know, &#34;can these let me access facebook, github, reddit&#34; etc. type stuff. Well, to my astonishment these kiosks had an interface that wouldn&#39;t allow me to access the c:\ drive!</description>
+    </item>
     
     <item>
       <title>Wallpapers</title>
