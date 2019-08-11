@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>H4cklife!!</title>
+    <link>/h4cklife.org/</link>
+    <description>Recent content on H4cklife!!</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright 2019 😜</copyright>
+    <lastBuildDate>Sun, 04 Aug 2019 19:07:12 -0600</lastBuildDate>
+    
+	<atom:link href="/h4cklife.org/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Wallpapers</title>
+      <link>/h4cklife.org/wallpapers/</link>
+      <pubDate>Sun, 04 Aug 2019 19:07:12 -0600</pubDate>
+      
+      <guid>/h4cklife.org/wallpapers/</guid>
+      <description>There should be a law against not changing your default wallpaper if you&#39;re a hacker! You really spend hours and hours staring at a screen with that nasty bruise looking default Ubutnu wallpaper? Yuck! I&#39;ll be keeping this updated for you guys. I try to find ones that are hard to find too so these should be somewhat rare.
+   Dead-cool   
+   Space ship</description>
+    </item>
+    
+    <item>
+      <title>Installing Covenant v3.0 on Ubuntu 19</title>
+      <link>/h4cklife.org/posts/installing-covenantv3.0-on-ubuntu-19-2019/</link>
+      <pubDate>Sat, 03 Aug 2019 13:40:35 -0600</pubDate>
+      
+      <guid>/h4cklife.org/posts/installing-covenantv3.0-on-ubuntu-19-2019/</guid>
+      <description>Intro There&#39;s a lot of hype around the new version of Covenant 3.0 so I figured I&#39;d share my installation experience with the world (I need content...shhhhh...lol). My boy Wraith said it was pretty legit so I had a quick look-see before hoping into bed. It def looks like a solid and modern framework that ups that ante for other C2 frameworks (you&#39;ll never steal my heart from Koadic!❤).</description>
+    </item>
+    
+    <item>
+      <title>How I Use Koadic on Internals</title>
+      <link>/h4cklife.org/posts/how-i-use-koadic-on-internals/</link>
+      <pubDate>Fri, 02 Aug 2019 19:48:17 -0600</pubDate>
+      
+      <guid>/h4cklife.org/posts/how-i-use-koadic-on-internals/</guid>
+      <description>Overview I LOVE KOADIC!! Yes this doesn&#39;t work out of the box against Windows 10+ machines but if you find yourself on a network with older Windows 7 and Windows Server 2012 and below machines Koadic will gobble the network whole and very quickly. I guess I should note that much of what I love about it is it&#39;s organization and implementation of Mimikatz which is probably the real MVP of the tool.</description>
+    </item>
+    
+    <item>
+      <title>What It&#39;s Like Being a Pentester After OSCP</title>
+      <link>/h4cklife.org/posts/what-its-like-being-a-pentester-after-oscp/</link>
+      <pubDate>Wed, 31 Jul 2019 21:31:39 -0600</pubDate>
+      
+      <guid>/h4cklife.org/posts/what-its-like-being-a-pentester-after-oscp/</guid>
+      <description>Job Hunting? Go Away&amp;hellip;.😤 So after you become an OSCP you expect jobs to just start raining on you after you stamp that OSCP in your resume and start sending it out. Yea....no. If you&#39;re like me and all you have is OSCP and Hackthebox in terms of network security experience job hunting can be absolutely excruciating. The interviews process can make you feel like you know absolutely nothing; which is partially true if you were like me at the time.</description>
+    </item>
+    
+    <item>
+      <title>Windows 7 Kiosk Escape</title>
+      <link>/h4cklife.org/posts/windows-7-kiosk-escape/</link>
+      <pubDate>Thu, 25 Jul 2019 10:15:07 -0600</pubDate>
+      
+      <guid>/h4cklife.org/posts/windows-7-kiosk-escape/</guid>
+      <description>body { text-align: justify}  Backstory One day I was on site with client and was tasked with assessing an application for them. This was troubling for two reasons: 1.) This was my first on site assessment and 2.) due to the nature of the content I was tasked to work with, my little visit there required full supervision, which meant that my primary point of contact (POC) watched over my shoulder as I worked on this application for about 4 or so hours.</description>
+    </item>
+    
+    <item>
+      <title>LazySysAdmin Writeup</title>
+      <link>/h4cklife.org/posts/lazysysadmin-writeup/</link>
+      <pubDate>Sun, 23 Jun 2019 22:34:54 -0600</pubDate>
+      
+      <guid>/h4cklife.org/posts/lazysysadmin-writeup/</guid>
+      <description>Intro I chose to do this write-up on LazySysAdmin because it is a good box for potential OSCP students to start out on and something that every OSCP pentester and every current OSCP (PWK) student that is ready to take the exam should be able to do without using a walk-through. This box should take 6 hours or less if you do not experience any hang ups or interruptions.</description>
+    </item>
+    
+    <item>
+      <title>A Pre-Exam For Future OSCP Students!</title>
+      <link>/h4cklife.org/posts/a-pre-exam-for-future-oscp-students/</link>
+      <pubDate>Sun, 23 Jun 2019 22:34:38 -0600</pubDate>
+      
+      <guid>/h4cklife.org/posts/a-pre-exam-for-future-oscp-students/</guid>
+      <description>Overview Whether you are in preparation for your lab time to begin or you just want to get a feel for what exam day will be like, I&amp;rsquo;ve put together a few practice exams for future OSCP students to take. These boxes should be comprehensive enough to cover many of the basics that you will face in the labs. All of these boxes will have write-ups available for you to review AFTER your exam time has ended.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/h4cklife.org/about/</link>
+      <pubDate>Fri, 21 Jun 2019 23:50:16 -0600</pubDate>
+      
+      <guid>/h4cklife.org/about/</guid>
+      <description>Self Dox: Hi, my name is Nate Curry and I began my OSCP journey several years ago. My first legitimate exposure to hacking 💻, outside of using Metasploit to send a MS08_netapi payload at a host running SMB on port 445, was through someone I met on reddit. I was soon shown the ropes and introduced to the &amp;ldquo;Mount Kilimanjaro&amp;rdquo; of hacking: The OSCP.
+Having started hacking with virtually no Linux exposure, caused me a lot of &amp;ldquo;pain&amp;rdquo; and &amp;ldquo;sufferance&amp;rdquo; and it took a long time for me to learn enough to defeat the OSCP exam!</description>
+    </item>
+    
+    <item>
+      <title>OSCP   How to Know When You&#39;re Ready to Take the Exam</title>
+      <link>/h4cklife.org/posts/oscp-how-to-know-when-youre-ready-to-take-the-exam/</link>
+      <pubDate>Fri, 21 Jun 2019 23:22:24 -0600</pubDate>
+      
+      <guid>/h4cklife.org/posts/oscp-how-to-know-when-youre-ready-to-take-the-exam/</guid>
+      <description>Easter Eggs in this post! 🥚
+If you&amp;rsquo;ve taken the red pill and decided to begin your journey towards the OSCP certification you will likely come to a point where you begin to wonder if you are ready to take/pass the exam. This article will serve as a guide in helping you determine just that. Let&amp;rsquo;s begin! TLDR&amp;rsquo;ers Start Here ⏩⏩
+  You&#39;ve have most of the public network rooted:  If you have about 60% of the public network rooted I would say that is a good time to start thinking about taking the exam.</description>
+    </item>
+    
+    <item>
+      <title>Starting OSCP From Scratch</title>
+      <link>/h4cklife.org/posts/starting-oscp-from-scratch/</link>
+      <pubDate>Fri, 21 Jun 2019 22:41:15 -0600</pubDate>
+      
+      <guid>/h4cklife.org/posts/starting-oscp-from-scratch/</guid>
+      <description>Read Time: 16 mins By: Clutchisback1
+I hate reading boring articles so I&amp;rsquo;m not going to waste any of your time by writing one. Besides, you&amp;rsquo;re probably an PWK student with lab time ticking away each second as you get closer to your exam date; The very exam date that will determine whether or not you&amp;rsquo;ve become a man/woman yet in the information security industry. Right now, you&amp;rsquo;re still a little boy/girl with absolutely nothing going for yourself.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/h4cklife.org/beefhook/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/h4cklife.org/beefhook/</guid>
+      <description>Good Beefhooks  https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html
+https://github.com/byt3bl33d3r/CrackMapExec/wiki/Using-Credentials
+https://github.com/byt3bl33d3r/CrackMapExec/wiki/SMB-Command-Reference
+http://techgenix.com/psexec-nasty-things-it-can-do/
+http://www.defaultpassword.com/
+https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20injection
+https://github.com/s0md3v/AwesomeXSS
+https://sushant747.gitbooks.io/total-oscp-guide/privilege_escalation_windows.html
+https://www.acunetix.com/blog/articles/web-shells-101-using-php-introduction-web-shells-part-2/
+https://www.securusglobal.com/community/2013/12/20/dumping-windows-credentials/
+https://www.onlinehashcrack.com/how-to-procdump-mimikatz-credentials.php
+https://pentestlab.blog/2018/07/04/dumping-domain-password-hashes/
+ Github Beefhooks  git clone https://github.com/Clutchisback1/GIT_THEM #My Github download script that downloads most of these
+git clone https://github.com/D35m0nd142/LFISuite.git
+git clone https://github.com/linted/linuxprivchecker.git
+git clone https://github.com/m4ll0k/WAScan.git
+git clone https://github.com/archerysec/archerysec.git
+git clone https://github.com/maurosoria/dirsearch.git
+git clone https://github.com/codingo/Reconnoitre.git
+git clone https://github.com/RenwaX23/XSS-Payloads.git
+git clone https://github.com/caffix/amass.git
+git clone https://github.com/cyberheartmi9/PayloadsAllTheThings.git
+git clone https://github.com/TheSecondSun/Bashark.git
+git clone https://github.com/s0md3v/AwesomeXSS.git
+git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme.git
+git clone https://github.</description>
+    </item>
+    
+  </channel>
+</rss>

