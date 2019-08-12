@@ -62,6 +62,10 @@
   </url>
   
   <url>
+    <loc>/layouts/partials/comments/</loc>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
     <priority>0</priority>
   </url>
@@ -69,6 +73,11 @@
   <url>
     <loc>/</loc>
     <lastmod>2019-08-11T15:33:51-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/layouts/</loc>
     <priority>0</priority>
   </url>
   
