@@ -92,8 +92,8 @@
       <pubDate>Fri, 21 Jun 2019 23:50:16 -0600</pubDate>
       
       <guid>/about/</guid>
-      <description>Self Dox: Hi, my name is Nate Curry and I began my OSCP journey several years ago. My first legitimate exposure to hacking 💻, outside of using Metasploit to send a MS08_netapi payload at a host running SMB on port 445, was through someone I met on reddit. I was soon shown the ropes and introduced to the &#34;Mount Kilimanjaro&#34; of hacking: The OSCP.
-Having started hacking with virtually NO Linux exposure, I endured a lot of &#34;</description>
+      <description>People That Supported Me! Before you read anything about me you have to check out the people that supported me and helped me along the way.
+ T0w3ntuM - The first of two mentors that I ever had who showed me &amp;ldquo;de wey&amp;rdquo; Ch33z_plz - Literally paid for some of my lab time and an exam attempt Wraiith75 - My dude Wraiittthhhhh&amp;hellip; Basically family&amp;hellip;His casa was mi casa Jibblits - Talk to this guy everyday bout life and things; we motivate each other 0xc0ffee - When I was feeling like an impostor this guy set me right  Work Peeps that helped me  N00py - Got my internal game ⬆⬆⬆ The Diamond Clad - My cell mate that listens to me rant about how everyone is a Vegan for hours on end and does cool web app things Radio Boy - Completely renovated the way I hack post OSCP Krav - For ruining my mind  Self Dox: Hi, my name is Nate Curry and I began my OSCP journey several years ago.</description>
     </item>
     
     <item>
@@ -123,7 +123,8 @@ I hate reading boring articles so I&amp;rsquo;m not going to waste any of your t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/beefhook/</guid>
-      <description>Good Beefhooks  https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html
+      <description>Are these beefhooks or are they not? That&amp;rsquo;s for you to decide every time you click a link! Well here&amp;rsquo;s a bunch; Happy clicking!
+Good Beefhooks  https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html
 https://github.com/byt3bl33d3r/CrackMapExec/wiki/Using-Credentials
 https://github.com/byt3bl33d3r/CrackMapExec/wiki/SMB-Command-Reference
 http://techgenix.com/psexec-nasty-things-it-can-do/
@@ -140,14 +141,6 @@ git clone https://github.com/D35m0nd142/LFISuite.git
 git clone https://github.com/linted/linuxprivchecker.git
 git clone https://github.com/m4ll0k/WAScan.git
 git clone https://github.com/archerysec/archerysec.git
-git clone https://github.com/maurosoria/dirsearch.git
-git clone https://github.com/codingo/Reconnoitre.git
-git clone https://github.com/RenwaX23/XSS-Payloads.git
-git clone https://github.com/caffix/amass.git
-git clone https://github.com/cyberheartmi9/PayloadsAllTheThings.git
-git clone https://github.com/TheSecondSun/Bashark.git
-git clone https://github.com/s0md3v/AwesomeXSS.git
-git clone https://github.com/PapirusDevelopmentTeam/papirus-icon-theme.git
 git clone https://github.</description>
     </item>
     
