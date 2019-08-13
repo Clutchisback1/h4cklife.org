@@ -93,7 +93,7 @@
       
       <guid>/about/</guid>
       <description>People That Supported Me! Before you read anything about me you have to check out the people that supported me and helped me along the way.
- T0w3ntuM - The first of two mentors that I ever had who showed me &amp;ldquo;de wey&amp;rdquo; Ch33z_plz - Literally paid for some of my lab time and an exam attempt Wraiith75 - My dude Wraiittthhhhh&amp;hellip; Basically family&amp;hellip;His casa was mi casa Jibblits - Talk to this guy everyday bout life and things; we motivate each other 0xc0ffee - When I was feeling like an impostor this guy set me right  Work Peeps that helped me  N00py - Got my internal game ⬆⬆⬆ The Diamond Clad - My cell mate that listens to me rant about how everyone is a Vegan for hours on end and does cool web app things Radio Boy - Completely renovated the way I hack post OSCP Krav - For ruining my mind  Self Dox: Hi, my name is Nate Curry and I began my OSCP journey several years ago.</description>
+ T0w3ntuM - The first of two mentors that I ever had who showed me &amp;ldquo;de wey&amp;rdquo; Ch33z_plz - Literally paid for some of my lab time and an exam attempt Wraiith75 - My dude Wraiittthhhhh&amp;hellip; Basically family&amp;hellip;His casa was mi casa Jibblits - Talk to this guy everyday bout life and things; we motivate each other 0xc0ffee - When I was feeling like an impostor this guy set me right  Work Peeps that helped me  N00py - Got my internal game ⬆⬆⬆ The Diamond Clad - My cell mate that listens to me rant about how everyone is a Vegan for hours on end and does cool web app things Radio Boy - Completely renovated the way I hack post OSCP Krav - For ruining my mind DP - First manager that showed me how to be a consultant  Self Dox: Hi, my name is Nate Curry and I began my OSCP journey several years ago.</description>
     </item>
     
     <item>
@@ -123,7 +123,7 @@ I hate reading boring articles so I&amp;rsquo;m not going to waste any of your t
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/beefhook/</guid>
-      <description>Are these beefhooks or are they not? That&amp;rsquo;s for you to decide every time you click a link! Well here&amp;rsquo;s a bunch; Happy clicking!
+      <description>Are these beefhooks or are they not? That&amp;rsquo;s for you to decide every time you click a link on the internet! Well here&amp;rsquo;s a bunch; Happy clicking!
 Good Beefhooks  https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html
 https://github.com/byt3bl33d3r/CrackMapExec/wiki/Using-Credentials
 https://github.com/byt3bl33d3r/CrackMapExec/wiki/SMB-Command-Reference
@@ -140,7 +140,6 @@ https://pentestlab.blog/2018/07/04/dumping-domain-password-hashes/
 git clone https://github.com/D35m0nd142/LFISuite.git
 git clone https://github.com/linted/linuxprivchecker.git
 git clone https://github.com/m4ll0k/WAScan.git
-git clone https://github.com/archerysec/archerysec.git
 git clone https://github.</description>
     </item>
     
