@@ -201,7 +201,7 @@ Armed with the password taken directly from the wp-config file, a successful log
 <p><center><img class="alignnone size-full wp-image-137" src="https://h4cklife.files.wordpress.com/2018/05/wp-admin.jpg" alt="Wp-admin" width="1898" height="622" /></center>
 <p style="text-align:justify;">This new access allows for both malicious plugins to be uploaded as well as existing plugins to be modified. In this case I chose to modify an existing plugin due to the fact that WordPress requires headers on added plugins. Modifying an existing plugin would save the step of copying another plugin&rsquo;s header to my payload.</p></p>
 
-<p><center><img class="alignnone size-full wp-image-136" src="https://h4cklife.files.wordpress.com/2018/05/wp-admin_plugins.jpg" alt="wp-admin_plugins" width="1103" height="528" /></center> <em>wp-admin page is now accessible using stolen credentials</em>
+<p><center><img class="alignnone size-full wp-image-136" src="https://h4cklife.files.wordpress.com/2018/05/wp-admin_plugins.jpg" alt="wp-admin_plugins" width="1103" height="528" /> <em>wp-admin page is now accessible using stolen credentials</em></center><br>
 <p style="text-align:justify;">Below is a snippet of the modified &ldquo;Akismet Anti-Spam&rdquo;plugin. All of the plugin contents have been removed except for the header comments and the PHP tags themselves. Towards the bottom of the snippet you will see the beginning my <a href="http://pentestmonkey.net/tools/web-shells/php-reverse-shell" target="_blank" rel="noopener">php-reverse-shell</a> code that replaced the original PHP plugin content:</p></p>
 
 <pre><code class="language-php">/**
