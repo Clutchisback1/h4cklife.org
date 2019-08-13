@@ -176,15 +176,16 @@ To start my web enumeration I began with a basic <strong>Nikto</strong> scan of 
 <p><h3>WPSCAN</h3>
 Having discovered that a possible WordPress site was running on the target machine, <strong>wpscan</strong> was used immediately after the web-scan completed. The user <strong><span style="text-decoration:underline;">Admin</span></strong> was discovered.</p>
 
-<p><center><img class=" size-full wp-image-133 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/wpscan_command.jpg" alt="wpscan_command" width="717" height="27" /></center> <em>Command used to enumerate wordpress users</em></p>
+<p><center><img class=" size-full wp-image-133 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/wpscan_command.jpg" alt="wpscan_command" width="717" height="27" /> <em>Command used to enumerate wordpress users</em></center><br></p>
 
-<p><center><img class=" size-full wp-image-134 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/wpscan_results.jpg" alt="wpscan_results" width="397" height="167" /></center> <em>User enumerated using the &ldquo;&ndash;enumerate u&rdquo; flag</em>
-<h3>SMB Enumeration</h3>
+<p><center><img class=" size-full wp-image-134 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/wpscan_results.jpg" alt="wpscan_results" width="397" height="167" /><em><br>User enumerated using the &ldquo;&ndash;enumerate u&rdquo; flag</em></center><br></p>
+
+<p><h3>SMB Enumeration</h3>
 <p style="text-align:justify;">To begin SMB enumeration, <strong>enum4linux </strong>was used for the initial scan. The scan results revealed several shares that could be connected to using the <strong>smbclient. </strong>Using information that was gathered from the initial SMB enumeration via enum4linx along with the username discovered during the wpscan, allowed for a precise SMB connection using the smbclient, to be made.</p></p>
 
-<p><center><img class=" size-full wp-image-131 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/enum4linux_scan.jpg" alt="enum4linux_scan" width="623" height="456" /></center> <em>Enum4linux Share Details</em></p>
+<p><center><img class=" size-full wp-image-131 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/enum4linux_scan.jpg" alt="enum4linux_scan" width="623" height="456" /><br><em>Enum4linux Share Details</em></center><br></p>
 
-<p><center><img class=" size-full wp-image-132 alignnone" src="https://h4cklife.files.wordpress.com/2018/05/smbclient_command.jpg" alt="smbclient_command" width="820" height="471" /></center> <em>Connecting to the interactive share via the smbclient</em></p>
+<p><center><img class=" size-full wp-image-132 alignnone" src="https://h4cklife.files.wordpress.com/2018/05/smbclient_command.jpg" alt="smbclient_command" width="820" height="471" /><em>Connecting to the interactive share via the smbclient</em></center><br></p>
 
 <p>Having connected to the SMB share named share$, allowed for the <strong>wp-config</strong> file and several other files containing passwords to be retrieved.</p>
 
@@ -266,33 +267,35 @@ $debug = 0;
 
 <p><center><img class="  wp-image-142 aligncenter" src="https://h4cklife.files.wordpress.com/2018/05/sudo_su.jpg" alt="sudo_su" width="359" height="82" /> <br>user runs sudo su command and receives root privileges!</center><br></p>
 
-<p>Below, the <strong>proof.txt</strong> was read from the /root/ directory validating that this machine has been exploited successfully:
-<pre><span style="color:#ff0000;"><strong>root@LazySysAdmin</strong></span>:/# cd /root
+<p>Below, the <strong>proof.txt</strong> was read from the /root/ directory validating that this machine has been exploited successfully:</p>
+
+<pre><code class="language-bash">root@LazySysAdmin: cd /root
 cd /root
-root@LazySysAdmin:~# ls
+root@LazySysAdmin: ls
 ls
 proof.txt
-root@LazySysAdmin:~# cat proof.txt
+root@LazySysAdmin: cat proof.txt
 cat proof.txt
-WX6k7NJtA8gfk*w5J3&amp;T@*Ga6!0o5UP89hMVEQ#PT9851</p>
 
-<p>Well done :)</p>
+WX6k7NJtA8gfk*...redacted...
 
-<p>Hope you learn&rsquo;t a few things along the way.</p>
 
-<p>Regards,</p>
+Well done :)
 
-<p>Togie Mcdogie</p>
+Hope you learnt a few things along the way.
 
-<p>Enjoy some random strings</p>
+Regards,
 
-<p>WX6k7NJtA8gfk*w5J3&amp;T@*Ga6!0o5UP89hMVEQ#PT9851
-2d2v#X6x9%D6!DDf4xC1ds6YdOEjug3otDmc1$#slTET7
-pf%&amp;1nRpaj^68ZeV2St9GkdoDkj48Fl$MI97Zt2nebt02
-bhO!5Je65B6Z0bhZhQ3W64wL65wonnQ$@yw%Zhy0U19pu
-</pre>
-<h3></h3>
-<h1>TLDR - Key Takeaways <span class="emoji">📬</span></h1>
+Togie Mcdogie
+
+
+Enjoy some random strings
+
+WX6k7NJtA8gfk*w5J3&amp;amp;T@*Ga6!0o5UP89hMVEQPT9851
+2d2v.....redacted...
+</code></pre>
+
+<p><h1>TLDR - Key Takeaways <span class="emoji">📬</span></h1>
 <ul>
     <li>Brute force SSH once a user has been found</li>
     <li>Modifying certain PHP plugins on WordPress can offline the website</li>
