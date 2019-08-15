@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/how-to-use-silent-trinity/</loc>
+    <lastmod>2019-08-14T21:19:50-06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/kiosk-escapes-pt-2/</loc>
     <lastmod>2019-08-11T15:33:51-06:00</lastmod>
   </url>
@@ -68,13 +73,13 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-08-11T15:33:51-06:00</lastmod>
+    <lastmod>2019-08-14T21:19:50-06:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2019-08-11T15:33:51-06:00</lastmod>
+    <lastmod>2019-08-14T21:19:50-06:00</lastmod>
     <priority>0</priority>
   </url>
   
