@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2019 😜</copyright>
-    <lastBuildDate>Wed, 14 Aug 2019 21:19:50 -0600</lastBuildDate>
+    <lastBuildDate>Fri, 30 Aug 2019 16:50:55 -0600</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Phish Using a Jump Box Part 1</title>
+      <link>/posts/how-to-phish-using-a-jump-box-part-1/</link>
+      <pubDate>Fri, 30 Aug 2019 16:50:55 -0600</pubDate>
+      
+      <guid>/posts/how-to-phish-using-a-jump-box-part-1/</guid>
+      <description>Installing Postfix First thing you need to do to get started is install postfix on your jump box.
+⋊&amp;gt; /e/gophish sudo apt-get install postfix  Once you have it installed you&#39;ll need to configure the main.cf file. After making changes to your main.cf file make sure that the service actually runs. If you run the postfix service with sudo service postfix start do a quick netstat and see if you see port 25 open and listening.</description>
+    </item>
     
     <item>
       <title>How to Use Silent Trinity - Bresaola 0.3.0dev</title>
