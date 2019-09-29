@@ -3,17 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/</loc>
-    <lastmod>2019-09-28T13:39:34-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/posts/kiosk-escapes-pt-3-mexico-edition/</loc>
-    <lastmod>2019-09-28T13:39:34-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
     <lastmod>2019-09-28T13:39:34-05:00</lastmod>
   </url>
   
@@ -84,15 +74,28 @@
   
   <url>
     <loc>/beefhook/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2019-09-28T13:39:34-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/posts/</loc>
+    <lastmod>2019-09-28T13:39:34-05:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
+    <priority>0</priority>
   </url>
   
 </urlset>
