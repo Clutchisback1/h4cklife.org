@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/posts/helpful-tricks-i-use-to-get-domain-admin/</loc>
+    <lastmod>2019-10-07T18:22:27-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/posts/kiosk-escapes-pt-3-mexico-edition/</loc>
     <lastmod>2019-09-28T13:39:34-05:00</lastmod>
   </url>
@@ -83,13 +88,13 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-09-28T13:39:34-05:00</lastmod>
+    <lastmod>2019-10-07T18:22:27-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2019-09-28T13:39:34-05:00</lastmod>
+    <lastmod>2019-10-07T18:22:27-05:00</lastmod>
     <priority>0</priority>
   </url>
   
