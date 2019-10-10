@@ -156,31 +156,5 @@ TLDR&amp;rsquo;ers Start Here ⤵   You&#39;ve have most of the public network 
 I hate reading boring articles so I&amp;rsquo;m not going to waste any of your time by writing one. Besides, you&amp;rsquo;re probably an PWK student with lab time ticking away each second as you get closer to your exam date; The very exam date that will determine whether or not you&amp;rsquo;ve become a man/woman yet in the information security industry. Right now, you&amp;rsquo;re still a little boy/girl with absolutely nothing going for yourself.</description>
     </item>
     
-    <item>
-      <title></title>
-      <link>/beefhook/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/beefhook/</guid>
-      <description>Are these beefhooks or are they not? That&amp;rsquo;s for you to decide every time you click a link on the internet! Well here&amp;rsquo;s a bunch; Happy clicking!
-Good Beefhooks  https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html
-https://github.com/byt3bl33d3r/CrackMapExec/wiki/Using-Credentials
-https://github.com/byt3bl33d3r/CrackMapExec/wiki/SMB-Command-Reference
-http://techgenix.com/psexec-nasty-things-it-can-do/
-http://www.defaultpassword.com/
-https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20injection
-https://github.com/s0md3v/AwesomeXSS
-https://sushant747.gitbooks.io/total-oscp-guide/privilege_escalation_windows.html
-https://www.acunetix.com/blog/articles/web-shells-101-using-php-introduction-web-shells-part-2/
-https://www.securusglobal.com/community/2013/12/20/dumping-windows-credentials/
-https://www.onlinehashcrack.com/how-to-procdump-mimikatz-credentials.php
-https://pentestlab.blog/2018/07/04/dumping-domain-password-hashes/
- Github Beefhooks  git clone https://github.com/Clutchisback1/GIT_THEM #My Github download script that downloads most of these
-git clone https://github.com/D35m0nd142/LFISuite.git
-git clone https://github.com/linted/linuxprivchecker.git
-git clone https://github.com/m4ll0k/WAScan.git
-git clone https://github.</description>
-    </item>
-    
   </channel>
 </rss>
