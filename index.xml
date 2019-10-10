@@ -19,7 +19,7 @@
       
       <guid>/posts/helpful-tricks-i-use-to-get-domain-admin/</guid>
       <description>So I was recently on an internal assessment (Thanks Hexcartel) and got to do some cool tricks I felt like sharing. Behold some tricks:
-Dumping Lsass on Windows 10 😋 Quick and Easy  So, we all know you you can&#39;t just blast Crackmapexec and attach a C2 stager and get shells raining like you could in an unpached Windows 7 network. See my post on &#34;How I use Koadic on Internals&#34;</description>
+Dumping Lsass on Windows 10 😋 Quick and Easy  So, we all know you can&#39;t just blast Crackmapexec and attach a C2 stager and get shells raining like you could in an unpached Windows 7 network. See my post on &#34;How I use Koadic on Internals&#34;</description>
     </item>
     
     <item>

@@ -7,7 +7,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="description" content="So I was recently on an internal assessment (Thanks Hexcartel) and got to do some cool tricks I felt like sharing. Behold some tricks:
-Dumping Lsass on Windows 10 😋 Quick and Easy  So, we all know you you can&#39;t just blast Crackmapexec and attach a C2 stager and get shells raining like you could in an unpached Windows 7 network. See my post on &#34;How I use Koadic on Internals&#34;"/>
+Dumping Lsass on Windows 10 😋 Quick and Easy  So, we all know you can&#39;t just blast Crackmapexec and attach a C2 stager and get shells raining like you could in an unpached Windows 7 network. See my post on &#34;How I use Koadic on Internals&#34;"/>
 <meta name="keywords" content="Hacking"/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="/posts/helpful-tricks-i-use-to-get-domain-admin/" />
@@ -26,13 +26,13 @@ Dumping Lsass on Windows 10 😋 Quick and Easy  So, we all know you you can&#39
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Helpful Tricks I Use to Get Domain Admin"/>
 <meta name="twitter:description" content="So I was recently on an internal assessment (Thanks Hexcartel) and got to do some cool tricks I felt like sharing. Behold some tricks:
-Dumping Lsass on Windows 10 😋 Quick and Easy  So, we all know you you can&#39;t just blast Crackmapexec and attach a C2 stager and get shells raining like you could in an unpached Windows 7 network. See my post on &#34;How I use Koadic on Internals&#34;"/>
+Dumping Lsass on Windows 10 😋 Quick and Easy  So, we all know you can&#39;t just blast Crackmapexec and attach a C2 stager and get shells raining like you could in an unpached Windows 7 network. See my post on &#34;How I use Koadic on Internals&#34;"/>
 
 
 
 <meta property="og:title" content="Helpful Tricks I Use to Get Domain Admin" />
 <meta property="og:description" content="So I was recently on an internal assessment (Thanks Hexcartel) and got to do some cool tricks I felt like sharing. Behold some tricks:
-Dumping Lsass on Windows 10 😋 Quick and Easy  So, we all know you you can&#39;t just blast Crackmapexec and attach a C2 stager and get shells raining like you could in an unpached Windows 7 network. See my post on &#34;How I use Koadic on Internals&#34;" />
+Dumping Lsass on Windows 10 😋 Quick and Easy  So, we all know you can&#39;t just blast Crackmapexec and attach a C2 stager and get shells raining like you could in an unpached Windows 7 network. See my post on &#34;How I use Koadic on Internals&#34;" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/helpful-tricks-i-use-to-get-domain-admin/" /><meta property="article:published_time" content="2019-10-07T18:22:27-05:00"/>
 <meta property="article:modified_time" content="2019-10-07T18:22:27-05:00"/><meta property="og:site_name" content="H4cklife!!" />
@@ -147,7 +147,7 @@ Dumping Lsass on Windows 10 😋 Quick and Easy  So, we all know you you can&#39
 <h4 id="quick-and-easy">Quick and Easy</h4>
 
 <div align="justify"><p>
-So, we all know you you can't just blast <a href="">Crackmapexec</a> and attach a C2 stager and get shells raining like you could in an unpached Windows 7 network. See my post on <a href="../how-i-use-koadic-on-internals">"How I use Koadic on Internals"</a> for that; No, on Windows 10 we have to be a little more sophisticated. So, let's say you've gotten local admin creds to a system and there's another Domain Admin that uses the same system but you can't seem to find a way to get their creds. Well, since you have local admin to that box you can use <code>Crackmapexec</code> to enable wdigest on that system so that next time the user auths' to that sytem their creds will get stored in memory and you'll be able to dump them.
+So, we all know you can't just blast <a href="">Crackmapexec</a> and attach a C2 stager and get shells raining like you could in an unpached Windows 7 network. See my post on <a href="../how-i-use-koadic-on-internals">"How I use Koadic on Internals"</a> for that; No, on Windows 10 we have to be a little more sophisticated. So, let's say you've gotten local admin creds to a system and there's another Domain Admin that uses the same system but you can't seem to find a way to get their creds. Well, since you have local admin to that box you can use <code>Crackmapexec</code> to enable wdigest on that system so that next time the user auths' to that sytem their creds will get stored in memory and you'll be able to dump them.
 </p></div>
 
 <div align="justify"><p>
