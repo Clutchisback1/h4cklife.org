@@ -31,11 +31,10 @@ https://www.acunetix.com/blog/articles/web-shells-101-using-php-introduction-web
 https://www.securusglobal.com/community/2013/12/20/dumping-windows-credentials/
 https://www.onlinehashcrack.com/how-to-procdump-mimikatz-credentials.php
 https://pentestlab.blog/2018/07/04/dumping-domain-password-hashes/
- Github Beefhooks  git clone https://github.com/Clutchisback1/GIT_THEM #My Github download script that downloads most of these
-git clone https://github.com/D35m0nd142/LFISuite.git
+ Github Beefhooks I have a github script that will download all of these:
+git clone https://github.com/Clutchisback1/GIT_THEM  git clone https://github.com/D35m0nd142/LFISuite.git
 git clone https://github.com/linted/linuxprivchecker.git
-git clone https://github.com/m4ll0k/WAScan.git
-git clone https://github.</description>
+git clone https://github.com/m4ll0k/WAScan.git</description>
     </item>
     
     <item>
