@@ -18,7 +18,7 @@
       <pubDate>Thu, 05 Dec 2019 19:43:33 -0600</pubDate>
       
       <guid>/posts/how-to-phish-using-a-jump-box-part-2/</guid>
-      <description>GoDaddy GUI Stuff 🙈 So in my first post I didn&#39;t show how I had all the DNS things set up in GoDaddy. One thing I always get hung up on is adding the TXT record for Let&#39;s encrypt. I always find a way to mess up the TXT record somehow. This is how it should look when you&#39;re waiting for the DNS registrar to update your Let&#39;s Encrypt TXT record:</description>
+      <description>GoDaddy GUI Stuff 🙈  So in my first post I didn&#39;t show how I had all the DNS things set up in GoDaddy. One thing I always get hung up on is adding the TXT record for Let&#39;s encrypt. I always find a way to mess up the TXT record somehow. This is how it should look when you&#39;re waiting for the DNS registrar to update your Let&#39;s Encrypt TXT record:     Let&amp;rsquo;s Encrypt Setting</description>
     </item>
     
     <item>
