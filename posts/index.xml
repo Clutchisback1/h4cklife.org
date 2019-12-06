@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2019 😜</copyright>
-    <lastBuildDate>Mon, 07 Oct 2019 18:22:27 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 25 Nov 2019 19:43:33 -0600</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>How to Phish Using a Jump Box Part 2</title>
+      <link>/posts/how-to-phish-using-a-jump-box-part-2/</link>
+      <pubDate>Mon, 25 Nov 2019 19:43:33 -0600</pubDate>
+      
+      <guid>/posts/how-to-phish-using-a-jump-box-part-2/</guid>
+      <description>GoDaddy GUI Stuff 🙈 So in my first post I didn&#39;t show how I had all the DNS things set up in GoDaddy. One thing I always get hung up on is adding the TXT record for Let&#39;s encrypt. I always find a way to mess up the TXT record somehow. This is how it should look when you&#39;re waiting for the DNS registrar to update your Let&#39;s Encrypt TXT record:</description>
+    </item>
     
     <item>
       <title>Helpful Tricks I Use to Get Domain Admin</title>
