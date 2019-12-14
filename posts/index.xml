@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2019 😜</copyright>
-    <lastBuildDate>Thu, 05 Dec 2019 19:43:33 -0600</lastBuildDate>
+    <lastBuildDate>Sat, 14 Dec 2019 08:39:01 -0600</lastBuildDate>
     
 	<atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sweetrolls AWS Solutions Architect Associate Experience</title>
+      <link>/posts/sweetrolls-aws-solutions-architect-associate-experience/</link>
+      <pubDate>Sat, 14 Dec 2019 08:39:01 -0600</pubDate>
+      
+      <guid>/posts/sweetrolls-aws-solutions-architect-associate-experience/</guid>
+      <description>Overview  The Cloud is becoming an increasingly prolific part of modern IT environments. It’s cheap, secure, and offloads responsibilities like patching and hardware maintenance to a third party. Unfortunately, the cloud remains largely misunderstood, even by industry “experts”.   The Certified Solutions Architect – Associate (CSAA) certification validates an examinee’s ability to “architect and deploy secure and robust applications on AWS technologies”. Certificate holders can expect, on average, a salary of $130,000 in the U.</description>
+    </item>
     
     <item>
       <title>How to Phish Using a Jump Box Part 2</title>
@@ -142,15 +151,6 @@ TLDR&amp;rsquo;ers Start Here ⤵   You&#39;ve have most of the public network 
       <guid>/posts/starting-oscp-from-scratch/</guid>
       <description>Read Time: 16 mins By: Clutchisback1
 I hate reading boring articles so I&amp;rsquo;m not going to waste any of your time by writing one. Besides, you&amp;rsquo;re probably an PWK student with lab time ticking away each second as you get closer to your exam date; The very exam date that will determine whether or not you&amp;rsquo;ve become a man/woman yet in the information security industry. Right now, you&amp;rsquo;re still a little boy/girl with absolutely nothing going for yourself.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/posts/sweetrolls-aws-solutions-architect-associate-experience/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/posts/sweetrolls-aws-solutions-architect-associate-experience/</guid>
-      <description>Sweetroll’s AWS Solutions Architect Associate Experience Overview  The Cloud is becoming an increasingly prolific part of modern IT environments. It’s cheap, secure, and offloads responsibilities like patching and hardware maintenance to a third party. Unfortunately, the cloud remains largely misunderstood, even by industry “experts”.   The Certified Solutions Architect – Associate (CSAA) certification validates an examinee’s ability to “architect and deploy secure and robust applications on AWS technologies”.</description>
     </item>
     
   </channel>
