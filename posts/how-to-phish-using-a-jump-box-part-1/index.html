@@ -2,40 +2,68 @@
 <html lang="en">
   <head>
     
-      <title>How to Phish Using a Jump Box Part 1 :: H4cklife!! — No-life it</title>
+      <title>
+        How to Phish Using a Jump Box Part 1 ::
+        H4cklife!! — No-life it
+      </title>
     
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="Installing Postfix First thing you need to do to get started is install postfix on your jump box.
-⋊&amp;gt; /e/gophish sudo apt-get install postfix  Once you have it installed you&#39;ll need to configure the main.cf file. After making changes to your main.cf file make sure that the service actually runs. If you run the postfix service with sudo service postfix start do a quick netstat and see if you see port 25 open and listening."/>
-<meta name="keywords" content="Hacking"/>
-<meta name="robots" content="noodp"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="Installing Postfix # First thing you need to do to get started is install postfix on your jump box.
+⋊&amp;gt; /e/gophish sudo apt-get install postfix It also goes without saying that you should back this file up before making changes to it. cp /etc/postfix /etc/postfix.bak will do you well! You can see my postfix config file below:
+Configuring Postfix Main.cf # ⋊&amp;gt; ~ cat /etc/postfix/main.cf 22:28:02 # See /usr/share/postfix/main.cf.dist for a commented, more complete version # Debian specific: Specifying a file name will cause the first # line of that file to be used as the name."
+/>
+<meta
+  name="keywords"
+  content="Hacking"
+/>
+<meta name="robots" content="noodp" />
 <link rel="canonical" href="/posts/how-to-phish-using-a-jump-box-part-1/" />
 
 
-<link rel="stylesheet" href="/assets/style.css">
 
 
-<link rel="stylesheet" href="/style.css">
+
+<link rel="stylesheet" href="/assets/style.css" />
+
+<link rel="stylesheet" href="/style.css" />
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
-<link rel="shortcut icon" href="/img/favicon.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="/img/apple-touch-icon-144-precomposed.png"
+/>
+<link rel="shortcut icon" href="/img/favicon.png" />
+
+
+<link href="/assets/fonts/Inter-Italic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Regular.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Medium.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-MediumItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Bold.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-BoldItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
 
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to Phish Using a Jump Box Part 1"/>
-<meta name="twitter:description" content="Installing Postfix First thing you need to do to get started is install postfix on your jump box.
-⋊&gt; /e/gophish sudo apt-get install postfix  Once you have it installed you&#39;ll need to configure the main.cf file. After making changes to your main.cf file make sure that the service actually runs. If you run the postfix service with sudo service postfix start do a quick netstat and see if you see port 25 open and listening."/>
+<meta name="twitter:description" content="Installing Postfix # First thing you need to do to get started is install postfix on your jump box.
+⋊&gt; /e/gophish sudo apt-get install postfix It also goes without saying that you should back this file up before making changes to it. cp /etc/postfix /etc/postfix.bak will do you well! You can see my postfix config file below:
+Configuring Postfix Main.cf # ⋊&gt; ~ cat /etc/postfix/main.cf 22:28:02 # See /usr/share/postfix/main.cf.dist for a commented, more complete version # Debian specific: Specifying a file name will cause the first # line of that file to be used as the name."/>
 
 
 
 <meta property="og:title" content="How to Phish Using a Jump Box Part 1" />
-<meta property="og:description" content="Installing Postfix First thing you need to do to get started is install postfix on your jump box.
-⋊&gt; /e/gophish sudo apt-get install postfix  Once you have it installed you&#39;ll need to configure the main.cf file. After making changes to your main.cf file make sure that the service actually runs. If you run the postfix service with sudo service postfix start do a quick netstat and see if you see port 25 open and listening." />
+<meta property="og:description" content="Installing Postfix # First thing you need to do to get started is install postfix on your jump box.
+⋊&gt; /e/gophish sudo apt-get install postfix It also goes without saying that you should back this file up before making changes to it. cp /etc/postfix /etc/postfix.bak will do you well! You can see my postfix config file below:
+Configuring Postfix Main.cf # ⋊&gt; ~ cat /etc/postfix/main.cf 22:28:02 # See /usr/share/postfix/main.cf.dist for a commented, more complete version # Debian specific: Specifying a file name will cause the first # line of that file to be used as the name." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/how-to-phish-using-a-jump-box-part-1/" /><meta property="article:published_time" content="2019-08-30T16:50:55-06:00"/>
-<meta property="article:modified_time" content="2019-08-30T16:50:55-06:00"/><meta property="og:site_name" content="H4cklife!!" />
+<meta property="og:url" content="/posts/how-to-phish-using-a-jump-box-part-1/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-08-30T16:50:55-06:00" />
+<meta property="article:modified_time" content="2019-08-30T16:50:55-06:00" /><meta property="og:site_name" content="H4cklife!!" />
+
 
 
 
@@ -47,13 +75,19 @@
     <div class="container">
       <header class="header">
   <span class="header__inner">
-    <a href="/" class="logo" style="text-decoration: none;">
+    <a
+  href="/"
+  class="logo"
+  style="text-decoration: none;"
+>
   
-    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
-  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
 </svg>
 </span>
-    <span class="logo__text">H4cklife!!</span>
+    <span class="logo__text"
+      >H4cklife!!</span
+    >
     <span class="logo__cursor"></span>
   
 </a>
@@ -81,7 +115,7 @@
         
       
       
-    
+      
   </ul>
 
   <ul class="menu__inner menu__inner--mobile">
@@ -107,16 +141,25 @@
 
         <span class="menu-trigger">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M0 0h24v24H0z" fill="none"/>
-            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
           </svg>
         </span>
       
       <span class="theme-toggle">
-        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+        <svg
+  class="theme-toggler"
+  width="24"
+  height="24"
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
-  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"
+  />
 </svg>
 
       </span>
@@ -127,17 +170,29 @@
 
       <div class="content">
         
+  
+  
+
   <div class="post">
-    <h2 class="post-title"><a href="/posts/how-to-phish-using-a-jump-box-part-1/">How to Phish Using a Jump Box Part 1</a></h2>
+    <h1 class="post-title">How to Phish Using a Jump Box Part 1</h1>
     <div class="post-meta">
       
         <span class="post-date">
-            2019-08-30
+          2019-08-30
         </span>
+
+        
+          
+        
       
+
       
+
+
       
-        <span class="post-read-time">— 7 min read</span>
+        <span class="post-read-time"
+          >— 5 min read</span
+        >
       
     </div>
 
@@ -147,260 +202,249 @@
 
     <div class="post-content">
       
-
-<h2 id="installing-postfix">Installing Postfix</h2>
-
+      <h2 id="installing-postfix">
+  Installing Postfix
+  <a href="#installing-postfix" class="h-anchor" aria-hidden="true">#</a>
+</h2>
 <p>First thing you need to do to get started is install postfix on your jump box.</p>
-
-<pre><code class="language-bash">⋊&gt; /e/gophish sudo apt-get install postfix
-</code></pre>
-
-<p style="text-align:justify;">
-Once you have it installed you'll need to configure the <code>main.cf</code> file.
-After making changes to your main.cf file make sure that the service actually runs. If you run the postfix service with <code>sudo service postfix start</code> do a quick netstat and see if you see port 25 open and listening. If you netstat and don't see port 25 open and listening you likely have an issue somewhere in your main.cf file.
-
-It also goes without saying that you should back this file up before making changes to it. <code>cp /etc/postfix /etc/postfix.bak</code> will do you well! You can see my postfix config file below:</p>
-
-<h3 id="configuring-postfix-main-cf">Configuring Postfix Main.cf</h3>
-
-<pre><code class="language-bash">⋊&gt; ~ cat /etc/postfix/main.cf                                                                                 22:28:02
-# See /usr/share/postfix/main.cf.dist for a commented, more complete version
-
-
-# Debian specific:  Specifying a file name will cause the first
-# line of that file to be used as the name.  The Debian default
-# is /etc/mailname.
-#myorigin = /etc/mailname
-
-smtpd_banner = $myhostname ESMTP $mail_name (Ubuntu)
-biff = no
-
-# appending .domain is the MUA's job.
-append_dot_mydomain = no
-
-# Uncomment the next line to generate &quot;delayed mail&quot; warnings
-#delay_warning_time = 4h
-
-readme_directory = no
-
-# See http://www.postfix.org/COMPATIBILITY_README.html -- default to 2 on
-# fresh installs.
-compatibility_level = 2
-
-# TLS parameters
-smtpd_tls_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
-smtpd_tls_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
-smtpd_use_tls=yes
-smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache
-smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
-
-# See /usr/share/doc/postfix/TLS_README.gz in the postfix-doc package for
-# information on enabling SSL in the smtp client.
-
-smtpd_relay_restrictions = permit_mynetworks permit_sasl_authenticated defer_unauth_destination
-#myhostname = localhost.members.linode.com
-myhostname = Beefhooks.com &lt;&lt; CHANGE THIS
-alias_maps = hash:/etc/aliases
-alias_database = hash:/etc/aliases
-mydestination = mail.Beefhooks.com &lt;&lt; CHANGE THIS, localhost, localhost.localdomain, localhost
-relayhost =
-mynetworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128
-mailbox_size_limit = 0
-recipient_delimiter = +
-inet_interfaces = all
-inet_protocols = all
-
-
-
-# I ADDED EVERYTHING BELOW ⬇⬇⬇⬇
-
-# My edits - [Thanks Jake]
-
-mime_header_checks = regexp:/etc/postfix/header_checks
-header_checks = regexp:/etc/postfix/header_checks
-#transport_maps = hash:/etc/postfix/transport
-
-# SSL Stuff - This makes Postfix  encrypt the email upon sending
-smtpd_tls_security_level = may
-smtp_tls_security_level = may
-smtp_tls_loglevel = 1
-smtpd_tls_loglevel = 1
-</code></pre>
-
-<h2 id="setting-up-ssl-encryption">Setting up SSL Encryption 📼</h2>
-
-<p style="text-align:justify;">
-Now that Postfix has been setup you should be ready to start getting SSL set up for your server. In my situation I went with letsencrypt (I think most people do). It's free! I also knew that I would be using a subdomain during my engagement so I created a wildcard certificate. To get started you'll need to install the letsencrypt certbot which will be used to generate the SSL keys and certs and what not:
-</p>
-
-<h3 id="install-the-letsencrypt-certbot">Install The Letsencrypt Certbot</h3>
-
-<pre><code class="language-bash">⋊&gt; /e/g/gophish
-
-sudo apt-get update
-sudo apt-get install software-properties-common
-sudo add-apt-repository ppa:certbot/certbot
-sudo apt-get update
-sudo apt-get install python-certbot-apache
-</code></pre>
-
-<p>Once that&rsquo;s installed you&rsquo;ll need to use it to create the cert. This is where you&rsquo;ll need to add the string that letsencrypt generates to a TXT record on your domain&rsquo;s DNS settings. You did purchase a domain right?? If not you should probably go and do that. Then you&rsquo;ll need to go to where you edit the TXT/MX records:</p>
-
-<h3 id="generating-the-wildcard-letsencrypt-certificate">Generating the Wildcard Letsencrypt Certificate</h3>
-
-<pre><code class="language-bash">⋊&gt; /e/g/gophish ./certbot-auto certonly -d '*.Beefhooks.com' --manual --preferred-challenges dns --register-unsafely-without-email
-Saving debug log to /var/log/letsencrypt/letsencrypt.log
-Plugins selected: Authenticator manual, Installer None
-Obtaining a new certificate
-Performing the following challenges:
-dns-01 challenge for Beefhooks.com
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-NOTE: The IP of this machine will be publicly logged as having requested this
-certificate. If you're running certbot in manual mode on a machine that is not
-your server, please ensure you're okay with that.
-
-Are you OK with your IP being logged?
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-(Y)es/(N)o: y
-
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Please deploy a DNS TXT record under the name
-_acme-challenge.Beefhooks.com with the following value:
-
-ftYJ_RjVZUzEeKxzgwjlWqzlqwzCbkrsXknduewigd
-
-Before continuing, verify the record is deployed.
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-Press Enter to Continue
-Waiting for verification...
-Cleaning up challenges
-
-IMPORTANT NOTES:
- - Congratulations! Your certificate and chain have been saved at:
-   /etc/letsencrypt/live/Beefhooks.com-0001/fullchain.pem
-   Your key file has been saved at:
-   /etc/letsencrypt/live/Beefhooks.com-0001/privkey.pem
-   Your cert will expire on 2019-11-20. To obtain a new or tweaked
-   version of this certificate in the future, simply run certbot-auto
-   again. To non-interactively renew *all* of your certificates, run
-   &quot;certbot-auto renew&quot;
- - If you like Certbot, please consider supporting our work by:
-
-   Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
-   Donating to EFF:                    https://eff.org/donate-le
-</code></pre>
-
-<p style="text-align:justify;">
-So when the certbot pauses and waits for you to update your TXT record you'll be left in limbo before you can hit enter on the prompt signaling that this record has been digested by DNS. So what you can do to check this is use the <code>watch</code> command with dig to see if and when the TXT record gets updated. I do this below:</p>
-
-<h3 id="checking-on-letsencrypt-challenge-dns-record-update">Checking on Letsencrypt Challenge DNS Record Update</h3>
-
-<pre><code class="language-bash">clutchisback1@HOMEPC /e/g/enum4linux$ watch dig -t txt _acme-challenge.Beefhooks.com
-
-Every 2.0s: dig -t txt _acme-challenge.Beefhooks.com                            HOMEPC: Fri Aug 23 16:33:16 2019
-
-
-; &lt;&lt;&gt;&gt; DiG 9.11.5-P1-1ubuntu2.5-Ubuntu &lt;&lt;&gt;&gt; -t txt _acme-challenge.Beefhooks.com
-;; global options: +cmd
-;; Got answer:
-;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: 35211
-;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
-
-;; OPT PSEUDOSECTION:
-; EDNS: version: 0, flags:; udp: 65494
-;; QUESTION SECTION:
-;_acme-challenge.Beefhooks.com. IN  TXT
-
-;; ANSWER SECTION:
-_acme-challenge.Beefhooks.com. 581 IN TXT   &quot;ftYJ_RjVZUzEeKxzgwjlWqzlqwzCbkrsXknduewigd&quot;
-
-;; Query time: 0 msec
-;; SERVER: 127.0.0.53#53(127.0.0.53)
-;; WHEN: Fri Aug 23 16:33:16 MDT 2019
-;; MSG SIZE  rcvd: 118
-</code></pre>
-
-<p style="text-align:justify;">
-See that long string <code>ftYJ_RjVZUzEeKxzgwjlWqzlqwzCbkrsXknduewigd</code>? Your certbot TXT record will populate there after some time once it's digested and registered with your domain. If you don't know about the <code>watch</code> command it obviously had a ton of other applications. It runs the command every n seconds and will change the output based on whatever relevant changes occur. It's pretty cool. Oh and say you wait for a while (10 or so mins) and nothing updates, hit enter and see if it just works. It's DNS so expect the unexpected. Sometimes it'll just work/not work. You know how it is...</p>
-
-<h3 id="configuring-gophish">Configuring Gophish</h3>
-
-<p style="text-align:justify;">
-So, now that your letsencrypt files are generated you'll need to update the Gophish <code>config.json</code> file located in your Gophish dir. You'll need to specify the letsencrypt key file and crt file in this configuration file. I copied them from the letsencrypt folder to my Gophish folder, that's why there's no path in this field. Here's a snapshot of my config file:</p>
-
-<pre><code class="language-bash">⋊&gt; /e/g/gophish cat config.json                                                                               01:56:30
-{
-	&quot;admin_server&quot;: {
-		&quot;listen_url&quot;: &quot;127.0.0.1:3333&quot;,
-		&quot;use_tls&quot;: true,
-		&quot;cert_path&quot;: &quot;gophish_admin.crt&quot;,
-		&quot;key_path&quot;: &quot;gophish_admin.key&quot;
-	},
-	&quot;phish_server&quot;: {
-		&quot;listen_url&quot;: &quot;0.0.0.0:443&quot;,
-		&quot;use_tls&quot;: true,
-		&quot;cert_path&quot;: &quot;Beefhooks.com.crt&quot;,   # CHANGE THIS
-		&quot;key_path&quot;: &quot;Beefhooks.com.key&quot;     # CHANGE THIS
-	},
-	&quot;db_name&quot;: &quot;sqlite3&quot;,
-	&quot;db_path&quot;: &quot;gophish.db&quot;,
-	&quot;migrations_prefix&quot;: &quot;db/db_&quot;,
-	&quot;contact_address&quot;: &quot;&quot;,
-	&quot;logging&quot;: {
-		&quot;filename&quot;: &quot;&quot;
-	}
-}
-</code></pre>
-
-<p style="text-align:justify;">
-Make sure that you're changing the <code>phish_server</code> parameters and <b>NOT</b> the <code>admin_server</code> parameters. Once you've made it to this point you should be good to start fooling around with creating the phishing campaign with Gophish, the application. I may create a part 2 if I'm able to find the time but this should be enough to get you all started Phishing from your own jump boxes! Shout out to <code>Jake N.</code> [The Cobra] and <code>Ryan V.</code>[1337llama] for showing me all the things!</p>
-
-<pre><code class="language-bash">_______________
-&lt; L33T PHi$HiNg &gt;
----------------
-   \
-    \  /\/\
-      \   /
-      |  0 &gt;&gt;
-      |___|
-__((_&lt;|   |
-(          |
-(__________)
-  |      |
-  |      |
-  /\     /\
-</code></pre>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>⋊&gt; /e/gophish sudo apt-get install postfix
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<p>It also goes without saying that you should back this file up before making changes to it. <!-- raw HTML omitted -->cp /etc/postfix /etc/postfix.bak<!-- raw HTML omitted --> will do you well! You can see my postfix config file below:<!-- raw HTML omitted --></p>
+<h3 id="configuring-postfix-maincf">
+  Configuring Postfix Main.cf
+  <a href="#configuring-postfix-maincf" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>⋊&gt; ~ cat /etc/postfix/main.cf                                                                                 22:28:02
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># See /usr/share/postfix/main.cf.dist for a commented, more complete version</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Debian specific:  Specifying a file name will cause the first</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># line of that file to be used as the name.  The Debian default</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># is /etc/mailname.</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#myorigin = /etc/mailname</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>smtpd_banner <span style="color:#f92672">=</span> $myhostname ESMTP $mail_name <span style="color:#f92672">(</span>Ubuntu<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>biff <span style="color:#f92672">=</span> no
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># appending .domain is the MUA&#39;s job.</span>
+</span></span><span style="display:flex;"><span>append_dot_mydomain <span style="color:#f92672">=</span> no
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Uncomment the next line to generate &#34;delayed mail&#34; warnings</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#delay_warning_time = 4h</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>readme_directory <span style="color:#f92672">=</span> no
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># See http://www.postfix.org/COMPATIBILITY_README.html -- default to 2 on</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># fresh installs.</span>
+</span></span><span style="display:flex;"><span>compatibility_level <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># TLS parameters</span>
+</span></span><span style="display:flex;"><span>smtpd_tls_cert_file<span style="color:#f92672">=</span>/etc/ssl/certs/ssl-cert-snakeoil.pem
+</span></span><span style="display:flex;"><span>smtpd_tls_key_file<span style="color:#f92672">=</span>/etc/ssl/private/ssl-cert-snakeoil.key
+</span></span><span style="display:flex;"><span>smtpd_use_tls<span style="color:#f92672">=</span>yes
+</span></span><span style="display:flex;"><span>smtpd_tls_session_cache_database <span style="color:#f92672">=</span> btree:<span style="color:#e6db74">${</span>data_directory<span style="color:#e6db74">}</span>/smtpd_scache
+</span></span><span style="display:flex;"><span>smtp_tls_session_cache_database <span style="color:#f92672">=</span> btree:<span style="color:#e6db74">${</span>data_directory<span style="color:#e6db74">}</span>/smtp_scache
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># See /usr/share/doc/postfix/TLS_README.gz in the postfix-doc package for</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># information on enabling SSL in the smtp client.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>smtpd_relay_restrictions <span style="color:#f92672">=</span> permit_mynetworks permit_sasl_authenticated defer_unauth_destination
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#myhostname = localhost.members.linode.com</span>
+</span></span><span style="display:flex;"><span>myhostname <span style="color:#f92672">=</span> Beefhooks.com <span style="color:#e6db74">&lt;&lt; CHANGE THIS
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">alias_maps = hash:/etc/aliases
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">alias_database = hash:/etc/aliases
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">mydestination = mail.Beefhooks.com &lt;&lt; CHANGE</span> THIS, localhost, localhost.localdomain, localhost
+</span></span><span style="display:flex;"><span>relayhost <span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>mynetworks <span style="color:#f92672">=</span> 127.0.0.0/8 <span style="color:#f92672">[</span>::ffff:127.0.0.0<span style="color:#f92672">]</span>/104 <span style="color:#f92672">[</span>::1<span style="color:#f92672">]</span>/128
+</span></span><span style="display:flex;"><span>mailbox_size_limit <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>recipient_delimiter <span style="color:#f92672">=</span> +
+</span></span><span style="display:flex;"><span>inet_interfaces <span style="color:#f92672">=</span> all
+</span></span><span style="display:flex;"><span>inet_protocols <span style="color:#f92672">=</span> all
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># I ADDED EVERYTHING BELOW ⬇⬇⬇⬇</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># My edits - [Thanks Jake]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>mime_header_checks <span style="color:#f92672">=</span> regexp:/etc/postfix/header_checks
+</span></span><span style="display:flex;"><span>header_checks <span style="color:#f92672">=</span> regexp:/etc/postfix/header_checks
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#transport_maps = hash:/etc/postfix/transport</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># SSL Stuff - This makes Postfix  encrypt the email upon sending</span>
+</span></span><span style="display:flex;"><span>smtpd_tls_security_level <span style="color:#f92672">=</span> may
+</span></span><span style="display:flex;"><span>smtp_tls_security_level <span style="color:#f92672">=</span> may
+</span></span><span style="display:flex;"><span>smtp_tls_loglevel <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>smtpd_tls_loglevel <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+</span></span></code></pre></div><h2 id="setting-up-ssl-encryption-">
+  Setting up SSL Encryption 📼
+  <a href="#setting-up-ssl-encryption-" class="h-anchor" aria-hidden="true">#</a>
+</h2>
+<!-- raw HTML omitted -->
+<h3 id="install-the-letsencrypt-certbot">
+  Install The Letsencrypt Certbot
+  <a href="#install-the-letsencrypt-certbot" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>⋊&gt; /e/g/gophish
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo apt-get update
+</span></span><span style="display:flex;"><span>sudo apt-get install software-properties-common
+</span></span><span style="display:flex;"><span>sudo add-apt-repository ppa:certbot/certbot
+</span></span><span style="display:flex;"><span>sudo apt-get update
+</span></span><span style="display:flex;"><span>sudo apt-get install python-certbot-apache
+</span></span></code></pre></div><p>Once that&rsquo;s installed you&rsquo;ll need to use it to create the cert. This is where you&rsquo;ll need to add the string that letsencrypt generates to a TXT record on your domain&rsquo;s DNS settings. You did purchase a domain right?? If not you should probably go and do that. Then you&rsquo;ll need to go to where you edit the TXT/MX records:</p>
+<h3 id="generating-the-wildcard-letsencrypt-certificate">
+  Generating the Wildcard Letsencrypt Certificate
+  <a href="#generating-the-wildcard-letsencrypt-certificate" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>⋊&gt; /e/g/gophish ./certbot-auto certonly -d <span style="color:#e6db74">&#39;*.Beefhooks.com&#39;</span> --manual --preferred-challenges dns --register-unsafely-without-email
+</span></span><span style="display:flex;"><span>Saving debug log to /var/log/letsencrypt/letsencrypt.log
+</span></span><span style="display:flex;"><span>Plugins selected: Authenticator manual, Installer None
+</span></span><span style="display:flex;"><span>Obtaining a new certificate
+</span></span><span style="display:flex;"><span>Performing the following challenges:
+</span></span><span style="display:flex;"><span>dns-01 challenge <span style="color:#66d9ef">for</span> Beefhooks.com
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</span></span><span style="display:flex;"><span>NOTE: The IP of this machine will be publicly logged as having requested this
+</span></span><span style="display:flex;"><span>certificate. If you<span style="color:#e6db74">&#39;re running certbot in manual mode on a machine that is not
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">your server, please ensure you&#39;</span>re okay with that.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Are you OK with your IP being logged?
+</span></span><span style="display:flex;"><span>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>Y<span style="color:#f92672">)</span>es/<span style="color:#f92672">(</span>N<span style="color:#f92672">)</span>o: y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</span></span><span style="display:flex;"><span>Please deploy a DNS TXT record under the name
+</span></span><span style="display:flex;"><span>_acme-challenge.Beefhooks.com with the following value:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ftYJ_RjVZUzEeKxzgwjlWqzlqwzCbkrsXknduewigd
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Before continuing, verify the record is deployed.
+</span></span><span style="display:flex;"><span>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+</span></span><span style="display:flex;"><span>Press Enter to Continue
+</span></span><span style="display:flex;"><span>Waiting <span style="color:#66d9ef">for</span> verification...
+</span></span><span style="display:flex;"><span>Cleaning up challenges
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>IMPORTANT NOTES:
+</span></span><span style="display:flex;"><span> - Congratulations! Your certificate and chain have been saved at:
+</span></span><span style="display:flex;"><span>   /etc/letsencrypt/live/Beefhooks.com-0001/fullchain.pem
+</span></span><span style="display:flex;"><span>   Your key file has been saved at:
+</span></span><span style="display:flex;"><span>   /etc/letsencrypt/live/Beefhooks.com-0001/privkey.pem
+</span></span><span style="display:flex;"><span>   Your cert will expire on 2019-11-20. To obtain a new or tweaked
+</span></span><span style="display:flex;"><span>   version of this certificate in the future, simply run certbot-auto
+</span></span><span style="display:flex;"><span>   again. To non-interactively renew *all* of your certificates, run
+</span></span><span style="display:flex;"><span>   <span style="color:#e6db74">&#34;certbot-auto renew&#34;</span>
+</span></span><span style="display:flex;"><span> - If you like Certbot, please consider supporting our work by:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   Donating to ISRG / Let<span style="color:#960050;background-color:#1e0010">&#39;</span>s Encrypt:   https://letsencrypt.org/donate
+</span></span><span style="display:flex;"><span>   Donating to EFF:                    https://eff.org/donate-le
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<h3 id="checking-on-letsencrypt-challenge-dns-record-update">
+  Checking on Letsencrypt Challenge DNS Record Update
+  <a href="#checking-on-letsencrypt-challenge-dns-record-update" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>clutchisback1@HOMEPC /e/g/enum4linux$ watch dig -t txt _acme-challenge.Beefhooks.com
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Every 2.0s: dig -t txt _acme-challenge.Beefhooks.com                            HOMEPC: Fri Aug <span style="color:#ae81ff">23</span> 16:33:16 <span style="color:#ae81ff">2019</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>; &lt;&lt;&gt;&gt; DiG 9.11.5-P1-1ubuntu2.5-Ubuntu &lt;&lt;&gt;&gt; -t txt _acme-challenge.Beefhooks.com
+</span></span><span style="display:flex;"><span>;; global options: +cmd
+</span></span><span style="display:flex;"><span>;; Got answer:
+</span></span><span style="display:flex;"><span>;; -&gt;&gt;HEADER<span style="color:#e6db74">&lt;&lt;- opco</span>de: QUERY, status: NOERROR, id: <span style="color:#ae81ff">35211</span>
+</span></span><span style="display:flex;"><span>;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>;; OPT PSEUDOSECTION:
+</span></span><span style="display:flex;"><span>; EDNS: version: 0, flags:; udp: <span style="color:#ae81ff">65494</span>
+</span></span><span style="display:flex;"><span>;; QUESTION SECTION:
+</span></span><span style="display:flex;"><span>;_acme-challenge.Beefhooks.com. IN  TXT
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>;; ANSWER SECTION:
+</span></span><span style="display:flex;"><span>_acme-challenge.Beefhooks.com. <span style="color:#ae81ff">581</span> IN TXT   <span style="color:#e6db74">&#34;ftYJ_RjVZUzEeKxzgwjlWqzlqwzCbkrsXknduewigd&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>;; Query time: <span style="color:#ae81ff">0</span> msec
+</span></span><span style="display:flex;"><span>;; SERVER: 127.0.0.53#53<span style="color:#f92672">(</span>127.0.0.53<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>;; WHEN: Fri Aug <span style="color:#ae81ff">23</span> 16:33:16 MDT <span style="color:#ae81ff">2019</span>
+</span></span><span style="display:flex;"><span>;; MSG SIZE  rcvd: <span style="color:#ae81ff">118</span>
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<h3 id="configuring-gophish">
+  Configuring Gophish
+  <a href="#configuring-gophish" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>⋊&gt; /e/g/gophish cat config.json                                                                               01:56:30
+</span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;admin_server&#34;</span>: <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;listen_url&#34;</span>: <span style="color:#e6db74">&#34;127.0.0.1:3333&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;use_tls&#34;</span>: true,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;cert_path&#34;</span>: <span style="color:#e6db74">&#34;gophish_admin.crt&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;key_path&#34;</span>: <span style="color:#e6db74">&#34;gophish_admin.key&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;phish_server&#34;</span>: <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;listen_url&#34;</span>: <span style="color:#e6db74">&#34;0.0.0.0:443&#34;</span>,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;use_tls&#34;</span>: true,
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;cert_path&#34;</span>: <span style="color:#e6db74">&#34;Beefhooks.com.crt&#34;</span>,   <span style="color:#75715e"># CHANGE THIS</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;key_path&#34;</span>: <span style="color:#e6db74">&#34;Beefhooks.com.key&#34;</span>     <span style="color:#75715e"># CHANGE THIS</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;db_name&#34;</span>: <span style="color:#e6db74">&#34;sqlite3&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;db_path&#34;</span>: <span style="color:#e6db74">&#34;gophish.db&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;migrations_prefix&#34;</span>: <span style="color:#e6db74">&#34;db/db_&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;contact_address&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;logging&#34;</span>: <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;filename&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>_______________
+</span></span><span style="display:flex;"><span>&lt; L33T PHi$HiNg &gt;
+</span></span><span style="display:flex;"><span>---------------
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    <span style="color:#ae81ff">\ </span> /<span style="color:#ae81ff">\/\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>      <span style="color:#ae81ff">\ </span>  /
+</span></span><span style="display:flex;"><span>      |  <span style="color:#ae81ff">0</span> &gt;&gt;
+</span></span><span style="display:flex;"><span>      |___|
+</span></span><span style="display:flex;"><span>__<span style="color:#f92672">((</span>_&lt;|   |
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>          |
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>__________<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  |      |
+</span></span><span style="display:flex;"><span>  |      |
+</span></span><span style="display:flex;"><span>  /<span style="color:#ae81ff">\ </span>    /<span style="color:#ae81ff">\
+</span></span></span></code></pre></div>
     </div>
     
-      <div class="pagination">
-        <div class="pagination__title">
-          <span class="pagination__title-h">Read other posts</span>
-          <hr />
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            <span class="pagination__title-h"
+              >Read other posts</span
+            >
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="/posts/kiosk-escapes-pt-3-mexico-edition/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">Kiosk Escapes Pt. 3 - Mexico Edition!!</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="/posts/how-to-use-silent-trinity/">
+                  <span class="button__text">How to Use Silent Trinity - Bresaola 0.3.0dev</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
         </div>
-        <div class="pagination__buttons">
-          
-            <span class="button previous">
-              <a href="/posts/kiosk-escapes-pt-3-mexico-edition/">
-                <span class="button__icon">←</span>
-                <span class="button__text">Kiosk Escapes Pt. 3 - Mexico Edition!!</span>
-              </a>
-            </span>
-          
-          
-            <span class="button next">
-              <a href="/posts/how-to-use-silent-trinity/">
-                <span class="button__text">How to Use Silent Trinity - Bresaola 0.3.0dev</span>
-                <span class="button__icon">→</span>
-              </a>
-            </span>
-          
-        </div>
-      </div>
+      
     
 
-    <script src="https://utteranc.es/client.js"
+    
+      
+        <script src="https://utteranc.es/client.js"
         repo="clutchisback1/h4cklife.org"
         issue-term="pathname"
         label="general-comment"
@@ -440,7 +484,9 @@ drift.load('2pa2ip2k9udy');
 </script>
 
 
-    </div>
+      
+    
+  </div>
 
       </div>
 
@@ -449,7 +495,7 @@ drift.load('2pa2ip2k9udy');
   <div class="footer__inner">
     
       <div class="copyright copyright--user">Copyright 2019 😜</div>
-    
+      
   </div>
 </footer>
 

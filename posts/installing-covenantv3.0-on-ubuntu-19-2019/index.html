@@ -2,37 +2,65 @@
 <html lang="en">
   <head>
     
-      <title>Installing Covenant v3.0 on Ubuntu 19 :: H4cklife!! — No-life it</title>
+      <title>
+        Installing Covenant v3.0 on Ubuntu 19 ::
+        H4cklife!! — No-life it
+      </title>
     
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-<meta name="description" content="Intro There&#39;s a lot of hype around the new version of Covenant 3.0 so I figured I&#39;d share my installation experience with the world (I need content...shhhhh...lol). My boy Wraith said it was pretty legit so I had a quick look-see before hoping into bed. It def looks like a solid and modern framework that ups that ante for other C2 frameworks (you&#39;ll never steal my heart from Koadic!❤)."/>
-<meta name="keywords" content="Hacking"/>
-<meta name="robots" content="noodp"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta
+  name="description"
+  content="Intro # Installation Steps I took&amp;hellip; -TLDRs Start Here ⤵ # To start off I cloned the repository recursively as instructed in the repo&amp;rsquo;s wiki:
+clutchisback1@Deadpool /e/github $ git clone --recurse-submodules https://github.com/cobbr/Covenant Cloning into &amp;#39;Covenant&amp;#39;... remote: Enumerating objects: 1133, done. remote: Counting objects: 100% (1133/1133), done. remote: Compressing objects: 100% (548/548), done. remote: Total 1545 (delta 639), reused 996 (delta 560), pack-reused 412 Receiving objects: 100% (1545/1545), 22.18 MiB | 3."
+/>
+<meta
+  name="keywords"
+  content="Hacking"
+/>
+<meta name="robots" content="noodp" />
 <link rel="canonical" href="/posts/installing-covenantv3.0-on-ubuntu-19-2019/" />
 
 
-<link rel="stylesheet" href="/assets/style.css">
 
 
-<link rel="stylesheet" href="/style.css">
+
+<link rel="stylesheet" href="/assets/style.css" />
+
+<link rel="stylesheet" href="/style.css" />
 
 
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/img/apple-touch-icon-144-precomposed.png">
-<link rel="shortcut icon" href="/img/favicon.png">
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="144x144"
+  href="/img/apple-touch-icon-144-precomposed.png"
+/>
+<link rel="shortcut icon" href="/img/favicon.png" />
+
+
+<link href="/assets/fonts/Inter-Italic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Regular.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Medium.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-MediumItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-Bold.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
+<link href="/assets/fonts/Inter-BoldItalic.woff2" rel="preload" type="font/woff2" as="font" crossorigin="">
 
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Installing Covenant v3.0 on Ubuntu 19"/>
-<meta name="twitter:description" content="Intro There&#39;s a lot of hype around the new version of Covenant 3.0 so I figured I&#39;d share my installation experience with the world (I need content...shhhhh...lol). My boy Wraith said it was pretty legit so I had a quick look-see before hoping into bed. It def looks like a solid and modern framework that ups that ante for other C2 frameworks (you&#39;ll never steal my heart from Koadic!❤)."/>
+<meta name="twitter:description" content="Intro # Installation Steps I took&hellip; -TLDRs Start Here ⤵ # To start off I cloned the repository recursively as instructed in the repo&rsquo;s wiki:
+clutchisback1@Deadpool /e/github $ git clone --recurse-submodules https://github.com/cobbr/Covenant Cloning into &#39;Covenant&#39;... remote: Enumerating objects: 1133, done. remote: Counting objects: 100% (1133/1133), done. remote: Compressing objects: 100% (548/548), done. remote: Total 1545 (delta 639), reused 996 (delta 560), pack-reused 412 Receiving objects: 100% (1545/1545), 22.18 MiB | 3."/>
 
 
 
 <meta property="og:title" content="Installing Covenant v3.0 on Ubuntu 19" />
-<meta property="og:description" content="Intro There&#39;s a lot of hype around the new version of Covenant 3.0 so I figured I&#39;d share my installation experience with the world (I need content...shhhhh...lol). My boy Wraith said it was pretty legit so I had a quick look-see before hoping into bed. It def looks like a solid and modern framework that ups that ante for other C2 frameworks (you&#39;ll never steal my heart from Koadic!❤)." />
+<meta property="og:description" content="Intro # Installation Steps I took&hellip; -TLDRs Start Here ⤵ # To start off I cloned the repository recursively as instructed in the repo&rsquo;s wiki:
+clutchisback1@Deadpool /e/github $ git clone --recurse-submodules https://github.com/cobbr/Covenant Cloning into &#39;Covenant&#39;... remote: Enumerating objects: 1133, done. remote: Counting objects: 100% (1133/1133), done. remote: Compressing objects: 100% (548/548), done. remote: Total 1545 (delta 639), reused 996 (delta 560), pack-reused 412 Receiving objects: 100% (1545/1545), 22.18 MiB | 3." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/posts/installing-covenantv3.0-on-ubuntu-19-2019/" /><meta property="article:published_time" content="2019-08-03T13:40:35-06:00"/>
-<meta property="article:modified_time" content="2019-08-03T13:40:35-06:00"/><meta property="og:site_name" content="H4cklife!!" />
+<meta property="og:url" content="/posts/installing-covenantv3.0-on-ubuntu-19-2019/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-08-03T13:40:35-06:00" />
+<meta property="article:modified_time" content="2019-08-03T13:40:35-06:00" /><meta property="og:site_name" content="H4cklife!!" />
+
 
 
 
@@ -44,13 +72,19 @@
     <div class="container">
       <header class="header">
   <span class="header__inner">
-    <a href="/" class="logo" style="text-decoration: none;">
+    <a
+  href="/"
+  class="logo"
+  style="text-decoration: none;"
+>
   
-    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" width="44" height="44" viewBox="0 0 44 44">
-  <polyline fill="none" stroke="#000" stroke-width="2" points="15 8 29.729 22.382 15 35.367"/>
+    <span class="logo__mark"><svg xmlns="http://www.w3.org/2000/svg" class="greater-icon" viewBox="0 0 44 44">
+  <path fill="none" d="M15 8l14.729 14.382L15 35.367" />
 </svg>
 </span>
-    <span class="logo__text">H4cklife!!</span>
+    <span class="logo__text"
+      >H4cklife!!</span
+    >
     <span class="logo__cursor"></span>
   
 </a>
@@ -78,7 +112,7 @@
         
       
       
-    
+      
   </ul>
 
   <ul class="menu__inner menu__inner--mobile">
@@ -104,16 +138,25 @@
 
         <span class="menu-trigger">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M0 0h24v24H0z" fill="none"/>
-            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
           </svg>
         </span>
       
       <span class="theme-toggle">
-        <svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+        <svg
+  class="theme-toggler"
+  width="24"
+  height="24"
+  viewBox="0 0 48 48"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
-  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"
+  />
 </svg>
 
       </span>
@@ -124,17 +167,29 @@
 
       <div class="content">
         
+  
+  
+
   <div class="post">
-    <h2 class="post-title"><a href="/posts/installing-covenantv3.0-on-ubuntu-19-2019/">Installing Covenant v3.0 on Ubuntu 19</a></h2>
+    <h1 class="post-title">Installing Covenant v3.0 on Ubuntu 19</h1>
     <div class="post-meta">
       
         <span class="post-date">
-            2019-08-03
+          2019-08-03
         </span>
+
+        
+          
+        
       
+
       
+
+
       
-        <span class="post-read-time">— 11 min read</span>
+        <span class="post-read-time"
+          >— 10 min read</span
+        >
       
     </div>
 
@@ -144,285 +199,268 @@
 
     <div class="post-content">
       
-
-<h3 id="intro">Intro</h3>
-
-<p style="text-align:justify;">
-There's a lot of hype around the new version of <a href="https://github.com/cobbr/Covenant">Covenant 3.0</a> so I figured I'd share my installation experience with the world (I need content...shhhhh...lol). My boy <a href='https://twitter.com/Wraiith1'>Wraith</a> said it was pretty legit so I had a quick look-see before hoping into bed. It def looks like a solid and modern framework that ups that ante for other C2 frameworks (<i>you'll never steal my heart from Koadic!❤</i>).</p>
-
-<h3 id="installation-steps-i-took-tldrs-start-here">Installation Steps I took&hellip;  -TLDRs Start Here ⤵</h3>
-
-<p>To start off I cloned the repository recursively as instructed in the repo&rsquo;s <a href="https://github.com/cobbr/Covenant/wiki/Installation-And-Startup">wiki</a>:</p>
-
-<pre><code class="language-bash">clutchisback1@Deadpool /e/github  $ git clone --recurse-submodules https://github.com/cobbr/Covenant
-Cloning into 'Covenant'...
-remote: Enumerating objects: 1133, done.
-remote: Counting objects: 100% (1133/1133), done.
-remote: Compressing objects: 100% (548/548), done.
-remote: Total 1545 (delta 639), reused 996 (delta 560), pack-reused 412
-Receiving objects: 100% (1545/1545), 22.18 MiB | 3.35 MiB/s, done.Resolving deltas: 100% (820/820), done.
-</code></pre>
-
-<p style="text-align:justify;">
-After cloning the repo you have to make sure you have the dotnet core pre-reqs before you can build the tool. Microsoft had the following commands on their instructions for Linux Installation which allows you to <a href="https://dotnet.microsoft.com/download/linux-package-manager/ubuntu19-04/sdk-current">install their x64 bit binaries</a>:</p>  
-
-<pre><code class="language-bash">wget -q https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
-</code></pre>
-
-<p>Apt has a dotnet framework as well and in the process of trying to install this I installed that too. (This may or may not need to be done)</p>
-
-<pre><code class="language-bash">clutchisback1@Deadpool /e/g/Covenant  $ sudo snap install dotnet-sdk --classic         2 changed files  master
-dotnet-sdk 2.2.401 from Microsoft .NET Core (dotnetcore✓) installed
-</code></pre>
-
-<p>Once this was done I was ready to build and run the application:</p>
-
-<pre><code class="language-bash">clutchisback1@Deadpool /e/g/Covenant  $ dotnet-sdk.dotnet build                        2 changed files  master
-
-Welcome to .NET Core!
----------------------
-Learn more about .NET Core: https://aka.ms/dotnet-docs
-Use 'dotnet --help' to see available commands or visit: https://aka.ms/dotnet-cli-docs
-
-Telemetry
----------
-The .NET Core tools collect usage data in order to help us improve your experience. The data is anonymous and doesnt include command-line arguments. The data is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to '1' or 'true' using your favorite shell.
-
-Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
-
-ASP.NET Core
-------------
-Successfully installed the ASP.NET Core HTTPS Development Certificate.
-To trust the certificate run 'dotnet dev-certs https --trust' (Windows and macOS only). For establishing trust on other platforms refer to the platform specific documentation.
-For more information on configuring HTTPS see https://go.microsoft.com/fwlink/?linkid=848054.
-Microsoft (R) Build Engine version 16.2.32702+c4012a063 for .NET Core
-Copyright (C) Microsoft Corporation. All rights reserved.
-
-
- Failed to download package 'Microsoft.CodeAnalysis.Razor.2.2.0' from 'https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.razor/2.2.0/microsoft.codeanalysis.razor.2.2.0.nupkg'.
- The download of 'https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.razor/2.2.0/microsoft.codeanalysis.razor.2.2.0.nupkg' timed out because no data was received for 60000ms.
- Exception of type 'System.TimeoutException' was thrown.
- Failed to download package 'Microsoft.Extensions.Caching.SqlServer.2.2.0' from 'https://api.nuget.org/v3-flatcontainer/microsoft.extensions.caching.sqlserver/2.2.0/microsoft.extensions.caching.sqlserver.2.2.0.nupkg'.
- The download of 'https://api.nuget.org/v3-flatcontainer/microsoft.extensions.caching.sqlserver/2.2.0/microsoft.extensions.caching.sqlserver.2.2.0.nupkg' timed out because no data was received for 60000ms.
- Exception of type 'System.TimeoutException' was thrown.
- Failed to download package 'Microsoft.Extensions.Caching.Memory.2.2.0' from 'https://api.nuget.org/v3-flatcontainer/microsoft.extensions.caching.memory/2.2.0/microsoft.extensions.caching.memory.2.2.0.nupkg'.
- The download of 'https://api.nuget.org/v3-flatcontainer/microsoft.extensions.caching.memory/2.2.0/microsoft.extensions.caching.memory.2.2.0.nupkg' timed out because no data was received for 60000ms.
- Exception of type 'System.TimeoutException' was thrown.
- Failed to download package 'System.Xml.XmlDocument.4.3.0' from 'https://api.nuget.org/v3-flatcontainer/system.xml.xmldocument/4.3.0/system.xml.xmldocument.4.3.0.nupkg'.
- The download of 'https://api.nuget.org/v3-flatcontainer/system.xml.xmldocument/4.3.0/system.xml.xmldocument.4.3.0.nupkg' timed out because no data was received for 60000ms.
- Exception of type 'System.TimeoutException' was thrown.
- Failed to download package 'Microsoft.Extensions.WebEncoders.2.2.0' from 'https://api.nuget.org/v3-flatcontainer/microsoft.extensions.webencoders/2.2.0/microsoft.extensions.webencoders.2.2.0.nupkg'.
- The download of 'https://api.nuget.org/v3-flatcontainer/microsoft.extensions.webencoders/2.2.0/microsoft.extensions.webencoders.2.2.0.nupkg' timed out because no data was received for 60000ms.
- Exception of type 'System.TimeoutException' was thrown.
- Restore completed in 1.45 min for /etc/github/Covenant/Covenant/Covenant.csproj.
- Failed to download package 'NETStandard.Library.2.0.3' from 'https://api.nuget.org/v3-flatcontainer/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg'.
- The download of 'https://api.nuget.org/v3-flatcontainer/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg' timed out because no data was received for 60000ms.
- Exception of type 'System.TimeoutException' was thrown.
- Retrying 'FindPackagesByIdAsync' for source 'https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.mvc.dataannotations/index.json'.
- The HTTP request to 'GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.mvc.dataannotations/index.json' has timed out after 100000ms.
- Retrying 'FindPackagesByIdAsync' for source 'https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.razor.runtime/index.json'.
- The HTTP request to 'GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.razor.runtime/index.json' has timed out after 100000ms.
- Retrying 'FindPackagesByIdAsync' for source 'https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.razor.design/index.json'.
- The HTTP request to 'GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.razor.design/index.json' has timed out after 100000ms.
- Restore completed in 1.75 min for /etc/github/Covenant/Covenant/Covenant.csproj.
- Covenant -&gt; /etc/github/Covenant/Covenant/bin/Debug/netcoreapp2.2/Covenant.dll
- Covenant -&gt; /etc/github/Covenant/Covenant/bin/Debug/netcoreapp2.2/Covenant.Views.dll
-
-Build succeeded.
-   0 Warning(s)
-   0 Error(s)
-
-Time Elapsed 00:02:00.61
-</code></pre>
-
-<h3 id="running-it">Running it 🏃</h3>
-
-<p style="text-align:justify;">
-After that big glob of "gobbly guk" I was able to launch the application by running run. As you can see I used the apt command 'dotnet-sdk.dotnet' that I had installed earlier to launch the run command specifying the apps folder with the '--project' flag. Apparently my project ended up being in a folder called Covenant which was also inside another folder called Covenant. I feel like there's a Linux law against embedding folders with the same name somewhere but 'whatevs':</p>
-
-<pre><code class="language-bash">clutchisback1@Deadpool /e/g/Covenant  $ dotnet-sdk.dotnet run --project Covenant       2 changed files  master
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'Take(1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'Take(1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'join AnonymousObject _T in {from GruntTask T in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTask]) where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1)) orderby EF.Property(?[T]?, &quot;Id&quot;) asc select new AnonymousObject(new [] {Convert(EF.Property(?[T]?, &quot;Id&quot;), Object)}) =&gt; Take(1)} on Property([T.Options], &quot;GruntTaskId&quot;) equals Convert([_T].GetValue(0), Nullable`1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'orderby [_T].GetValue(0) asc' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'Take(1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'Take(1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'join AnonymousObject _T in {from GruntTask T in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTask]) where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1)) orderby EF.Property(?[T]?, &quot;Id&quot;) asc select new AnonymousObject(new [] {Convert(EF.Property(?[T]?, &quot;Id&quot;), Object)}) =&gt; Take(1)} on Property([T.GruntTaskReferenceSourceLibraries], &quot;GruntTaskId&quot;) equals Convert([_T].GetValue(0), Nullable`1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'orderby [_T].GetValue(0) asc, EF.Property(?[g.ReferenceSourceLibrary]?, &quot;Id&quot;) asc' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'Take(1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'Take(1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'join AnonymousObject _T in {from GruntTask T in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTask]) where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1)) orderby EF.Property(?[T]?, &quot;Id&quot;) asc select new AnonymousObject(new [] {Convert(EF.Property(?[T]?, &quot;Id&quot;), Object)}) =&gt; Take(1)} on Property([T.GruntTaskReferenceSourceLibraries], &quot;GruntTaskId&quot;) equals Convert([_T].GetValue(0), Nullable`1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'Distinct()' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'Take(1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'Take(1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'join AnonymousObject _T in {from GruntTask T in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTask]) where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1)) orderby EF.Property(?[T]?, &quot;Id&quot;) asc select new AnonymousObject(new [] {Convert(EF.Property(?[T]?, &quot;Id&quot;), Object)}) =&gt; Take(1)} on Property([T.GruntTaskReferenceSourceLibraries], &quot;GruntTaskId&quot;) equals Convert([_T].GetValue(0), Nullable`1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'Distinct()' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'join AnonymousObject _g.ReferenceSourceLibrary in {from GruntTaskReferenceSourceLibrary T.GruntTaskReferenceSourceLibraries in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTaskReferenceSourceLibrary]) join ReferenceSourceLibrary g.ReferenceSourceLibrary in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.ReferenceSourceLibrary]) on Property([T.GruntTaskReferenceSourceLibraries], &quot;ReferenceSourceLibraryId&quot;) equals Property([g.ReferenceSourceLibrary], &quot;Id&quot;) join AnonymousObject _T in {from GruntTask T in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTask]) where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1)) orderby EF.Property(?[T]?, &quot;Id&quot;) asc select new AnonymousObject(new [] {Convert(EF.Property(?[T]?, &quot;Id&quot;), Object)}) =&gt; Take(1)} on Property([T.GruntTaskReferenceSourceLibraries], &quot;GruntTaskId&quot;) equals Convert([_T].GetValue(0), Nullable`1) select new AnonymousObject(new [] {Convert(EF.Property(?[g.ReferenceSourceLibrary]?, &quot;Id&quot;), Object), [_T].GetValue(0)}) =&gt; Distinct()} on Property([g.ReferenceSourceLibrary.ReferenceSourceLibraryReferenceAssemblies], &quot;ReferenceSourceLibraryId&quot;) equals Convert([_g.ReferenceSourceLibrary].GetValue(0), Nullable`1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'orderby [_g.ReferenceSourceLibrary].GetValue(1) asc, [_g.ReferenceSourceLibrary].GetValue(0) asc' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'Take(1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'Take(1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'join AnonymousObject _T in {from GruntTask T in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTask]) where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1)) orderby EF.Property(?[T]?, &quot;Id&quot;) asc select new AnonymousObject(new [] {Convert(EF.Property(?[T]?, &quot;Id&quot;), Object)}) =&gt; Take(1)} on Property([T.GruntTaskReferenceSourceLibraries], &quot;GruntTaskId&quot;) equals Convert([_T].GetValue(0), Nullable`1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'Distinct()' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'Take(1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'Take(1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'join AnonymousObject _T in {from GruntTask T in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTask]) where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1)) orderby EF.Property(?[T]?, &quot;Id&quot;) asc select new AnonymousObject(new [] {Convert(EF.Property(?[T]?, &quot;Id&quot;), Object)}) =&gt; Take(1)} on Property([T.GruntTaskReferenceSourceLibraries], &quot;GruntTaskId&quot;) equals Convert([_T].GetValue(0), Nullable`1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'Distinct()' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'join AnonymousObject _g.ReferenceSourceLibrary in {from GruntTaskReferenceSourceLibrary T.GruntTaskReferenceSourceLibraries in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTaskReferenceSourceLibrary]) join ReferenceSourceLibrary g.ReferenceSourceLibrary in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.ReferenceSourceLibrary]) on Property([T.GruntTaskReferenceSourceLibraries], &quot;ReferenceSourceLibraryId&quot;) equals Property([g.ReferenceSourceLibrary], &quot;Id&quot;) join AnonymousObject _T in {from GruntTask T in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTask]) where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1)) orderby EF.Property(?[T]?, &quot;Id&quot;) asc select new AnonymousObject(new [] {Convert(EF.Property(?[T]?, &quot;Id&quot;), Object)}) =&gt; Take(1)} on Property([T.GruntTaskReferenceSourceLibraries], &quot;GruntTaskId&quot;) equals Convert([_T].GetValue(0), Nullable`1) select new AnonymousObject(new [] {Convert(EF.Property(?[g.ReferenceSourceLibrary]?, &quot;Id&quot;), Object), [_T].GetValue(0)}) =&gt; Distinct()} on Property([g.ReferenceSourceLibrary.ReferenceSourceLibraryEmbeddedResources], &quot;ReferenceSourceLibraryId&quot;) equals Convert([_g.ReferenceSourceLibrary].GetValue(0), Nullable`1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'orderby [_g.ReferenceSourceLibrary].GetValue(1) asc, [_g.ReferenceSourceLibrary].GetValue(0) asc' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'Take(1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'Take(1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'join AnonymousObject _T in {from GruntTask T in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTask]) where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1)) orderby EF.Property(?[T]?, &quot;Id&quot;) asc select new AnonymousObject(new [] {Convert(EF.Property(?[T]?, &quot;Id&quot;), Object)}) =&gt; Take(1)} on Property([T.GruntTaskReferenceAssemblies], &quot;GruntTaskId&quot;) equals Convert([_T].GetValue(0), Nullable`1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'orderby [_T].GetValue(0) asc' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'Take(1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'Take(1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'join AnonymousObject _T in {from GruntTask T in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTask]) where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1)) orderby EF.Property(?[T]?, &quot;Id&quot;) asc select new AnonymousObject(new [] {Convert(EF.Property(?[T]?, &quot;Id&quot;), Object)}) =&gt; Take(1)} on Property([T.GruntTaskEmbeddedResources], &quot;GruntTaskId&quot;) equals Convert([_T].GetValue(0), Nullable`1)' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'orderby [_T].GetValue(0) asc' could not be translated and will be evaluated locally.
-warn: Microsoft.EntityFrameworkCore.Query[20500]
-      The LINQ expression 'FirstOrDefault()' could not be translated and will be evaluated locally.
-Creating cert...
-Using Covenant certificate with hash: 7F7E063A40H1956058C81CB4AB73DE4BB0458984
-warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
-      No XML encryptor configured. Key {52l98bjb-8e7c-43d4-b0a8-1cde58f78352} may be persisted to storage in unencrypted form.
-warn: Microsoft.AspNetCore.Server.Kestrel[0]
-      Overriding address(es) 'https://localhost:7443, http://localhost:7442'. Binding to endpoints defined in UseKestrel() instead.
-Hosting environment: Development
-Content root path: /etc/github/Covenant/Covenant
-Now listening on: https://0.0.0.0:7443
-Application started. Press Ctrl+C to shut down.
-</code></pre>
-
-<p>And viola! At the end of that&hellip;.output&hellip;.you can see the service is now running on port 7443.</p>
-
-<p><center>
-<img src="../../images/Installing Covenant/Main Screen.png" alt="Covenant Login Screen" />
-<figcaption>
-<center>Covenant&rsquo;s Login Screen</center>
-</figcaption>
-</center></p>
-
+      <h3 id="intro">
+  Intro
+  <a href="#intro" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<!-- raw HTML omitted -->
+<h3 id="installation-steps-i-took---tldrs-start-here-">
+  Installation Steps I took&hellip;  -TLDRs Start Here ⤵
+  <a href="#installation-steps-i-took---tldrs-start-here-" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<p>To start off I cloned the repository recursively as instructed in the repo&rsquo;s <!-- raw HTML omitted -->wiki<!-- raw HTML omitted -->:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>clutchisback1@Deadpool /e/github  $ git clone --recurse-submodules https://github.com/cobbr/Covenant
+</span></span><span style="display:flex;"><span>Cloning into <span style="color:#e6db74">&#39;Covenant&#39;</span>...
+</span></span><span style="display:flex;"><span>remote: Enumerating objects: 1133, <span style="color:#66d9ef">done</span>.
+</span></span><span style="display:flex;"><span>remote: Counting objects: 100% <span style="color:#f92672">(</span>1133/1133<span style="color:#f92672">)</span>, <span style="color:#66d9ef">done</span>.
+</span></span><span style="display:flex;"><span>remote: Compressing objects: 100% <span style="color:#f92672">(</span>548/548<span style="color:#f92672">)</span>, <span style="color:#66d9ef">done</span>.
+</span></span><span style="display:flex;"><span>remote: Total <span style="color:#ae81ff">1545</span> <span style="color:#f92672">(</span>delta 639<span style="color:#f92672">)</span>, reused <span style="color:#ae81ff">996</span> <span style="color:#f92672">(</span>delta 560<span style="color:#f92672">)</span>, pack-reused <span style="color:#ae81ff">412</span>
+</span></span><span style="display:flex;"><span>Receiving objects: 100% <span style="color:#f92672">(</span>1545/1545<span style="color:#f92672">)</span>, 22.18 MiB | 3.35 MiB/s, <span style="color:#66d9ef">done</span>.Resolving deltas: 100% <span style="color:#f92672">(</span>820/820<span style="color:#f92672">)</span>, <span style="color:#66d9ef">done</span>.
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget -q https://packages.microsoft.com/config/ubuntu/19.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+</span></span><span style="display:flex;"><span>sudo dpkg -i packages-microsoft-prod.deb
+</span></span></code></pre></div><p>Apt has a dotnet framework as well and in the process of trying to install this I installed that too. (This may or may not need to be done)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>clutchisback1@Deadpool /e/g/Covenant  $ sudo snap install dotnet-sdk --classic         <span style="color:#ae81ff">2</span> changed files  master
+</span></span><span style="display:flex;"><span>dotnet-sdk 2.2.401 from Microsoft .NET Core <span style="color:#f92672">(</span>dotnetcore✓<span style="color:#f92672">)</span> installed
+</span></span></code></pre></div><p>Once this was done I was ready to build and run the application:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>clutchisback1@Deadpool /e/g/Covenant  $ dotnet-sdk.dotnet build                        <span style="color:#ae81ff">2</span> changed files  master
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Welcome to .NET Core!
+</span></span><span style="display:flex;"><span>---------------------
+</span></span><span style="display:flex;"><span>Learn more about .NET Core: https://aka.ms/dotnet-docs
+</span></span><span style="display:flex;"><span>Use <span style="color:#e6db74">&#39;dotnet --help&#39;</span> to see available commands or visit: https://aka.ms/dotnet-cli-docs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Telemetry
+</span></span><span style="display:flex;"><span>---------
+</span></span><span style="display:flex;"><span>The .NET Core tools collect usage data in order to help us improve your experience. The data is anonymous and doesnt include command-line arguments. The data is collected by Microsoft and shared with the community. You can opt-out of telemetry by setting the DOTNET_CLI_TELEMETRY_OPTOUT environment variable to <span style="color:#e6db74">&#39;1&#39;</span> or <span style="color:#e6db74">&#39;true&#39;</span> using your favorite shell.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemetry
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ASP.NET Core
+</span></span><span style="display:flex;"><span>------------
+</span></span><span style="display:flex;"><span>Successfully installed the ASP.NET Core HTTPS Development Certificate.
+</span></span><span style="display:flex;"><span>To trust the certificate run <span style="color:#e6db74">&#39;dotnet dev-certs https --trust&#39;</span> <span style="color:#f92672">(</span>Windows and macOS only<span style="color:#f92672">)</span>. For establishing trust on other platforms refer to the platform specific documentation.
+</span></span><span style="display:flex;"><span>For more information on configuring HTTPS see https://go.microsoft.com/fwlink/?linkid<span style="color:#f92672">=</span>848054.
+</span></span><span style="display:flex;"><span>Microsoft <span style="color:#f92672">(</span>R<span style="color:#f92672">)</span> Build Engine version 16.2.32702+c4012a063 <span style="color:#66d9ef">for</span> .NET Core
+</span></span><span style="display:flex;"><span>Copyright <span style="color:#f92672">(</span>C<span style="color:#f92672">)</span> Microsoft Corporation. All rights reserved.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> Failed to download package <span style="color:#e6db74">&#39;Microsoft.CodeAnalysis.Razor.2.2.0&#39;</span> from <span style="color:#e6db74">&#39;https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.razor/2.2.0/microsoft.codeanalysis.razor.2.2.0.nupkg&#39;</span>.
+</span></span><span style="display:flex;"><span> The download of <span style="color:#e6db74">&#39;https://api.nuget.org/v3-flatcontainer/microsoft.codeanalysis.razor/2.2.0/microsoft.codeanalysis.razor.2.2.0.nupkg&#39;</span> timed out because no data was received <span style="color:#66d9ef">for</span> 60000ms.
+</span></span><span style="display:flex;"><span> Exception of type <span style="color:#e6db74">&#39;System.TimeoutException&#39;</span> was thrown.
+</span></span><span style="display:flex;"><span> Failed to download package <span style="color:#e6db74">&#39;Microsoft.Extensions.Caching.SqlServer.2.2.0&#39;</span> from <span style="color:#e6db74">&#39;https://api.nuget.org/v3-flatcontainer/microsoft.extensions.caching.sqlserver/2.2.0/microsoft.extensions.caching.sqlserver.2.2.0.nupkg&#39;</span>.
+</span></span><span style="display:flex;"><span> The download of <span style="color:#e6db74">&#39;https://api.nuget.org/v3-flatcontainer/microsoft.extensions.caching.sqlserver/2.2.0/microsoft.extensions.caching.sqlserver.2.2.0.nupkg&#39;</span> timed out because no data was received <span style="color:#66d9ef">for</span> 60000ms.
+</span></span><span style="display:flex;"><span> Exception of type <span style="color:#e6db74">&#39;System.TimeoutException&#39;</span> was thrown.
+</span></span><span style="display:flex;"><span> Failed to download package <span style="color:#e6db74">&#39;Microsoft.Extensions.Caching.Memory.2.2.0&#39;</span> from <span style="color:#e6db74">&#39;https://api.nuget.org/v3-flatcontainer/microsoft.extensions.caching.memory/2.2.0/microsoft.extensions.caching.memory.2.2.0.nupkg&#39;</span>.
+</span></span><span style="display:flex;"><span> The download of <span style="color:#e6db74">&#39;https://api.nuget.org/v3-flatcontainer/microsoft.extensions.caching.memory/2.2.0/microsoft.extensions.caching.memory.2.2.0.nupkg&#39;</span> timed out because no data was received <span style="color:#66d9ef">for</span> 60000ms.
+</span></span><span style="display:flex;"><span> Exception of type <span style="color:#e6db74">&#39;System.TimeoutException&#39;</span> was thrown.
+</span></span><span style="display:flex;"><span> Failed to download package <span style="color:#e6db74">&#39;System.Xml.XmlDocument.4.3.0&#39;</span> from <span style="color:#e6db74">&#39;https://api.nuget.org/v3-flatcontainer/system.xml.xmldocument/4.3.0/system.xml.xmldocument.4.3.0.nupkg&#39;</span>.
+</span></span><span style="display:flex;"><span> The download of <span style="color:#e6db74">&#39;https://api.nuget.org/v3-flatcontainer/system.xml.xmldocument/4.3.0/system.xml.xmldocument.4.3.0.nupkg&#39;</span> timed out because no data was received <span style="color:#66d9ef">for</span> 60000ms.
+</span></span><span style="display:flex;"><span> Exception of type <span style="color:#e6db74">&#39;System.TimeoutException&#39;</span> was thrown.
+</span></span><span style="display:flex;"><span> Failed to download package <span style="color:#e6db74">&#39;Microsoft.Extensions.WebEncoders.2.2.0&#39;</span> from <span style="color:#e6db74">&#39;https://api.nuget.org/v3-flatcontainer/microsoft.extensions.webencoders/2.2.0/microsoft.extensions.webencoders.2.2.0.nupkg&#39;</span>.
+</span></span><span style="display:flex;"><span> The download of <span style="color:#e6db74">&#39;https://api.nuget.org/v3-flatcontainer/microsoft.extensions.webencoders/2.2.0/microsoft.extensions.webencoders.2.2.0.nupkg&#39;</span> timed out because no data was received <span style="color:#66d9ef">for</span> 60000ms.
+</span></span><span style="display:flex;"><span> Exception of type <span style="color:#e6db74">&#39;System.TimeoutException&#39;</span> was thrown.
+</span></span><span style="display:flex;"><span> Restore completed in 1.45 min <span style="color:#66d9ef">for</span> /etc/github/Covenant/Covenant/Covenant.csproj.
+</span></span><span style="display:flex;"><span> Failed to download package <span style="color:#e6db74">&#39;NETStandard.Library.2.0.3&#39;</span> from <span style="color:#e6db74">&#39;https://api.nuget.org/v3-flatcontainer/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg&#39;</span>.
+</span></span><span style="display:flex;"><span> The download of <span style="color:#e6db74">&#39;https://api.nuget.org/v3-flatcontainer/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg&#39;</span> timed out because no data was received <span style="color:#66d9ef">for</span> 60000ms.
+</span></span><span style="display:flex;"><span> Exception of type <span style="color:#e6db74">&#39;System.TimeoutException&#39;</span> was thrown.
+</span></span><span style="display:flex;"><span> Retrying <span style="color:#e6db74">&#39;FindPackagesByIdAsync&#39;</span> <span style="color:#66d9ef">for</span> source <span style="color:#e6db74">&#39;https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.mvc.dataannotations/index.json&#39;</span>.
+</span></span><span style="display:flex;"><span> The HTTP request to <span style="color:#e6db74">&#39;GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.mvc.dataannotations/index.json&#39;</span> has timed out after 100000ms.
+</span></span><span style="display:flex;"><span> Retrying <span style="color:#e6db74">&#39;FindPackagesByIdAsync&#39;</span> <span style="color:#66d9ef">for</span> source <span style="color:#e6db74">&#39;https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.razor.runtime/index.json&#39;</span>.
+</span></span><span style="display:flex;"><span> The HTTP request to <span style="color:#e6db74">&#39;GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.razor.runtime/index.json&#39;</span> has timed out after 100000ms.
+</span></span><span style="display:flex;"><span> Retrying <span style="color:#e6db74">&#39;FindPackagesByIdAsync&#39;</span> <span style="color:#66d9ef">for</span> source <span style="color:#e6db74">&#39;https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.razor.design/index.json&#39;</span>.
+</span></span><span style="display:flex;"><span> The HTTP request to <span style="color:#e6db74">&#39;GET https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.razor.design/index.json&#39;</span> has timed out after 100000ms.
+</span></span><span style="display:flex;"><span> Restore completed in 1.75 min <span style="color:#66d9ef">for</span> /etc/github/Covenant/Covenant/Covenant.csproj.
+</span></span><span style="display:flex;"><span> Covenant -&gt; /etc/github/Covenant/Covenant/bin/Debug/netcoreapp2.2/Covenant.dll
+</span></span><span style="display:flex;"><span> Covenant -&gt; /etc/github/Covenant/Covenant/bin/Debug/netcoreapp2.2/Covenant.Views.dll
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Build succeeded.
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">0</span> Warning<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">0</span> Error<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Time Elapsed 00:02:00.61
+</span></span></code></pre></div><h3 id="running-it-">
+  Running it 🏃
+  <a href="#running-it-" class="h-anchor" aria-hidden="true">#</a>
+</h3>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>clutchisback1@Deadpool /e/g/Covenant  $ dotnet-sdk.dotnet run --project Covenant       <span style="color:#ae81ff">2</span> changed files  master
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;Take(1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;Take(1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;join AnonymousObject _T in {from GruntTask T in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTask]) where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1)) orderby EF.Property(?[T]?, &#34;Id&#34;) asc select new AnonymousObject(new [] {Convert(EF.Property(?[T]?, &#34;Id&#34;), Object)}) =&gt; Take(1)} on Property([T.Options], &#34;GruntTaskId&#34;) equals Convert([_T].GetValue(0), Nullable`1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;orderby [_T].GetValue(0) asc&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;Take(1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;Take(1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;join AnonymousObject _T in {from GruntTask T in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTask]) where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1)) orderby EF.Property(?[T]?, &#34;Id&#34;) asc select new AnonymousObject(new [] {Convert(EF.Property(?[T]?, &#34;Id&#34;), Object)}) =&gt; Take(1)} on Property([T.GruntTaskReferenceSourceLibraries], &#34;GruntTaskId&#34;) equals Convert([_T].GetValue(0), Nullable`1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;orderby [_T].GetValue(0) asc, EF.Property(?[g.ReferenceSourceLibrary]?, &#34;Id&#34;) asc&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;Take(1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;Take(1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;join AnonymousObject _T in {from GruntTask T in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTask]) where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1)) orderby EF.Property(?[T]?, &#34;Id&#34;) asc select new AnonymousObject(new [] {Convert(EF.Property(?[T]?, &#34;Id&#34;), Object)}) =&gt; Take(1)} on Property([T.GruntTaskReferenceSourceLibraries], &#34;GruntTaskId&#34;) equals Convert([_T].GetValue(0), Nullable`1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;Distinct()&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;Take(1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;Take(1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;join AnonymousObject _T in {from GruntTask T in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTask]) where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1)) orderby EF.Property(?[T]?, &#34;Id&#34;) asc select new AnonymousObject(new [] {Convert(EF.Property(?[T]?, &#34;Id&#34;), Object)}) =&gt; Take(1)} on Property([T.GruntTaskReferenceSourceLibraries], &#34;GruntTaskId&#34;) equals Convert([_T].GetValue(0), Nullable`1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;Distinct()&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;join AnonymousObject _g.ReferenceSourceLibrary in {from GruntTaskReferenceSourceLibrary T.GruntTaskReferenceSourceLibraries in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTaskReferenceSourceLibrary]) join ReferenceSourceLibrary g.ReferenceSourceLibrary in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.ReferenceSourceLibrary]) on Property([T.GruntTaskReferenceSourceLibraries], &#34;ReferenceSourceLibraryId&#34;) equals Property([g.ReferenceSourceLibrary], &#34;Id&#34;) join AnonymousObject _T in {from GruntTask T in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTask]) where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1)) orderby EF.Property(?[T]?, &#34;Id&#34;) asc select new AnonymousObject(new [] {Convert(EF.Property(?[T]?, &#34;Id&#34;), Object)}) =&gt; Take(1)} on Property([T.GruntTaskReferenceSourceLibraries], &#34;GruntTaskId&#34;) equals Convert([_T].GetValue(0), Nullable`1) select new AnonymousObject(new [] {Convert(EF.Property(?[g.ReferenceSourceLibrary]?, &#34;Id&#34;), Object), [_T].GetValue(0)}) =&gt; Distinct()} on Property([g.ReferenceSourceLibrary.ReferenceSourceLibraryReferenceAssemblies], &#34;ReferenceSourceLibraryId&#34;) equals Convert([_g.ReferenceSourceLibrary].GetValue(0), Nullable`1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;orderby [_g.ReferenceSourceLibrary].GetValue(1) asc, [_g.ReferenceSourceLibrary].GetValue(0) asc&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;Take(1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;Take(1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;join AnonymousObject _T in {from GruntTask T in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTask]) where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1)) orderby EF.Property(?[T]?, &#34;Id&#34;) asc select new AnonymousObject(new [] {Convert(EF.Property(?[T]?, &#34;Id&#34;), Object)}) =&gt; Take(1)} on Property([T.GruntTaskReferenceSourceLibraries], &#34;GruntTaskId&#34;) equals Convert([_T].GetValue(0), Nullable`1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;Distinct()&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;Take(1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;Take(1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;join AnonymousObject _T in {from GruntTask T in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTask]) where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1)) orderby EF.Property(?[T]?, &#34;Id&#34;) asc select new AnonymousObject(new [] {Convert(EF.Property(?[T]?, &#34;Id&#34;), Object)}) =&gt; Take(1)} on Property([T.GruntTaskReferenceSourceLibraries], &#34;GruntTaskId&#34;) equals Convert([_T].GetValue(0), Nullable`1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;Distinct()&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;join AnonymousObject _g.ReferenceSourceLibrary in {from GruntTaskReferenceSourceLibrary T.GruntTaskReferenceSourceLibraries in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTaskReferenceSourceLibrary]) join ReferenceSourceLibrary g.ReferenceSourceLibrary in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.ReferenceSourceLibrary]) on Property([T.GruntTaskReferenceSourceLibraries], &#34;ReferenceSourceLibraryId&#34;) equals Property([g.ReferenceSourceLibrary], &#34;Id&#34;) join AnonymousObject _T in {from GruntTask T in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTask]) where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1)) orderby EF.Property(?[T]?, &#34;Id&#34;) asc select new AnonymousObject(new [] {Convert(EF.Property(?[T]?, &#34;Id&#34;), Object)}) =&gt; Take(1)} on Property([T.GruntTaskReferenceSourceLibraries], &#34;GruntTaskId&#34;) equals Convert([_T].GetValue(0), Nullable`1) select new AnonymousObject(new [] {Convert(EF.Property(?[g.ReferenceSourceLibrary]?, &#34;Id&#34;), Object), [_T].GetValue(0)}) =&gt; Distinct()} on Property([g.ReferenceSourceLibrary.ReferenceSourceLibraryEmbeddedResources], &#34;ReferenceSourceLibraryId&#34;) equals Convert([_g.ReferenceSourceLibrary].GetValue(0), Nullable`1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;orderby [_g.ReferenceSourceLibrary].GetValue(1) asc, [_g.ReferenceSourceLibrary].GetValue(0) asc&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;Take(1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;Take(1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;join AnonymousObject _T in {from GruntTask T in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTask]) where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1)) orderby EF.Property(?[T]?, &#34;Id&#34;) asc select new AnonymousObject(new [] {Convert(EF.Property(?[T]?, &#34;Id&#34;), Object)}) =&gt; Take(1)} on Property([T.GruntTaskReferenceAssemblies], &#34;GruntTaskId&#34;) equals Convert([_T].GetValue(0), Nullable`1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;orderby [_T].GetValue(0) asc&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;Take(1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1))&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;Take(1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;join AnonymousObject _T in {from GruntTask T in value(Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1[Covenant.Models.Grunts.GruntTask]) where ([T].Name.Equals(__name_0, OrdinalIgnoreCase) OrElse [T].AlternateNames.Contains(__name_0, __OrdinalIgnoreCase_1)) orderby EF.Property(?[T]?, &#34;Id&#34;) asc select new AnonymousObject(new [] {Convert(EF.Property(?[T]?, &#34;Id&#34;), Object)}) =&gt; Take(1)} on Property([T.GruntTaskEmbeddedResources], &#34;GruntTaskId&#34;) equals Convert([_T].GetValue(0), Nullable`1)&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;orderby [_T].GetValue(0) asc&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>warn: Microsoft.EntityFrameworkCore.Query<span style="color:#f92672">[</span>20500<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      The LINQ expression <span style="color:#e6db74">&#39;FirstOrDefault()&#39;</span> could not be translated and will be evaluated locally.
+</span></span><span style="display:flex;"><span>Creating cert...
+</span></span><span style="display:flex;"><span>Using Covenant certificate with hash: 7F7E063A40H1956058C81CB4AB73DE4BB0458984
+</span></span><span style="display:flex;"><span>warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager<span style="color:#f92672">[</span>35<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      No XML encryptor configured. Key <span style="color:#f92672">{</span>52l98bjb-8e7c-43d4-b0a8-1cde58f78352<span style="color:#f92672">}</span> may be persisted to storage in unencrypted form.
+</span></span><span style="display:flex;"><span>warn: Microsoft.AspNetCore.Server.Kestrel<span style="color:#f92672">[</span>0<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      Overriding address<span style="color:#f92672">(</span>es<span style="color:#f92672">)</span> <span style="color:#e6db74">&#39;https://localhost:7443, http://localhost:7442&#39;</span>. Binding to endpoints defined in UseKestrel<span style="color:#f92672">()</span> instead.
+</span></span><span style="display:flex;"><span>Hosting environment: Development
+</span></span><span style="display:flex;"><span>Content root path: /etc/github/Covenant/Covenant
+</span></span><span style="display:flex;"><span>Now listening on: https://0.0.0.0:7443
+</span></span><span style="display:flex;"><span>Application started. Press Ctrl+C to shut down.
+</span></span></code></pre></div><p>And viola! At the end of that&hellip;.output&hellip;.you can see the service is now running on port 7443.</p>
+<!-- raw HTML omitted -->
 <p>Hope that helps you guys get things up and running!</p>
-
-<pre><code class="language-bash">_____________________
-&lt; C0v3n4nt Is T00 0p! &gt;
----------------------
-                      \                    ^    /^
-                       \                  / \  // \
-                        \   |\___/|      /   \//  .\
-                         \  /O  O  \__  /    //  | \ \           *----*
-                           /     /  \/_/    //   |  \  \          \   |
-                           @___@`    \/_   //    |   \   \         \/\ \
-                          0/0/|       \/_ //     |    \    \         \  \
-                      0/0/0/0/|        \///      |     \     \       |  |
-                   0/0/0/0/0/_|_ /   (  //       |      \     _\     |  /
-                0/0/0/0/0/0/`/,_ _ _/  ) ; -.    |    _ _\.-~       /   /
-                            ,-}        _      *-.|.-~-.           .~    ~
-           \     \__/        `/\      /                 ~-. _ .-~      /
-            \____(oo)           *.   }            {                   /
-            (    (--)          .----~-.\        \-`                 .~
-            //__\\  \__ Ack!   ///.----..&lt;        \             _ -~
-           //    \\               ///-._ _ _ _ _ _ _{^ - - - - ~
-</code></pre>
-
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>_____________________
+</span></span><span style="display:flex;"><span>&lt; C0v3n4nt Is T00 0p! &gt;
+</span></span><span style="display:flex;"><span>---------------------
+</span></span><span style="display:flex;"><span>                      <span style="color:#ae81ff">\ </span>                   ^    /^
+</span></span><span style="display:flex;"><span>                       <span style="color:#ae81ff">\ </span>                 / <span style="color:#ae81ff">\ </span> // <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>                        <span style="color:#ae81ff">\ </span>  |<span style="color:#ae81ff">\_</span>__/|      /   <span style="color:#ae81ff">\/</span>/  .<span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>                         <span style="color:#ae81ff">\ </span> /O  O  <span style="color:#ae81ff">\_</span>_  /    //  | <span style="color:#ae81ff">\ \ </span>          *----*
+</span></span><span style="display:flex;"><span>                           /     /  <span style="color:#ae81ff">\/</span>_/    //   |  <span style="color:#ae81ff">\ </span> <span style="color:#ae81ff">\ </span>         <span style="color:#ae81ff">\ </span>  |
+</span></span><span style="display:flex;"><span>                           @___@<span style="color:#e6db74">`</span>    <span style="color:#ae81ff">\/</span>_   //    |   <span style="color:#ae81ff">\ </span>  <span style="color:#ae81ff">\ </span>        <span style="color:#ae81ff">\/\ \
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>                          0/0/|       <span style="color:#ae81ff">\/</span>_ //     |    <span style="color:#ae81ff">\ </span>   <span style="color:#ae81ff">\ </span>        <span style="color:#ae81ff">\ </span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>                      0/0/0/0/|        <span style="color:#ae81ff">\/</span>//      |     <span style="color:#ae81ff">\ </span>    <span style="color:#ae81ff">\ </span>      |  |
+</span></span><span style="display:flex;"><span>                   0/0/0/0/0/_|_ /   <span style="color:#f92672">(</span>  //       |      <span style="color:#ae81ff">\ </span>    _<span style="color:#ae81ff">\ </span>    |  /
+</span></span><span style="display:flex;"><span>                0/0/0/0/0/0/<span style="color:#e6db74">`</span>/,_ _ _/  <span style="color:#f92672">)</span> ; -.    |    _ _<span style="color:#ae81ff">\.</span>-~       /   /
+</span></span><span style="display:flex;"><span>                            ,-<span style="color:#f92672">}</span>        _      *-.|.-~-.           .~    ~
+</span></span><span style="display:flex;"><span>           <span style="color:#ae81ff">\ </span>    <span style="color:#ae81ff">\_</span>_/        <span style="color:#e6db74">`</span>/<span style="color:#ae81ff">\ </span>     /                 ~-. _ .-~      /
+</span></span><span style="display:flex;"><span>            <span style="color:#ae81ff">\_</span>___<span style="color:#f92672">(</span>oo<span style="color:#f92672">)</span>           *.   <span style="color:#f92672">}</span>            <span style="color:#f92672">{</span>                   /
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">(</span>    <span style="color:#f92672">(</span>--<span style="color:#f92672">)</span>          .----~-.<span style="color:#ae81ff">\ </span>       <span style="color:#ae81ff">\-</span><span style="color:#e6db74">`</span>                 .~
+</span></span><span style="display:flex;"><span>            //__<span style="color:#ae81ff">\\</span>  <span style="color:#ae81ff">\_</span>_ Ack!   ///.----..&lt;        <span style="color:#ae81ff">\ </span>            _ -~
+</span></span><span style="display:flex;"><span>           //    <span style="color:#ae81ff">\\</span>               ///-._ _ _ _ _ _ _<span style="color:#f92672">{</span>^ - - - - ~
+</span></span></code></pre></div>
     </div>
     
-      <div class="pagination">
-        <div class="pagination__title">
-          <span class="pagination__title-h">Read other posts</span>
-          <hr />
+      
+        <div class="pagination">
+          <div class="pagination__title">
+            <span class="pagination__title-h"
+              >Read other posts</span
+            >
+            <hr />
+          </div>
+          <div class="pagination__buttons">
+            
+              <span class="button previous">
+                <a href="/posts/kiosk-escapes-pt-2/">
+                  <span class="button__icon">←</span>
+                  <span class="button__text">Kiosk Escapes Pt 2 - Ft. Microsoft Edge!!</span>
+                </a>
+              </span>
+            
+            
+              <span class="button next">
+                <a href="/posts/how-i-use-koadic-on-internals/">
+                  <span class="button__text">How I Use Koadic on Internals</span>
+                  <span class="button__icon">→</span>
+                </a>
+              </span>
+            
+          </div>
         </div>
-        <div class="pagination__buttons">
-          
-            <span class="button previous">
-              <a href="/posts/kiosk-escapes-pt-2/">
-                <span class="button__icon">←</span>
-                <span class="button__text">Kiosk Escapes Pt 2 - Ft. Microsoft Edge!!</span>
-              </a>
-            </span>
-          
-          
-            <span class="button next">
-              <a href="/posts/how-i-use-koadic-on-internals/">
-                <span class="button__text">How I Use Koadic on Internals</span>
-                <span class="button__icon">→</span>
-              </a>
-            </span>
-          
-        </div>
-      </div>
+      
     
 
-    <script src="https://utteranc.es/client.js"
+    
+      
+        <script src="https://utteranc.es/client.js"
         repo="clutchisback1/h4cklife.org"
         issue-term="pathname"
         label="general-comment"
@@ -462,7 +500,9 @@ drift.load('2pa2ip2k9udy');
 </script>
 
 
-    </div>
+      
+    
+  </div>
 
       </div>
 
@@ -471,7 +511,7 @@ drift.load('2pa2ip2k9udy');
   <div class="footer__inner">
     
       <div class="copyright copyright--user">Copyright 2019 😜</div>
-    
+      
   </div>
 </footer>
 
