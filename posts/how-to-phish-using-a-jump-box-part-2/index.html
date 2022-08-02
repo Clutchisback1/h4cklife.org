@@ -11,11 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta
   name="description"
-  content="GoDaddy GUI Stuff 🙈 # Setting Up Gophish GUI Stuff 🔧 # The Landing Page: The page that&amp;rsquo;s going to be presented to users when they click your phishing link
-The Email Template: Email sent to your email targets
-Users &amp;amp; Groups: Email targets that will receive the phishing Email
-Sending Profiles: User that is going to be sending out the phishing email
-Landing Page ✈ # The Email Template 📜 # Things to Note on the Email Template 📫 # Users and Groups 😜 # Spam Filters 💫 # Campaign Settings 🔫 # Shout-outs 📢 # __________________ &amp;lt; y0u L1tt13 L14R!"
+  content="GoDaddy GUI Stuff 🙈 # So in my first post I didn&#39;t show how I had all the DNS things set up in GoDaddy. One thing I always get hung up on is adding the TXT record for Let&#39;s encrypt. I always find a way to mess up the TXT record somehow. This is how it should look when you&#39;re waiting for the DNS registrar to update your Let&#39;s Encrypt TXT record: Let&#39;s Encrypt Setting As for the other settings, this is what my Beefhooks."
 />
 <meta
   name="keywords"
@@ -51,20 +47,12 @@ Landing Page ✈ # The Email Template 📜 # Things to Note on the Email Templat
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to Phish Using a Jump Box Part 2"/>
-<meta name="twitter:description" content="GoDaddy GUI Stuff 🙈 # Setting Up Gophish GUI Stuff 🔧 # The Landing Page: The page that&rsquo;s going to be presented to users when they click your phishing link
-The Email Template: Email sent to your email targets
-Users &amp; Groups: Email targets that will receive the phishing Email
-Sending Profiles: User that is going to be sending out the phishing email
-Landing Page ✈ # The Email Template 📜 # Things to Note on the Email Template 📫 # Users and Groups 😜 # Spam Filters 💫 # Campaign Settings 🔫 # Shout-outs 📢 # __________________ &lt; y0u L1tt13 L14R!"/>
+<meta name="twitter:description" content="GoDaddy GUI Stuff 🙈 # So in my first post I didn&#39;t show how I had all the DNS things set up in GoDaddy. One thing I always get hung up on is adding the TXT record for Let&#39;s encrypt. I always find a way to mess up the TXT record somehow. This is how it should look when you&#39;re waiting for the DNS registrar to update your Let&#39;s Encrypt TXT record: Let&#39;s Encrypt Setting As for the other settings, this is what my Beefhooks."/>
 
 
 
 <meta property="og:title" content="How to Phish Using a Jump Box Part 2" />
-<meta property="og:description" content="GoDaddy GUI Stuff 🙈 # Setting Up Gophish GUI Stuff 🔧 # The Landing Page: The page that&rsquo;s going to be presented to users when they click your phishing link
-The Email Template: Email sent to your email targets
-Users &amp; Groups: Email targets that will receive the phishing Email
-Sending Profiles: User that is going to be sending out the phishing email
-Landing Page ✈ # The Email Template 📜 # Things to Note on the Email Template 📫 # Users and Groups 😜 # Spam Filters 💫 # Campaign Settings 🔫 # Shout-outs 📢 # __________________ &lt; y0u L1tt13 L14R!" />
+<meta property="og:description" content="GoDaddy GUI Stuff 🙈 # So in my first post I didn&#39;t show how I had all the DNS things set up in GoDaddy. One thing I always get hung up on is adding the TXT record for Let&#39;s encrypt. I always find a way to mess up the TXT record somehow. This is how it should look when you&#39;re waiting for the DNS registrar to update your Let&#39;s Encrypt TXT record: Let&#39;s Encrypt Setting As for the other settings, this is what my Beefhooks." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/how-to-phish-using-a-jump-box-part-2/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2019-12-05T19:43:33-06:00" />
@@ -188,8 +176,6 @@ Landing Page ✈ # The Email Template 📜 # Things to Note on the Email Templat
         </span>
 
         
-          
-        
       
 
       
@@ -197,7 +183,7 @@ Landing Page ✈ # The Email Template 📜 # Things to Note on the Email Templat
 
       
         <span class="post-read-time"
-          >— 1 min read</span
+          >— 5 min read</span
         >
       
     </div>
@@ -212,15 +198,35 @@ Landing Page ✈ # The Email Template 📜 # Things to Note on the Email Templat
   GoDaddy GUI Stuff 🙈
   <a href="#godaddy-gui-stuff-" class="h-anchor" aria-hidden="true">#</a>
 </h2>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<div align="justify"><p>
+So in my first post I didn't show how I had all the DNS things set up in GoDaddy. One thing I always get hung up on is adding the TXT record for Let's encrypt. I always find a way to mess up the TXT record somehow. This is how it should look when you're waiting for the DNS registrar to update your Let's Encrypt TXT record:
+</p></div>
+<center>
+<figure>
+<img src="../../images/Phishing-PT2/Lets_encrypt_setting.png" alt="Let's Encrypt Setting" />
+<figcaption>
+<center>Let's Encrypt Setting</center>
+</figcaption>
+</figure>
+</center>
+<div align="justify"><p>
+As for the other settings, this is what my Beefhooks.com site DNS settings look like:
+</p></div>
+<center>
+<figure>
+<img src="../../images/Phishing-PT2/DNS_Settings.png" alt="DNS Settings" />
+<figcaption>
+<center>DNS Settings</center>
+</figcaption>
+</figure>
+</center>
 <h2 id="setting-up-gophish-gui-stuff-">
   Setting Up Gophish GUI Stuff 🔧
   <a href="#setting-up-gophish-gui-stuff-" class="h-anchor" aria-hidden="true">#</a>
 </h2>
-<!-- raw HTML omitted -->
+<div align="justify"><p>
+We already touched base on how to set up the <code>config.json</code> file for Gophish but we haven't looked at setting up the Landing pages and all that; Lets go over that now. So after you get the Gophish service running on port <code>3333</code> and you get authenticated and all that, you'll want to start setting up the components of the phish which are:
+</p></div>
 <ol>
 <li>
 <p>The Landing Page: The page that&rsquo;s going to be presented to users when they click your phishing link</p>
@@ -239,47 +245,106 @@ Landing Page ✈ # The Email Template 📜 # Things to Note on the Email Templat
   Landing Page ✈
   <a href="#landing-page-" class="h-anchor" aria-hidden="true">#</a>
 </h2>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<div align="justify"><p>
+Starting with the most interesting one first, the landing page; This is where you'll need to import the page you'd like to clone and use to fool your targeted users. To do this Gophish has a really good import function that works real well most of the time. It'll get hung up if there's a bunch of Javascripty stuff on the login forms sometimes so you'll have to be creative in those instances. There's also some Firefox/Chrome extensions that can be used for saving pages HTML source code that are capable of handling heavily JavaScripted login forms. For this example I just used GoPhish's function to import a page:
+</p></div>
+<center>
+<figure>
+<img src="../../images/Phishing-PT2/Gophish Landing Page.png" alt="Landing Page" />
+<figcaption>
+<center>GoPhish Landing Page</center>
+</figcaption>
+</figure>
+</center>
+<div align="justify"><p>
+Yours should look something like this. Be sure to select <code>capture credentials</code> and <code>capture passwords</code>so that submitted data will be captured for your viewing later on.
+</p></div>
 <h2 id="the-email-template-">
   The Email Template 📜
   <a href="#the-email-template-" class="h-anchor" aria-hidden="true">#</a>
 </h2>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<div align="justify"><p>
+Once you've set up your landing page you'll want to set up your email template. This is where I've found that the documentation on Gophish starts lacking a bit as it can be difficult to find certain things. This is also where your creativity will come in as you'll have to think of a convincing <b><font color="white">LIE</font></b>, you little disgusting liar (lol), that will get users to fall subject to your phish. Take a look at how I set my email template up to get a general idea:
+</p></div>
+<center>
+<figure>
+<img src="../../images/Phishing-PT2/Email Template.png" alt="Email Template" />
+<figcaption>
+<center>GoPhish Email Template</center>
+</figcaption>
+</figure>
+</center>
 <h3 id="things-to-note-on-the-email-template-">
   Things to Note on the Email Template 📫
   <a href="#things-to-note-on-the-email-template-" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<div align="justify"><p>
+Gophish has functionality that will act as variables. They're pretty self explanatory but finding all of these in the Gophish documentation was tough for me. The URL variable is probably the only one that needs clarification out of the three; This will be the malicious URL that your phished users will click which will direct them to your malicious landing page.
+</p></div>  
+<li>{{.FirstName}}</li>
+<li>{{.LastName}}</li>
+<li>{{.URL}}</li>
+<div align="justify"><p>
+Another thing you'll want to do is make an HTML version of your email. This will help increase your legitimacy when getting through the spam filters. Basically if you just copy your text version and hit the HTML tab at the top and then paste it there the HTML will automatically populate. You'll need to go back to the Text tab after you paste then look at the HTML tab again so it can do a little refresh and the HTML code will populate automatically nice and neat. It will also allow the {{variables}} I mentioned above.
+</p></div>
 <h2 id="users-and-groups-">
   Users and Groups 😜
   <a href="#users-and-groups-" class="h-anchor" aria-hidden="true">#</a>
 </h2>
-<!-- raw HTML omitted -->
+<div align="justify"><p>
+Seriously...you don't need my help with this...Okay I'll give you this: If you have a ton of users GoPhish has a <code>bulk import</code> feature that will allow you to import from a spreadsheet. Make sure you download their CSV Template and fill it in with your users.
+</p></div>
 <h2 id="spam-filters-">
   Spam Filters 💫
   <a href="#spam-filters-" class="h-anchor" aria-hidden="true">#</a>
 </h2>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<div align="justify"><p>
+Now that you have everything situated you'll want to do a test Campaign before blasting this puppy out to your users. For this you can use <a href="https://www.mail-tester.com"> Mail Tester</a> or something similar to see how well your email does against spam filters. If something is off it will let you know here. A good number to shoot for is 7/10. Anything less than that will likely not reach your users. Thanks <a href="https://twitter.com/sweetrollbandit">SweetRoll</a> for teaching me this part!
+</p></div>
+<center>
+<figure>
+<img src="../../images/Phishing-PT2/Spam Tester 2.png" alt="Spam Tester" />
+<figcaption>
+<center>Spam Testing</center>
+</figcaption>
+</figure>
+</center>
+<div align="justify"><p>
+Once you've addressed any issues that came up while testing your phish and you are now satisfied with your score, it's time to launch the Campaign!
+</p></div>
 <h2 id="campaign-settings-">
   Campaign Settings 🔫
   <a href="#campaign-settings-" class="h-anchor" aria-hidden="true">#</a>
 </h2>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<div align="justify"><p>
+You can use settings similar to mine below to launch your Campaign:
+</p></div>
+<center>
+<figure>
+<img src="../../images/Phishing-PT2/Campaign.png" alt="Campaign Settings" />
+<figcaption>
+<center>Campaign Settings</center>
+</figcaption>
+</figure>
+</center>
+<div align="justify"><p>
+Keep in mind that the <code>URL</code> setting will be the domain name that you purchased from Godaddy or whichever domain registrar you used during the initial configuration steps, NOT your Jumpbox's IP, though it still may work! Once you launch your Campaign you can kick your feet up and wait as the clicks and creds start rolling in one by one. This will be the dashboard you see while your campaign is running:
+</p></div>
+<center>
+<figure>
+<img src="../../images/Phishing-PT2/Campain Dashboard.png" alt="Campaign Dashboard" />
+<figcaption>
+<center>Campaign Dashboard</center>
+</figcaption>
+</figure>
+</center>
 <h3 id="shout-outs-">
   Shout-outs 📢
   <a href="#shout-outs-" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<!-- raw HTML omitted -->
+<div align="justify"><p>
+Special shoutout to my dude <a href="https://twitter.com/sweetrollbandit">SweetRoll</a> for helping me learn some of this stuff. He's got something nice he's working on for phishing that's pretty sweet (pun intended). Also big shout-out to Jake...aka the cobra.. for showing me that phishing from my jump box was even possible. Thanks!
+</p></div>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>__________________
 </span></span><span style="display:flex;"><span>&lt; y0u L1tt13 L14R! &gt;
 </span></span><span style="display:flex;"><span>------------------
@@ -294,78 +359,8 @@ Landing Page ✈ # The Email Template 📜 # Things to Note on the Email Templat
 </span></span></span></code></pre></div>
     </div>
     
-      
-        <div class="pagination">
-          <div class="pagination__title">
-            <span class="pagination__title-h"
-              >Read other posts</span
-            >
-            <hr />
-          </div>
-          <div class="pagination__buttons">
-            
-              <span class="button previous">
-                <a href="/posts/sweetrolls-aws-solutions-architect-associate-experience/">
-                  <span class="button__icon">←</span>
-                  <span class="button__text">Sweetrolls AWS Solutions Architect Associate Experience</span>
-                </a>
-              </span>
-            
-            
-              <span class="button next">
-                <a href="/posts/helpful-tricks-i-use-to-get-domain-admin/">
-                  <span class="button__text">Helpful Tricks I Use to Get Domain Admin</span>
-                  <span class="button__icon">→</span>
-                </a>
-              </span>
-            
-          </div>
-        </div>
-      
-    
 
     
-      
-        <script src="https://utteranc.es/client.js"
-        repo="clutchisback1/h4cklife.org"
-        issue-term="pathname"
-        label="general-comment"
-	theme="github-dark"
-        crossorigin="anonymous"
-        async>
-</script>
-
-
-
-
-<script>
-"use strict";
-
-!function() {
-  var t = window.driftt = window.drift = window.driftt || [];
-  if (!t.init) {
-    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-    t.factory = function(e) {
-      return function() {
-        var n = Array.prototype.slice.call(arguments);
-        return n.unshift(e), t.push(n), t;
-      };
-    }, t.methods.forEach(function(e) {
-      t[e] = t.factory(e);
-    }), t.load = function(t) {
-      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-      var i = document.getElementsByTagName("script")[0];
-      i.parentNode.insertBefore(o, i);
-    };
-  }
-}();
-drift.SNIPPET_VERSION = '0.3.1';
-drift.load('2pa2ip2k9udy');
-</script>
-
-
       
     
   </div>

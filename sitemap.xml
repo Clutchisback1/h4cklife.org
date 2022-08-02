@@ -1,122 +1,75 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>/posts/sweetrolls-aws-solutions-architect-associate-experience/</loc>
-    <lastmod>2019-12-14T08:39:01-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/how-to-phish-using-a-jump-box-part-2/</loc>
-    <lastmod>2019-12-05T19:43:33-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/beefhook/</loc>
-    <lastmod>2019-10-10T19:07:12-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/coalcast/</loc>
-    <lastmod>2019-10-10T14:10:30-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/helpful-tricks-i-use-to-get-domain-admin/</loc>
-    <lastmod>2019-10-07T18:22:27-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/kiosk-escapes-pt-3-mexico-edition/</loc>
-    <lastmod>2019-09-28T13:39:34-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/how-to-phish-using-a-jump-box-part-1/</loc>
-    <lastmod>2019-08-30T16:50:55-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/how-to-use-silent-trinity/</loc>
-    <lastmod>2019-08-14T21:19:50-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/kiosk-escapes-pt-2/</loc>
-    <lastmod>2019-08-11T15:33:51-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/wallpapers/</loc>
-    <lastmod>2019-08-04T19:07:12-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/installing-covenantv3.0-on-ubuntu-19-2019/</loc>
-    <lastmod>2019-08-03T13:40:35-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/how-i-use-koadic-on-internals/</loc>
-    <lastmod>2019-08-02T19:48:17-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/what-its-like-being-a-pentester-after-oscp/</loc>
-    <lastmod>2019-07-31T21:31:39-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/windows-7-kiosk-escape/</loc>
-    <lastmod>2019-07-25T10:15:07-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/lazysysadmin-writeup/</loc>
-    <lastmod>2019-06-23T22:34:54-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/a-pre-exam-for-future-oscp-students/</loc>
-    <lastmod>2019-06-23T22:34:38-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/about/</loc>
-    <lastmod>2019-06-21T23:50:16-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/oscp-how-to-know-when-youre-ready-to-take-the-exam/</loc>
-    <lastmod>2019-06-21T23:22:24-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/starting-oscp-from-scratch/</loc>
-    <lastmod>2019-06-21T22:41:15-06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
   <url>
     <loc>/</loc>
-    <lastmod>2019-12-14T08:39:01-06:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+    <lastmod>2022-07-31T20:34:46-05:00</lastmod>
+  </url><url>
+    <loc>/posts/iterm2-things-that-will-help-you/</loc>
+    <lastmod>2022-07-31T20:34:46-05:00</lastmod>
+  </url><url>
     <loc>/posts/</loc>
+    <lastmod>2022-07-31T20:34:46-05:00</lastmod>
+  </url><url>
+    <loc>/posts/sweetrolls-aws-solutions-architect-associate-experience/</loc>
     <lastmod>2019-12-14T08:39:01-06:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>/posts/how-to-phish-using-a-jump-box-part-2/</loc>
+    <lastmod>2019-12-05T19:43:33-06:00</lastmod>
+  </url><url>
+    <loc>/beefhook/</loc>
+    <lastmod>2019-10-10T19:07:12-06:00</lastmod>
+  </url><url>
+    <loc>/coalcast/</loc>
+    <lastmod>2019-10-10T14:10:30-05:00</lastmod>
+  </url><url>
+    <loc>/posts/helpful-tricks-i-use-to-get-domain-admin/</loc>
+    <lastmod>2019-10-07T18:22:27-05:00</lastmod>
+  </url><url>
+    <loc>/posts/kiosk-escapes-pt-3-mexico-edition/</loc>
+    <lastmod>2019-09-28T13:39:34-05:00</lastmod>
+  </url><url>
+    <loc>/posts/how-to-phish-using-a-jump-box-part-1/</loc>
+    <lastmod>2019-08-30T16:50:55-06:00</lastmod>
+  </url><url>
+    <loc>/posts/how-to-use-silent-trinity/</loc>
+    <lastmod>2019-08-14T21:19:50-06:00</lastmod>
+  </url><url>
+    <loc>/posts/kiosk-escapes-pt-2/</loc>
+    <lastmod>2019-08-11T15:33:51-06:00</lastmod>
+  </url><url>
+    <loc>/wallpapers/</loc>
+    <lastmod>2019-08-04T19:07:12-06:00</lastmod>
+  </url><url>
+    <loc>/posts/installing-covenantv3.0-on-ubuntu-19-2019/</loc>
+    <lastmod>2019-08-03T13:40:35-06:00</lastmod>
+  </url><url>
+    <loc>/posts/how-i-use-koadic-on-internals/</loc>
+    <lastmod>2019-08-02T19:48:17-06:00</lastmod>
+  </url><url>
+    <loc>/posts/what-it_s-like-being-a-pentester-after-oscp/</loc>
+    <lastmod>2019-07-31T21:31:39-06:00</lastmod>
+  </url><url>
+    <loc>/posts/windows-7-kiosk-escape/</loc>
+    <lastmod>2019-07-25T10:15:07-06:00</lastmod>
+  </url><url>
+    <loc>/posts/lazysysadmin-writeup/</loc>
+    <lastmod>2019-06-23T22:34:54-06:00</lastmod>
+  </url><url>
+    <loc>/posts/a-pre-exam-for-future-oscp-students/</loc>
+    <lastmod>2019-06-23T22:34:38-06:00</lastmod>
+  </url><url>
+    <loc>/about/</loc>
+    <lastmod>2019-06-21T23:50:16-06:00</lastmod>
+  </url><url>
+    <loc>/posts/oscp-how-to-know-when-you_re-ready-to-take-the-exam/</loc>
+    <lastmod>2019-06-21T23:22:24-06:00</lastmod>
+  </url><url>
+    <loc>/posts/starting-oscp-from-scratch/</loc>
+    <lastmod>2019-06-21T22:41:15-06:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
+  </url><url>
     <loc>/tags/</loc>
-    <priority>0</priority>
   </url>
-  
 </urlset>

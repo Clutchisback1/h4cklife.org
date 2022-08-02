@@ -176,8 +176,6 @@
         </span>
 
         
-          
-        
       
 
       
@@ -196,8 +194,10 @@
 
     <div class="post-content">
       
-      <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+      <style>
+body {
+text-align: justify}
+</style>
 <h3 id="backstory">
   Backstory
   <a href="#backstory" class="h-anchor" aria-hidden="true">#</a>
@@ -209,91 +209,60 @@
   <a href="#the-hacking-part---tldrers-start-here-" class="h-anchor" aria-hidden="true">#</a>
 </h3>
 <p>So after spending a bunch of time poking around on this thing I noticed that <code>ctrl+alt+delete</code> worked, which brought up the screen below:</p>
-<!-- raw HTML omitted -->
+<center>
+<figure>
+<img src="../../images/Kiosk_Escape/1.png" alt="Image of Windows 7 lock options" />
+<figcaption>
+<center>Image of Windows 7 lock options</center>
+</figcaption>
+</figure>
+</center>
 <p>From playing around in the past in the past and partially out of desperation I decided to open up the infamous <code>On Screen Keyboard</code> in hopes that this thing would give me additional Windows options:</p>
-<!-- raw HTML omitted -->
+<center>
+<figure>
+<img src="../../images/Kiosk_Escape/2.png" alt="Image of On-Screen Keyboard options" />
+<figcaption>
+<center>Image of On-Screen Keyboard options</center>
+</figcaption>
+</figure>
+</center>
 <p>Once the on-screen keyboard options were available, I was able to select the <code>Control whether the On-Screen Keyboard starts...</code> option which brought up the following screenshot where I was then able to access the <code>Use Speech Recognition</code> option:</p>
-<!-- raw HTML omitted -->
+<center>
+<figure>
+<img src="../../images/Kiosk_Escape/3.png" alt="Selecting Speech Recognition" />
+<figcaption>
+<center>Selecting Speech Recognition</center>
+</figcaption>
+</figure>
+</center>
 <p><strong>If you can get to this point it&rsquo;s pretty much game over.</strong> Here I just selected the control panel option and could access a whole bunch of other things. I mean right clicking and opening a command prompt could have probably worked sooner but this is what I did at the time.</p>
-<!-- raw HTML omitted -->
+<center>
+<figure>
+<img src="../../images/Kiosk_Escape/4.png" alt="Image of Control Panel option" />
+<figcaption>
+<center>Accessible Control Panel option</center>
+</figcaption>
+</figure>
+</center>
 <p>Something to note about this vector is that it does require prior authentication and the PC needs to be unlocked when you hit <code>ctrl+alt+delete</code>. You cant simply walk up to a locked pc and access the accessibility options as the <code>Control whether the On-Screen Keyboard starts...</code> option will be missing if you do. Also, in this example the user that was authenticated at the time had local system administrative privileges so this instance was pretty bad but you may run in to other obstacles that makes this vector more or less viable for you to pull off. Just keep this in the back of your mind the next time you feel like checking out some of the complementary systems you have access to out there in the wild and remember: <strong>Do nothing without permission</strong>!</p>
-<!-- raw HTML omitted -->
+<Center>
+```bash
+__________
+< We Fr0gz >
+----------
+    \
+     \
+         oO)-.                       .-(Oo
+        /__  _\                     /_  __\
+        \  \(  |     ()~()         |  )/  /
+         \__|\ |    (-___-)        | /|__/
+         '  '--'    ==`-'==        '--'  '
 <pre tabindex="0"><code>&lt;/center&gt;
 </code></pre>
     </div>
     
-      
-        <div class="pagination">
-          <div class="pagination__title">
-            <span class="pagination__title-h"
-              >Read other posts</span
-            >
-            <hr />
-          </div>
-          <div class="pagination__buttons">
-            
-              <span class="button previous">
-                <a href="/posts/what-it_s-like-being-a-pentester-after-oscp/">
-                  <span class="button__icon">←</span>
-                  <span class="button__text">What It&#39;s Like Being a Pentester After OSCP</span>
-                </a>
-              </span>
-            
-            
-              <span class="button next">
-                <a href="/posts/lazysysadmin-writeup/">
-                  <span class="button__text">LazySysAdmin Writeup</span>
-                  <span class="button__icon">→</span>
-                </a>
-              </span>
-            
-          </div>
-        </div>
-      
-    
 
     
-      
-        <script src="https://utteranc.es/client.js"
-        repo="clutchisback1/h4cklife.org"
-        issue-term="pathname"
-        label="general-comment"
-	theme="github-dark"
-        crossorigin="anonymous"
-        async>
-</script>
-
-
-
-
-<script>
-"use strict";
-
-!function() {
-  var t = window.driftt = window.drift = window.driftt || [];
-  if (!t.init) {
-    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-    t.factory = function(e) {
-      return function() {
-        var n = Array.prototype.slice.call(arguments);
-        return n.unshift(e), t.push(n), t;
-      };
-    }, t.methods.forEach(function(e) {
-      t[e] = t.factory(e);
-    }), t.load = function(t) {
-      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-      var i = document.getElementsByTagName("script")[0];
-      i.parentNode.insertBefore(o, i);
-    };
-  }
-}();
-drift.SNIPPET_VERSION = '0.3.1';
-drift.load('2pa2ip2k9udy');
-</script>
-
-
       
     
   </div>

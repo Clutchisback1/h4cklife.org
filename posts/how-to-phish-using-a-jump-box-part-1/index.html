@@ -12,8 +12,7 @@
 <meta
   name="description"
   content="Installing Postfix # First thing you need to do to get started is install postfix on your jump box.
-⋊&amp;gt; /e/gophish sudo apt-get install postfix It also goes without saying that you should back this file up before making changes to it. cp /etc/postfix /etc/postfix.bak will do you well! You can see my postfix config file below:
-Configuring Postfix Main.cf # ⋊&amp;gt; ~ cat /etc/postfix/main.cf 22:28:02 # See /usr/share/postfix/main.cf.dist for a commented, more complete version # Debian specific: Specifying a file name will cause the first # line of that file to be used as the name."
+⋊&amp;gt; /e/gophish sudo apt-get install postfix Once you have it installed you&#39;ll need to configure the main.cf file. After making changes to your main.cf file make sure that the service actually runs. If you run the postfix service with sudo service postfix start do a quick netstat and see if you see port 25 open and listening."
 />
 <meta
   name="keywords"
@@ -50,15 +49,13 @@ Configuring Postfix Main.cf # ⋊&amp;gt; ~ cat /etc/postfix/main.cf 22:28:02 # 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="How to Phish Using a Jump Box Part 1"/>
 <meta name="twitter:description" content="Installing Postfix # First thing you need to do to get started is install postfix on your jump box.
-⋊&gt; /e/gophish sudo apt-get install postfix It also goes without saying that you should back this file up before making changes to it. cp /etc/postfix /etc/postfix.bak will do you well! You can see my postfix config file below:
-Configuring Postfix Main.cf # ⋊&gt; ~ cat /etc/postfix/main.cf 22:28:02 # See /usr/share/postfix/main.cf.dist for a commented, more complete version # Debian specific: Specifying a file name will cause the first # line of that file to be used as the name."/>
+⋊&gt; /e/gophish sudo apt-get install postfix Once you have it installed you&#39;ll need to configure the main.cf file. After making changes to your main.cf file make sure that the service actually runs. If you run the postfix service with sudo service postfix start do a quick netstat and see if you see port 25 open and listening."/>
 
 
 
 <meta property="og:title" content="How to Phish Using a Jump Box Part 1" />
 <meta property="og:description" content="Installing Postfix # First thing you need to do to get started is install postfix on your jump box.
-⋊&gt; /e/gophish sudo apt-get install postfix It also goes without saying that you should back this file up before making changes to it. cp /etc/postfix /etc/postfix.bak will do you well! You can see my postfix config file below:
-Configuring Postfix Main.cf # ⋊&gt; ~ cat /etc/postfix/main.cf 22:28:02 # See /usr/share/postfix/main.cf.dist for a commented, more complete version # Debian specific: Specifying a file name will cause the first # line of that file to be used as the name." />
+⋊&gt; /e/gophish sudo apt-get install postfix Once you have it installed you&#39;ll need to configure the main.cf file. After making changes to your main.cf file make sure that the service actually runs. If you run the postfix service with sudo service postfix start do a quick netstat and see if you see port 25 open and listening." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/posts/how-to-phish-using-a-jump-box-part-1/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2019-08-30T16:50:55-06:00" />
@@ -182,8 +179,6 @@ Configuring Postfix Main.cf # ⋊&gt; ~ cat /etc/postfix/main.cf 22:28:02 # See 
         </span>
 
         
-          
-        
       
 
       
@@ -191,7 +186,7 @@ Configuring Postfix Main.cf # ⋊&gt; ~ cat /etc/postfix/main.cf 22:28:02 # See 
 
       
         <span class="post-read-time"
-          >— 5 min read</span
+          >— 7 min read</span
         >
       
     </div>
@@ -208,8 +203,10 @@ Configuring Postfix Main.cf # ⋊&gt; ~ cat /etc/postfix/main.cf 22:28:02 # See 
 </h2>
 <p>First thing you need to do to get started is install postfix on your jump box.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>⋊&gt; /e/gophish sudo apt-get install postfix
-</span></span></code></pre></div><!-- raw HTML omitted -->
-<p>It also goes without saying that you should back this file up before making changes to it. <!-- raw HTML omitted -->cp /etc/postfix /etc/postfix.bak<!-- raw HTML omitted --> will do you well! You can see my postfix config file below:<!-- raw HTML omitted --></p>
+</span></span></code></pre></div><p style="text-align:justify;">
+Once you have it installed you'll need to configure the <code>main.cf</code> file.
+After making changes to your main.cf file make sure that the service actually runs. If you run the postfix service with <code>sudo service postfix start</code> do a quick netstat and see if you see port 25 open and listening. If you netstat and don't see port 25 open and listening you likely have an issue somewhere in your main.cf file.
+<p>It also goes without saying that you should back this file up before making changes to it. <code>cp /etc/postfix /etc/postfix.bak</code> will do you well! You can see my postfix config file below:</p></p>
 <h3 id="configuring-postfix-maincf">
   Configuring Postfix Main.cf
   <a href="#configuring-postfix-maincf" class="h-anchor" aria-hidden="true">#</a>
@@ -280,7 +277,9 @@ Configuring Postfix Main.cf # ⋊&gt; ~ cat /etc/postfix/main.cf 22:28:02 # See 
   Setting up SSL Encryption 📼
   <a href="#setting-up-ssl-encryption-" class="h-anchor" aria-hidden="true">#</a>
 </h2>
-<!-- raw HTML omitted -->
+<p style="text-align:justify;">
+Now that Postfix has been setup you should be ready to start getting SSL set up for your server. In my situation I went with letsencrypt (I think most people do). It's free! I also knew that I would be using a subdomain during my engagement so I created a wildcard certificate. To get started you'll need to install the letsencrypt certbot which will be used to generate the SSL keys and certs and what not:
+</p>
 <h3 id="install-the-letsencrypt-certbot">
   Install The Letsencrypt Certbot
   <a href="#install-the-letsencrypt-certbot" class="h-anchor" aria-hidden="true">#</a>
@@ -338,7 +337,8 @@ Configuring Postfix Main.cf # ⋊&gt; ~ cat /etc/postfix/main.cf 22:28:02 # See 
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>   Donating to ISRG / Let<span style="color:#960050;background-color:#1e0010">&#39;</span>s Encrypt:   https://letsencrypt.org/donate
 </span></span><span style="display:flex;"><span>   Donating to EFF:                    https://eff.org/donate-le
-</span></span></code></pre></div><!-- raw HTML omitted -->
+</span></span></code></pre></div><p style="text-align:justify;">
+So when the certbot pauses and waits for you to update your TXT record you'll be left in limbo before you can hit enter on the prompt signaling that this record has been digested by DNS. So what you can do to check this is use the <code>watch</code> command with dig to see if and when the TXT record gets updated. I do this below:</p>
 <h3 id="checking-on-letsencrypt-challenge-dns-record-update">
   Checking on Letsencrypt Challenge DNS Record Update
   <a href="#checking-on-letsencrypt-challenge-dns-record-update" class="h-anchor" aria-hidden="true">#</a>
@@ -366,12 +366,14 @@ Configuring Postfix Main.cf # ⋊&gt; ~ cat /etc/postfix/main.cf 22:28:02 # See 
 </span></span><span style="display:flex;"><span>;; SERVER: 127.0.0.53#53<span style="color:#f92672">(</span>127.0.0.53<span style="color:#f92672">)</span>
 </span></span><span style="display:flex;"><span>;; WHEN: Fri Aug <span style="color:#ae81ff">23</span> 16:33:16 MDT <span style="color:#ae81ff">2019</span>
 </span></span><span style="display:flex;"><span>;; MSG SIZE  rcvd: <span style="color:#ae81ff">118</span>
-</span></span></code></pre></div><!-- raw HTML omitted -->
+</span></span></code></pre></div><p style="text-align:justify;">
+See that long string <code>ftYJ_RjVZUzEeKxzgwjlWqzlqwzCbkrsXknduewigd</code>? Your certbot TXT record will populate there after some time once it's digested and registered with your domain. If you don't know about the <code>watch</code> command it obviously had a ton of other applications. It runs the command every n seconds and will change the output based on whatever relevant changes occur. It's pretty cool. Oh and say you wait for a while (10 or so mins) and nothing updates, hit enter and see if it just works. It's DNS so expect the unexpected. Sometimes it'll just work/not work. You know how it is...</p>
 <h3 id="configuring-gophish">
   Configuring Gophish
   <a href="#configuring-gophish" class="h-anchor" aria-hidden="true">#</a>
 </h3>
-<!-- raw HTML omitted -->
+<p style="text-align:justify;">
+So, now that your letsencrypt files are generated you'll need to update the Gophish <code>config.json</code> file located in your Gophish dir. You'll need to specify the letsencrypt key file and crt file in this configuration file. I copied them from the letsencrypt folder to my Gophish folder, that's why there's no path in this field. Here's a snapshot of my config file:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>⋊&gt; /e/g/gophish cat config.json                                                                               01:56:30
 </span></span><span style="display:flex;"><span><span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;admin_server&#34;</span>: <span style="color:#f92672">{</span>
@@ -394,7 +396,8 @@ Configuring Postfix Main.cf # ⋊&gt; ~ cat /etc/postfix/main.cf 22:28:02 # See 
 </span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;filename&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>
 </span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
-</span></span></code></pre></div><!-- raw HTML omitted -->
+</span></span></code></pre></div><p style="text-align:justify;">
+Make sure that you're changing the <code>phish_server</code> parameters and <b>NOT</b> the <code>admin_server</code> parameters. Once you've made it to this point you should be good to start fooling around with creating the phishing campaign with Gophish, the application. I may create a part 2 if I'm able to find the time but this should be enough to get you all started Phishing from your own jump boxes! Shout out to <code>Jake N.</code> [The Cobra] and <code>Ryan V.</code>[1337llama] for showing me all the things!</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>_______________
 </span></span><span style="display:flex;"><span>&lt; L33T PHi$HiNg &gt;
 </span></span><span style="display:flex;"><span>---------------
@@ -412,78 +415,8 @@ Configuring Postfix Main.cf # ⋊&gt; ~ cat /etc/postfix/main.cf 22:28:02 # See 
 </span></span></span></code></pre></div>
     </div>
     
-      
-        <div class="pagination">
-          <div class="pagination__title">
-            <span class="pagination__title-h"
-              >Read other posts</span
-            >
-            <hr />
-          </div>
-          <div class="pagination__buttons">
-            
-              <span class="button previous">
-                <a href="/posts/kiosk-escapes-pt-3-mexico-edition/">
-                  <span class="button__icon">←</span>
-                  <span class="button__text">Kiosk Escapes Pt. 3 - Mexico Edition!!</span>
-                </a>
-              </span>
-            
-            
-              <span class="button next">
-                <a href="/posts/how-to-use-silent-trinity/">
-                  <span class="button__text">How to Use Silent Trinity - Bresaola 0.3.0dev</span>
-                  <span class="button__icon">→</span>
-                </a>
-              </span>
-            
-          </div>
-        </div>
-      
-    
 
     
-      
-        <script src="https://utteranc.es/client.js"
-        repo="clutchisback1/h4cklife.org"
-        issue-term="pathname"
-        label="general-comment"
-	theme="github-dark"
-        crossorigin="anonymous"
-        async>
-</script>
-
-
-
-
-<script>
-"use strict";
-
-!function() {
-  var t = window.driftt = window.drift = window.driftt || [];
-  if (!t.init) {
-    if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-    t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-    t.factory = function(e) {
-      return function() {
-        var n = Array.prototype.slice.call(arguments);
-        return n.unshift(e), t.push(n), t;
-      };
-    }, t.methods.forEach(function(e) {
-      t[e] = t.factory(e);
-    }), t.load = function(t) {
-      var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-      o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-      var i = document.getElementsByTagName("script")[0];
-      i.parentNode.insertBefore(o, i);
-    };
-  }
-}();
-drift.SNIPPET_VERSION = '0.3.1';
-drift.load('2pa2ip2k9udy');
-</script>
-
-
       
     
   </div>
